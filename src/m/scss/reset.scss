@@ -1,0 +1,89 @@
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;font-family:Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif; font-size:100%;}
+html,body{color:#333}
+body{background:#fff;overflow-x: hidden;}
+ul,ol,li{ list-style:none;}
+a:link, a:visited{ color:#646464; text-decoration:none;}
+a:hover{ color:#12b7f5;}
+.aAfter{background-color: #12b7f5;content: '';display: block;height: 3px;width: 70%;position: absolute;bottom:25px;left: 15%;}
+img{ border:none;}
+em{ font-style:normal;}
+h1,h2,h3,h4,h5{ font-weight:normal;}
+.clearfloat:after{ content:'.';display:block;overflow:hidden;visibility:hidden;font-size:0;line-height:0;width:0;height:0;}
+.clearfloat{zoom:1;}
+.centerWidth{width: 1200px;}
+// 头部
+#pageHead{
+    height: 82px;
+    position: fixed;
+    z-index: 111;
+    width: 100%;
+    background-color: #fff;
+    .headCenter{
+        @extend .centerWidth;
+        margin: 0 auto;
+        clear: both;
+        .logo{
+            float: left;
+            margin-top: 20px;
+        }
+        .headNav{
+            float: right;
+            li{
+                float: left;
+                font-size: 14px;
+                margin-left: 55px;
+                a{
+                    display: block;
+                    height: 82px;
+                    line-height: 82px;
+                    position: relative; 
+                }
+                a:hover{ 
+                    &::after{
+                        @extend .aAfter;
+                    }
+                }
+                &.active {
+                    a{ 
+                        color:#12b7f5;
+                        &::after{
+                            @extend .aAfter;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// footer
+#pageFoot{
+    background-color: #315c93;
+    height: 182px;
+    width: 100%;
+    color: #fff;
+    clear: both;
+    .footContent{
+        width: 1200px;
+        margin: 0 auto;
+        text-align: center; 
+        padding-top:60px;
+        p{
+            font-size: 18px;
+            line-height: 40px;
+            i{
+                display: inline-block;
+                width: 1px;
+                height: 14px;
+                margin: 0 10px;
+                background-color: #fff
+            }
+        }
+               
+    }
+}
+
+// pageContent
+.pageContent{
+    padding-top: 82px;
+}

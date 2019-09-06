@@ -1,0 +1,54 @@
+@import './reset.scss';
+ 
+
+/* banner */
+.crossbanenr{ width: 100%; height: 778px;}
+.crossbanenr ul{ position: relative; width: 100%; height: 100%; overflow: hidden; /*max-width: 1920px; */min-width: 1007px; margin: 0 auto;}
+.crossbanenr li{ position: absolute; left: 50%; top: 0; width: 1920px; height: 100%; margin: 0 0 0 -960px; display: none; z-index: 1;}
+.crossbanenr li:first-child{ display: block;}
+.bncont{ position: relative; width: 948px; height: 100%; margin: 0 auto;}
+.content{ width: 100%;}
+.content h1{ width: 100%; height:0; overflow: hidden; padding-top: 320px; background: #fff url('../images/indexBanner_2.jpg') no-repeat center center;background-size: 90% auto;}
+.activebg{ position: relative; width: 100%; height: 632px; background: #fff; background-attachment: fixed;background-position: center bottom; background-repeat: no-repeat}
+.fisrtbg{ background-image: url('../images/indexBanner_3.jpg');height:600px;background-position: 0 250px;}
+.secondbg{ background-image: url('../images/indexBanner_5.jpg');height:600px;background-position: 0 340px;}
+.thirdbg{ background-image: url('../images/indexBanner_7.jpg'); height:600px;background-position: 0 340px;}
+.txtwrap p{ font-size: 18px; letter-spacing: 0.12em;}
+.qfigure{ width: 100%; height: 584px; background: #fff;}
+.indexBanner2{width: 100%; height: 422px; background: #fff;}
+.qw960{ position: relative; width: 1200px; height: 584px; margin: 0 auto;}
+.qcallAnimate{ position: absolute; left: 0; top: -222px; width: 273px; height: 546px; background: transparent url('../images/indexBanner_4_1.png') no-repeat 0 0;}
+.qcall .txtwrap{ position: absolute; right: 133px; top: 65px; width:442px; height:301px;background: transparent url('../images/indexBanner_4_2.jpg') no-repeat 0 0; color: transparent}
+.indexBanner6{
+    width: 100%;
+    height: 528px;
+    background: transparent url('../images/indexBanner_6.jpg') no-repeat center center; color: transparent
+}
+.indexBanner7{
+    height: 1148px;
+    width: 100%;
+    
+    .bannerCenter_7{
+        width: 1200px;
+        background: transparent url('../images/indexBanner_8_1.png') no-repeat left center;
+        height: 100%;
+        position: relative;
+        margin: 0 auto;
+        .banner7Text{
+            color: transparent;
+            background: transparent url('../images/indexBanner_8_2.jpg') no-repeat center center;
+            background-size: 90% auto;
+            width: 661px;
+            height: 373px;
+            position: absolute;
+            right: 0;
+            top: 435px;
+        }
+    }
+    
+}
+
+
+
+
+.pcqq{background: url('../images/indexBanner_1.jpg') no-repeat center center;    background-size: cover;}

@@ -1,0 +1,11 @@
+<div id="pageHead">
+    <div class="headCenter">
+        <a href="/" class="logo"><img src="./images/logo.png" alt="麦尔带"></a>
+        <ul class="headNav">
+            <li @@if (context.index==='active' ) { class="active" }><a href="/">首页</a></li>
+            <li @@if (context.advantage==='active' ) { class="active" }><a href="/advantage.html">优势</a></li>
+            <li @@if (context.serve==='active' ) { class="active" }><a href="/serve.html">服务</a></li>
+            <li @@if (context.about==='active' ) { class="active" }><a href="/about.html">关于麦尔带</a></li>
+        </ul>
+    </div>
+</div>
