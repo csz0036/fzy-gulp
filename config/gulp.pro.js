@@ -15,7 +15,7 @@ const path = require('./path')
 //删除dist目录下文件
 const del=require('del');
 gulp.task('clean',function(cb){
-    return del(['dist/*'],cb);
+    return del(['../dist/*'], {force:true}, cb);
 })
 
 /* 操作js */
@@ -46,6 +46,7 @@ gulp.task('style', function () {
 
 //图片压缩插件
 gulp.task('image', function() {
+    console.log(1111)
     gulp.src(path.image.dev)
         .pipe(imagemin())
         .pipe(gulp.dest(path.image.build))

@@ -15,7 +15,7 @@ const path = {
         build : '../dist/'+nodeEvn+''
     },
     image : {
-        dev : 'src/'+nodeEvn+'images/*.{png,jpg,jpeg,gif}',
+        dev : '../src/'+nodeEvn+'images/*.{png,jpg,jpeg,gif}',
         build : '../dist/'+nodeEvn+'images'
     }
 }

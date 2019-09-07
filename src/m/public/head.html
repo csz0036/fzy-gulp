@@ -1,11 +1,15 @@
-<div id="pageHead">
-    <div class="headCenter">
-        <a href="/" class="logo"><img src="./images/logo.png" alt="麦尔带"></a>
-        <ul class="headNav">
-            <li @@if (context.index==='active' ) { class="active" }><a href="/">首页</a></li>
-            <li @@if (context.advantage==='active' ) { class="active" }><a href="/advantage.html">优势</a></li>
-            <li @@if (context.serve==='active' ) { class="active" }><a href="/serve.html">服务</a></li>
-            <li @@if (context.about==='active' ) { class="active" }><a href="/about.html">关于麦尔带</a></li>
-        </ul>
+<div id="head">
+    <div class="detailShow">
+        <p  class="logo"><a href="/"></a></p>
+        <p class="experience">立即体验</p>
+        <p  class="button"></p>
     </div>
+    <ul v-show="showNav" class="navListButton">
+        <li ><a href="'/'">首页</a></li>
+        <li ><a href="'product'">产品</a></li>
+        <li ><a href="'robot'">智能应用</a></li>
+        <li ><a href="'price'">价格</a></li>
+        <li ><a href="'about'">公司介绍</a></li>
+        <li ><a href="'join'">伙伴加盟</a></li>
+    </ul>
 </div>

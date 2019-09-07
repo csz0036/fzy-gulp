@@ -10,6 +10,15 @@ const fileinclude = require('gulp-file-include');
 const path = require('./path')
 const nodeEvn = process.env.NODE_ENV == 'all' ? '**/' : process.env.NODE_ENV + '/'
 
+
+//删除dist目录下文件
+const del=require('del');
+gulp.task('clean',function(cb){
+    console.log('-------del------','../dist/'+nodeEvn+'*')
+    return del(['../dist/'+nodeEvn+'*'],{force:true}, cb);
+})
+
+
 /* 操作js */
 gulp.task('scripts', function () {
     gulp.src(path.js.dev)
@@ -36,6 +45,7 @@ gulp.task('style', function () {
 
 //图片压缩插件
 gulp.task('image', function() {
+    console.log('image------',path.image.dev,path.image.build)
     gulp.src(path.image.dev)
         .pipe(imagemin())
         .pipe(gulp.dest(path.image.build))
@@ -54,7 +64,7 @@ gulp.task('html', function() {
         .pipe(browsersync.stream());
 });
 
-gulp.task('serve', function() {
+gulp.task('serve',['clean'], function() {
     gulp.start('scripts','style','image','html');
     browsersync.init({
         port: 3000,
