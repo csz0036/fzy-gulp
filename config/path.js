@@ -15,8 +15,8 @@ const path = {
         build : '../dist/'+nodeEvn+''
     },
     image : {
-        dev : '../src/'+nodeEvn+'images/*.{png,jpg,jpeg,gif}',
-        build : '../dist/'+nodeEvn+'images'
+        dev : '../src/'+nodeEvn+'images/**/*.{png,jpg,jpeg,gif}',
+        build : '../dist/'+nodeEvn+'images/'
     }
 }
 module.exports = path

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./headConfig.html')
+    <title>法智易-智能合同管理系统-慧点科技法务领域专业品牌</title>
+    <link rel="stylesheet" href="./css/join.min.css">
+</head>
+
+<body>
+    <!--S header-->
+    @@include('./head.html',{ "index": "active" })
+    <!--E header-->
+
+    <!--S content-->
+    <div id="pageContent">
+        <div class="join">
+            <div class="h2">伙伴加盟</div>
+            <ul class="join-type">
+                <li class="active" data-value="销售服务商">
+                    <em></em>
+                    销售服务商
+                </li>
+                <li data-value="营销合伙人">
+                    <em></em>
+                    营销合伙人
+                </li>
+            </ul>
+            <article>
+                <div>
+                    <span>*</span>
+                    <input id="js-join-city" type="text" placeholder="请选择城市" readonly="true">
+                </div>
+                <div>
+                    <span>*</span>
+                    <input type="text" name="name" placeholder="姓名">
+                </div>
+                <div>
+                    <span>*</span>
+                    <input type="tel" name="phone" placeholder="请输入手机号">
+                </div>
+                <div>
+                    <input type="text" name="company" placeholder="公司名称">
+                </div>
+                <div>
+                    <input type="text" name="email" placeholder="请输入联系邮箱">
+                </div>
+            </article>
+            <div class="btns">
+                <div class="btn">提交申请</div>
+            </div>
+        </div>
+    </div>
+    <!--E content-->
+
+    <!--S footer-->
+    @@include('./foot.html')
+    <!--E footer-->
+
+    <script src="./js/jquery-1.9.1.min.js"></script>
+    <script src="./js/basis.min.js"></script>
+</body>
+
+</html>
