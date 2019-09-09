@@ -164,6 +164,8 @@
 .price .price-qa article {
     padding-bottom: 13*.02rem;
     border-bottom: 1*.02rem solid #DEDEDE;
+    user-select: none;
+
 }
 
 .price .price-qa article .h4 {
@@ -174,6 +176,8 @@
     letter-spacing: 0;
     line-height: 43*.02rem;
     cursor: pointer;
+    user-select: none;
+
 }
 
 .price .price-qa article .h4.active {

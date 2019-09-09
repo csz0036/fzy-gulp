@@ -1,0 +1,298 @@
+@import './reset.scss';
+
+.banner {
+    width: 100%;
+    height: 412px;
+    background-image: linear-gradient(-135deg, #09F 0, #06C 100%);
+    position: relative
+}
+
+.bannerBg {
+    width: 1113px;
+    height: 412px;
+    background: url(../images/product/product.png) no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto
+}
+
+.bannerCon,
+.bannerCon2 {
+    width: 818px;
+    position: absolute;
+    top: 105px;
+    left: 50%;
+    margin-left: -409px;
+    text-align: center
+}
+
+.bannerCon h1,
+.bannerCon2 h1 {
+    font-size: 40px;
+    color: #fff;
+    font-weight: 300
+}
+
+.bannerCon p {
+    width: 588px;
+    margin: 25px auto 45px;
+    color: #fff;
+    line-height: 28px;
+    letter-spacing: 1px
+}
+
+.bannerBtn {
+    display: inline-block;
+    width: 180px;
+    height: 62px;
+    line-height: 62px;
+    text-align: center;
+    font-size: 22px;
+    color: #0086EC;
+    background: #FDFDFD;
+    box-shadow: 0 3px 6px 0 rgba(121, 121, 121, .4);
+    border-radius: 6px;
+    margin: 0 auto;
+    cursor: pointer
+}
+
+.bannerBtn span {
+    width: 20px;
+    height: 20px;
+    background: url(../images/product/arrowRight.png) no-repeat;
+    background-size: 100% 100%;
+    display: inline-block;
+    margin-left: 15px
+}
+
+.product {
+    width: 100%
+}
+
+.productListFive,
+.productListOne,
+.productListSeven,
+.productListThree,
+.productListTwo {
+    width: 1050px;
+    margin: 85px auto 75px;
+    display: flex
+}
+
+.productCon,
+.productCon2 {
+    background: #f6f7f9;
+    margin: 0 auto;
+    padding: 75px 0
+}
+
+.productCon2 {
+    padding: 110px 0
+}
+
+.productListTwo {
+    margin: 0 auto
+}
+
+.productListThree {
+    margin: 65px auto 90px
+}
+
+.productListFive {
+    margin: 100px auto 120px
+}
+
+.productListSeven {
+    margin: 100px auto 120px
+}
+
+.product1 {
+    width: 430px;
+    height: 390px;
+    margin-left: 10px;
+    margin-right: 50px
+}
+
+.productIntro {
+    padding-top: 130px
+}
+
+.productIntro h2 {
+    font-size: 30px;
+    color: #5B5E5F;
+    line-height: 40px
+}
+
+.productIntro span {
+    color: #EE6723;
+}
+
+.productIntro ul {
+    margin-top: 20px
+}
+
+.productIntro ul li {
+    font-size: 16px;
+    line-height: 30px
+}
+
+.productIntro2 {
+    padding-top: 60px;
+    margin-right: 45px
+}
+
+.productIntro2 h2,
+.productIntro3 h2 {
+    width: 300px
+}
+
+.productIntro2 ul {
+    width: 410px
+}
+
+.product2 {
+    width: 541px;
+    height: 399px
+}
+
+.productIntro3 {
+    width: 330px;
+    margin-right: 90px
+}
+
+.productIntro4 {
+    padding-top: 100px
+}
+
+.productIntro4 h2 {
+    width: 360px
+}
+
+.productIntro5 {
+    width: 390px;
+    padding-top: 70px;
+    margin-right: 70px
+}
+
+.product3 {
+    width: 412px;
+    height: 399px;
+    margin-right: 100px
+}
+
+.product4 {
+    width: 541px;
+    height: 399px
+}
+
+.product5 {
+    width: 433px;
+    height: 330px;
+    margin-right: 80px
+}
+
+.product6 {
+    width: 570px;
+    height: 330px
+}
+
+.productIntro6 {
+    padding-top: 85px
+}
+
+.product7 {
+    width: 520px;
+    height: 330px;
+    margin-right: 45px
+}
+
+.productIntro7 {
+    padding-top: 55px;
+    margin-right: 90px
+}
+
+.productIntro7 h2 {
+    width: 406px
+}
+
+.product8 {
+    width: 520px;
+    height: 330px
+}
+
+.video {
+    width: 767px;
+    height: 431px;
+    margin: 105px auto 60px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .19)
+}
+
+.videoImg {
+    width: 767px;
+    height: 431px;
+    transition: all 1s
+}
+
+.videoImg:hover {
+    transform: scale(1.1)
+}
+
+.videoDec {
+    width: 767px;
+    position: absolute;
+    left: 50%;
+    margin-left: -383px;
+    top: 20%;
+    text-align: center;
+    color: #fff
+}
+
+.videoDec p:first-child {
+    font-size: 40px;
+    line-height: 40px
+}
+
+.videoDec p:last-child {
+    font-size: 30px;
+    line-height: 30px;
+    margin-top: 25px
+}
+
+.playBtn {
+    width: 102px;
+    height: 102px;
+    background: url(../images/product/play.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    margin-left: -51px;
+    cursor: pointer
+}
+
+.company {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 50px;
+    overflow: hidden
+}
+
+.company h2 {
+    font-size: 30px;
+    color: #5B5E5F
+}
+
+.company h2 span {
+    color: #0068CE
+}
+
+.productLogo {
+    width: 100%;
+    height: 130px;
+    position: relative;
+    margin: 35px 0;
+    padding-bottom: 25px;
+    background: url(../images/product/productLogo.png) 0 0 repeat-x;
+    background-size: auto 100%;
+}

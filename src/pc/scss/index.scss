@@ -1,54 +1,1156 @@
 @import './reset.scss';
- 
 
-/* banner */
-.crossbanenr{ width: 100%; height: 778px;}
-.crossbanenr ul{ position: relative; width: 100%; height: 100%; overflow: hidden; /*max-width: 1920px; */min-width: 1007px; margin: 0 auto;}
-.crossbanenr li{ position: absolute; left: 50%; top: 0; width: 1920px; height: 100%; margin: 0 0 0 -960px; display: none; z-index: 1;}
-.crossbanenr li:first-child{ display: block;}
-.bncont{ position: relative; width: 948px; height: 100%; margin: 0 auto;}
-.content{ width: 100%;}
-.content h1{ width: 100%; height:0; overflow: hidden; padding-top: 320px; background: #fff url('../images/indexBanner_2.jpg') no-repeat center center;background-size: 90% auto;}
-.activebg{ position: relative; width: 100%; height: 632px; background: #fff; background-attachment: fixed;background-position: center bottom; background-repeat: no-repeat}
-.fisrtbg{ background-image: url('../images/indexBanner_3.jpg');height:600px;background-position: 0 250px;}
-.secondbg{ background-image: url('../images/indexBanner_5.jpg');height:600px;background-position: 0 340px;}
-.thirdbg{ background-image: url('../images/indexBanner_7.jpg'); height:600px;background-position: 0 340px;}
-.txtwrap p{ font-size: 18px; letter-spacing: 0.12em;}
-.qfigure{ width: 100%; height: 584px; background: #fff;}
-.indexBanner2{width: 100%; height: 422px; background: #fff;}
-.qw960{ position: relative; width: 1200px; height: 584px; margin: 0 auto;}
-.qcallAnimate{ position: absolute; left: 0; top: -222px; width: 273px; height: 546px; background: transparent url('../images/indexBanner_4_1.png') no-repeat 0 0;}
-.qcall .txtwrap{ position: absolute; right: 133px; top: 65px; width:442px; height:301px;background: transparent url('../images/indexBanner_4_2.jpg') no-repeat 0 0; color: transparent}
-.indexBanner6{
-    width: 100%;
-    height: 528px;
-    background: transparent url('../images/indexBanner_6.jpg') no-repeat center center; color: transparent
-}
-.indexBanner7{
-    height: 1148px;
-    width: 100%;
-    
-    .bannerCenter_7{
-        width: 1200px;
-        background: transparent url('../images/indexBanner_8_1.png') no-repeat left center;
-        height: 100%;
-        position: relative;
-        margin: 0 auto;
-        .banner7Text{
-            color: transparent;
-            background: transparent url('../images/indexBanner_8_2.jpg') no-repeat center center;
-            background-size: 90% auto;
-            width: 661px;
-            height: 373px;
-            position: absolute;
-            right: 0;
-            top: 435px;
-        }
-    }
-    
+.content {
+    margin-top: 70px
 }
 
+.conForth,
+.conOne,
+.conThree,
+.conTwo {
+    padding-top: 85px;
+    text-align: center;
+    overflow: auto;
+}
+
+.conThree {
+    padding-top: 85px;
+    background: #F8F9FB
+}
+
+.conTit {
+    line-height: 40px;
+    font-size: 40px;
+    color: #47494A;
+    font-weight: 300
+}
+
+.conTit2 {
+    font-size: 35px;
+    color: #47494A;
+    line-height: 35px;
+    font-weight: 300
+}
+
+.conIntro {
+    font-size: 22px;
+    color: #151515;
+    line-height: 22px;
+    margin-top: 25px;
+    font-weight: 300
+}
+
+.conIntro_lf {
+    padding: 50px 0 0;
+    width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.conIntro span {
+    color: #0068CE
+}
+
+.btn {
+    width: 100%;
+    height: 74px;
+    margin-top: 30px;
+    position: relative
+}
 
 
 
-.pcqq{background: url('../images/indexBanner_1.jpg') no-repeat center center;    background-size: cover;}
+.conOneImg {
+    width: 439px;
+    height: 377px;
+    margin-top: 10px
+}
+
+.conForthCompany,
+.conOneData {
+    width: 100%;
+    background: #F8F9FB;
+    margin-top: 35px
+}
+
+.conOneDataList {
+    width: 1175px;
+    height: 134px;
+    padding: 58px 0;
+    margin: 0 auto;
+    background: #F8F9FB
+}
+
+.conOneDataList li {
+    width: 234px;
+    text-align: center;
+    float: left;
+    border-right: 1px solid #DFDFDF;
+    padding: 13px 0
+}
+
+.conOneDataList li:last-child {
+    border: none
+}
+
+.conOneDataNum {
+    position: relative
+}
+
+.conOneDataNum span {
+    font-size: 70px;
+    text-align: center;
+    font-weight: 100;
+    color: #47494A
+}
+
+.conOneDataPer {
+    font-size: 20px
+}
+
+.conOneDataDown,
+.conOneDataUp,
+.conOneDataUp2 {
+    width: 20px;
+    height: 20px;
+    background: url(../images/index/dataUp.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 65px;
+    top: 15px
+}
+
+.conOneDataUp2 {
+    right: 45px
+}
+
+.conOneDataDown {
+    background: url(../images/index/dataDown.png) no-repeat;
+    background-size: 100% 100%
+}
+
+.conOneDataTit {
+    font-size: 18px
+}
+
+.conTwoStep {
+    width: 1100px;
+    margin: 70px auto 0;
+    padding-bottom: 50px
+}
+
+.conTwoStep dl {
+    width: 240px;
+    height: 210px;
+    float: left;
+    margin: 30px 63px
+}
+
+.conTwoStep dl dt {
+    width: 60px;
+    height: 60px;
+    background: url(../images/index/step.png) no-repeat;
+    background-size: 100% 100%;
+    display: inline-block
+}
+
+.conTwoStepTit {
+    font-size: 20px;
+    color: #5B5E5F;
+    margin-top: 12px;
+    font-weight: 400
+}
+
+.conTwoStepIntro {
+    margin-top: 20px;
+    text-align: left;
+    line-height: 26px
+}
+
+.conTwoStep dl dt.conTwoStepIcon2 {
+    background: url(../images/index/step2.png) no-repeat;
+    background-size: 100% 100%
+}
+
+.conTwoStep dl dt.conTwoStepIcon3 {
+    background: url(../images/index/step3.png) no-repeat;
+    background-size: 100% 100%
+}
+
+.conTwoStep dl dt.conTwoStepIcon4 {
+    background: url(../images/index/step4.png) no-repeat;
+    background-size: 100% 100%
+}
+
+.conTwoStep dl dt.conTwoStepIcon5 {
+    background: url(../images/index/step5.png) no-repeat;
+    background-size: 100% 100%
+}
+
+.conTwoStep dl dt.conTwoStepIcon6 {
+    background: url(../images/index/step6.png) no-repeat;
+    background-size: 100% 100%
+}
+
+.conTwoLine {
+    width: 944px;
+    height: 1px;
+    background: #DFDFDF;
+    margin: 0 auto
+}
+
+.conThreeFir,
+.conThreeSec,
+.conThreeThi {
+    width: 1000px;
+    margin: 85px auto 105px;
+    position: relative;
+    overflow: auto;
+    clear: both;
+}
+
+.conThreeUp {
+    width: 455px;
+    position: absolute;
+    left: 0;
+    top: 110px
+}
+
+.conThreeLeft p,
+.conThreeSec p,
+.conThreeUp p {
+    font-size: 30px;
+    color: #5B5E5F;
+    text-align: left;
+    line-height: 60px
+}
+
+.conThreeUp p {
+    line-height: 40px
+}
+
+.conThreeSec p {
+    text-align: center
+}
+
+.conThreeLeft p {
+    width: 450px
+}
+
+.conThreeLeft ul,
+.conThreeUp ul {
+    margin-top: 40px;
+    text-align: left
+}
+
+.conThreeLeft ul li,
+.conThreeUp ul li {
+    font-size: 16px;
+    line-height: 30px
+}
+
+.conThreeImg1 {
+    width: 474px;
+    height: 368px;
+    float: right
+}
+
+.conThreeSec {
+    margin: 0 auto
+}
+
+.conThreeSec ul {
+    width: 385px;
+    margin: 30px auto 0;
+    text-align: left;
+    font-size: 16px;
+    line-height: 30px
+}
+
+.conThreeImg2 {
+    width: 565px;
+    height: 320px;
+    margin-top: 40px
+}
+
+.conThreeThi {
+    margin: 100px auto 0;
+    padding-bottom: 135px
+}
+
+.conThreeLeft {
+    width: 525px;
+    text-align: left;
+    position: absolute;
+    left: 0;
+    top: 40px
+}
+
+.conThreeImg3 {
+    width: 343px;
+    height: 339px;
+    float: right;
+    margin-right: 40px
+}
+
+.conForth {
+    padding-top: 80px;
+    overflow: hidden
+}
+
+.conForthList {
+    width: 995px;
+    margin: 80px auto 70px;
+    overflow: hidden
+}
+
+.conForthList li {
+    float: left;
+    position: relative;
+    margin-right: 22px;
+    margin-bottom: 30px
+}
+
+.conForthList li a {
+    display: block;
+    color: #333
+}
+
+.conForthList li div {
+    width: 232px;
+    height: 256px;
+    background: url(../images/index/scenario1.png) no-repeat;
+    background-size: 100% 100%
+}
+
+.conForthList li:nth-child(4n) {
+    margin-right: 0
+}
+
+.conForthList li.scenario2 div {
+    background: url(../images/index/scenario2.png) no-repeat;
+    background-size: 100% 100%
+}
+
+.conForthList li.scenario3 div {
+    background: url(../images/index/scenario3.png) no-repeat;
+    background-size: 100% 100%
+}
+
+.conForthList li.scenario4 div {
+    background: url(../images/index/scenario4.png) no-repeat;
+    background-size: 100% 100%
+}
+
+.conForthList li.scenario5 div {
+    background: url(../images/index/scenario5.png) no-repeat;
+    background-size: 100% 100%
+}
+
+.conForthList li.scenario6 div {
+    background: url(../images/index/scenario6.png) no-repeat;
+    background-size: 100% 100%
+}
+
+.conForthList li.scenario7 div {
+    background: url(../images/index/scenario7.png) no-repeat;
+    background-size: 100% 100%
+}
+
+.conForthList li.scenario8 div {
+    background: url(../images/index/scenario8.png) no-repeat;
+    background-size: 100% 100%
+}
+
+.conForthList li div span {
+    position: absolute;
+    left: 20px;
+    bottom: 18px
+}
+
+.conForthListFc {
+    width: 218px;
+    height: 242px;
+    background: rgba(0, 0, 0, .6);
+    box-shadow: 0 3px 6px 0 rgba(121, 121, 121, .4);
+    border-radius: 8px;
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    opacity: 0;
+    transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    -ms-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -webkit-transition: all .5s ease-out
+}
+
+.conForthListFc span {
+    margin: 60px 18px;
+    display: block;
+    border-top: 2px solid rgba(255, 255, 255, .5);
+    border-bottom: 2px solid rgba(255, 255, 255, .5)
+}
+
+.conForthListFc span i:first-child {
+    color: #FDFDFD;
+    display: block;
+    text-align: center;
+    padding: 12px 0
+}
+
+.conForthListFc span i:last-child {
+    font-size: 12px;
+    color: #FDFDFD;
+    text-align: left;
+    margin-bottom: 17px;
+    display: block
+}
+
+.conForthList li:hover div {
+    -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -ms-filter: blur(4px);
+    filter: blur(4px);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=4, MakeShadow=false)
+}
+
+.conForthList li:hover .conForthListFc {
+    opacity: 1;
+    transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0)
+}
+
+.conForthList li:hover div span {
+    display: none
+}
+
+.conForthList li:nth-child(4n) div:hover {
+    margin-right: 0
+}
+
+.conForthCompany {
+    padding-bottom: 50px;
+    margin-top: 0
+}
+
+.conForthCompany p {
+    font-size: 35px;
+    color: #47494A;
+    font-weight: 300;
+    padding: 80px 0 50px
+}
+
+.conForthCompany p span {
+    color: #0068CE
+}
+
+.comLogo {
+    width: 784px;
+    height: 324px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 70px !important
+}
+
+.comLogo img,
+.comLogoList {
+    width: 784px;
+    height: 324px;
+    display: flex
+}
+
+.banner {
+    width: 100%;
+    height: 412px;
+    background-image: linear-gradient(-135deg, #09F 0, #06C 100%);
+    position: relative
+}
+
+
+
+
+
+
+
+
+
+
+
+.price {
+    width: 720px;
+    margin: 155px auto 0
+}
+
+.priceCon {
+    width: 720px;
+    text-align: center
+}
+
+.priceTitle {
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 300;
+    color: #47494A
+}
+
+.priceCon p {
+    color: #666;
+    line-height: 28px;
+    margin-top: 28px;
+    letter-spacing: 1px
+}
+
+.priceList {
+    width: 716px;
+    background: #FFF;
+    border: 1px solid #E3E3E3;
+    box-shadow: 6px 6px 15px 0 rgba(0, 0, 0, .06);
+    border-radius: 1px;
+    margin-top: 80px
+}
+
+.priceList li {
+    margin: 0 30px;
+    text-align: left;
+    overflow: hidden;
+    border-bottom: 1px solid #EBEBEB
+}
+
+.priceList li:last-child {
+    border: none
+}
+
+.priceList li span {
+    width: 33%;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    float: left;
+    font-size: 16px
+}
+
+.priceList li.priceListTit {
+    margin: 0;
+    border-bottom: 1px solid #DEDEDE
+}
+
+.priceList li.priceListTit span {
+    font-size: 20px;
+    height: 60px;
+    line-height: 60px
+}
+
+.priceList li.priceListNum {
+    margin: 0
+}
+
+.priceList li.priceListNum span {
+    height: 130px;
+    line-height: 200px;
+    font-size: 16px;
+    position: relative
+}
+
+.priceList li.priceListNum span:first-child {
+    line-height: 130px
+}
+
+.priceList li.priceListNum span:last-child i,
+.priceList li.priceListNum span:nth-child(2) i {
+    width: 96px;
+    height: 43px;
+    background: url(../images/index/price1.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 50%;
+    top: 30px;
+    margin-left: -48px
+}
+
+.priceList li.priceListNum span:last-child i {
+    background: url(../images/index/price2.png) no-repeat;
+    background-size: 100% 100%
+}
+
+.priceList li.priceBg {
+    margin: 0;
+    height: 50px;
+    line-height: 50px;
+    background: #F2F2F2;
+    font-size: 16px;
+    padding-left: 92px
+}
+
+.priceList li span.point i {
+    width: 11px;
+    height: 11px;
+    background: #050706;
+    border-radius: 100%;
+    display: inline-block
+}
+
+.priceCon2 {
+    width: 660px;
+    margin: 150px auto 140px;
+    text-align: center
+}
+
+.priceTitle2 {
+    font-size: 30px;
+    color: #5B5E5F;
+    line-height: 40px
+}
+
+.chose {
+    margin-top: 70px
+}
+
+.choseCon,
+.choseCon2 {
+    width: 266px;
+    margin: 0 auto
+}
+
+.choseCon2 {
+    margin-left: 125px
+}
+
+.choseCon img,
+.choseCon2 img {
+    width: 266px;
+    height: 227px
+}
+
+.choseTit {
+    font-size: 20px;
+    color: #5B5E5F;
+    margin-top: 30px;
+    line-height: 20px;
+    font-weight: 400
+}
+
+.choseIntro {
+    text-align: left;
+    line-height: 26px;
+    margin-top: 27px
+}
+
+.problem {
+    width: 878px;
+    margin: 70px auto 55px;
+    text-align: center
+}
+
+.problem h2 {
+    font-size: 30px;
+    color: #5B5E5F
+}
+
+.problemList {
+    margin-top: 45px;
+    padding-bottom: 20px;
+    border-top: 1px solid #D9D9D9;
+    text-align: left
+}
+
+.problemList li {
+    border-bottom: 1px solid #D9D9D9;
+    overflow: hidden
+}
+
+.problemList li a {
+    height: 60px;
+    line-height: 60px;
+    font-size: 16px;
+    font-weight: 400;
+    display: block
+}
+
+.problemList li a:hover,
+.problemList li.active a {
+    color: #008DD1
+}
+
+.problemList li a span {
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #BCBCBC;
+    border-bottom: 2px solid #BCBCBC;
+    float: right;
+    margin-top: 26px;
+    margin-right: 10px;
+    overflow: hidden;
+    transform-origin: center center;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transition: transform .2s;
+    -moz-transition: -moz-transform .2s;
+    -o-transition: -o-transform .2s;
+    -ms-transition: -ms-transform .2s
+}
+
+.problemList li.active a span {
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #4B90CA;
+    border-bottom: 2px solid #4B90CA;
+    transform-origin: center center;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transition: transform .2s;
+    -moz-transition: -moz-transform .2s;
+    -o-transition: -o-transform .2s;
+    -ms-transition: -ms-transform .2s
+}
+
+.problemList li div {
+    max-height: 0;
+    font-size: 16px;
+    color: #5B5E5F;
+    line-height: 30px;
+    transition: all .4s
+}
+
+.problemList li div p {
+    padding-top: 5px;
+    padding-bottom: 45px
+}
+
+.problemList li.active div {
+    max-height: 200px
+}
+
+.banner2 {
+    width: 100%;
+    height: 412px;
+    background: url(../images/index/aboutBg.jpg) no-repeat;
+    background-size: 100% 100%;
+    position: relative
+}
+
+.bannerCon2 {
+    width: 618px;
+    top: 60px;
+    margin-left: -309px
+}
+
+.hdLogo {
+    width: 167px;
+    height: 52px;
+    background: url(../images/index/hdLogo.png) no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto 35px
+}
+
+.bannerCon2 p {
+    font-size: 20px;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 35px
+}
+
+.aboutLogo {
+    width: 919px;
+    height: 1049px;
+    background: url(../images/index/aboutLogo.png) no-repeat;
+    background-size: 100% 100%;
+    margin: 30px auto 0
+}
+
+.rank {
+    font-size: 16px;
+    color: #5B5E5F;
+    padding: 25px 0
+}
+
+.about {
+    width: 1000px;
+    margin: 85px auto 70px
+}
+
+.aboutCon {
+    margin-bottom: 120px;
+    text-align: center
+}
+
+.mt95 {
+    margin-bottom: 95px
+}
+
+.aboutCon h1 {
+    font-size: 30px;
+    color: #5B5E5F;
+    line-height: 30px
+}
+
+.certificateImg {
+    width: 812px;
+    height: 331px;
+    margin: 45px auto 0
+}
+
+.aboutCon p {
+    width: 997px;
+    line-height: 32px;
+    font-size: 16px;
+    text-align: left;
+    margin: 50px auto 80px
+}
+
+.introduce {
+    padding: 0 110px
+}
+
+.introduce li {
+    width: 184px;
+    float: left;
+    text-align: left;
+    font-size: 20px;
+    color: #5B5E5F
+}
+
+.introduce li:nth-child(2) {
+    margin: 0 114px
+}
+
+.introduce li i {
+    width: 10px;
+    height: 56px;
+    background: #0095FB;
+    display: inline-block;
+    margin-right: 10px
+}
+
+.introduce li span em:first-child {
+    font-size: 26px;
+    color: #333;
+    line-height: 26px;
+    display: block
+}
+
+.introduce li span em:last-child {
+    display: block;
+    font-size: 20px;
+    color: #000;
+    line-height: 40px
+}
+
+.certificate {
+    padding: 0 10px;
+    margin-top: 70px
+}
+
+.certificate li {
+    margin-right: 38px;
+    float: left
+}
+
+.certificate li:last-child {
+    margin: 0
+}
+
+.certificate li img {
+    width: 216px;
+    height: 280px
+}
+
+.time {
+    width: 100%;
+    height: 160px;
+    margin-top: 115px
+}
+
+.timeLine {
+    border-bottom: 2px dashed #D4D4D4;
+    padding-top: 80px
+}
+
+.timeList {
+    height: 154px;
+    padding: 0 70px 6px;
+    margin-top: -80px
+}
+
+.timeList li {
+    width: 57px;
+    height: 57px;
+    line-height: 60px;
+    border-radius: 100%;
+    background-image: linear-gradient(-121deg, #06C 0, #09F 98%);
+    box-shadow: 0 3px 6px 0 rgba(121, 121, 121, .4);
+    float: left;
+    font-size: 16px;
+    margin-right: 90px;
+    margin-top: 50px;
+    vertical-align: middle;
+    position: relative
+}
+
+.timeList li span:first-child {
+    color: #fff
+}
+
+.timeList li.twelve {
+    margin-right: 60px
+}
+
+.timeList li.seventeen {
+    margin-right: 20px
+}
+
+.timeList li.eighteenth {
+    width: 76px;
+    height: 76px;
+    line-height: 80px;
+    background-image: linear-gradient(44deg, #FF8722 0, #F60 97%);
+    margin-right: 0;
+    margin-top: 40px
+}
+
+.timeName,
+.timeName2,
+.timeName3 {
+    width: 52px;
+    height: 53px;
+    vertical-align: top;
+    position: absolute;
+    left: 50%;
+    top: -53px;
+    margin-left: -28px
+}
+
+.timeName2 {
+    top: 58px;
+    bottom: -53px
+}
+
+.timeNameCon {
+    height: 22px;
+    line-height: 22px;
+    display: block
+}
+
+.verticalBar {
+    height: 31px;
+    display: block;
+    border-right: 2px dashed #D4D4D4;
+    margin-right: 24px
+}
+
+.timeName3 {
+    top: -42px
+}
+
+.timeName3 .verticalBar {
+    height: 20px
+}
+
+.join {
+    padding-top: 145px;
+    padding-bottom: 35px;
+    background: #f5f4f5
+}
+
+.joinCon {
+    width: 900px;
+    margin: 0 auto;
+    text-align: center
+}
+
+.joinCon h1 {
+    font-size: 40px;
+    color: #47494A;
+    line-height: 30px;
+    font-weight: 300
+}
+
+.joinCon p {
+    font-size: 16px;
+    color: #000;
+    margin-top: 23px
+}
+
+.joinCon p span {
+    color: #0068CE
+}
+
+.joinForm {
+    width: 300px;
+    height: 420px;
+    background: #fff;
+    padding: 80px 300px;
+    margin-top: 50px
+}
+
+.join-list li {
+    height: 28px;
+    line-height: 28px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #E1E1E1;
+    position: relative
+}
+
+.joinMark {
+    font-size: 20px;
+    color: #E3001C;
+    position: absolute;
+    left: -20px;
+    top: 15px
+}
+
+.join-list li label {
+    height: 28px;
+    line-height: 28px;
+    display: inline-block
+}
+
+.join-list li label input {
+    width: 270px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+    color: #333;
+    background: #fff
+}
+
+.join-list li.joinAddress,
+.join-list li.joinIdentity {
+    height: 50px;
+    border: none;
+    padding: 0;
+    text-align: left
+}
+
+.join-list li.joinIdentity {
+    height: 40px
+}
+
+.join-list li.joinIdentity label {
+    height: 28px;
+    line-height: 28px;
+    margin-right: 20px
+}
+
+.join-list li.joinAddress label {
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #E1E1E1;
+    padding: 10px;
+    background: url(../images/index/chose.png) 95px center no-repeat;
+    background-size: 10px 10px
+}
+
+.joinAddress label.choseAddress select {
+    height: 28px;
+    line-height: 28px;
+    width: 94px;
+    border: none;
+    background: 0 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.joinIdentity label.choseIdentity input {
+    width: 18px;
+    float: left;
+    margin-right: 5px;
+    overflow: hidden
+}
+
+.join-list li.joinAddress span {
+    margin: 0 9px
+}
+
+.joinBtn {
+    margin-right: 0;
+    margin-top: 30px
+}
+
+.balloonsPre {
+    position: relative;
+    bottom: 30px;
+    left: 330px;
+    text-align: left
+}
+
+.balloons {
+    height: 14px;
+    line-height: 14px;
+    color: #fff;
+    padding: 13px 20px;
+    background: #FD5639;
+    border-radius: 3px
+}
+
+.balloons em {
+    display: block;
+    border-width: 6px;
+    position: absolute;
+    bottom: 8px;
+    left: -11px;
+    border-style: dashed solid dashed dashed;
+    border-color: transparent #FD5639 transparent transparent;
+    font-size: 0;
+    line-height: 0
+}
+
+/*add style clj*/
+.fyz_activity {
+    position: fixed;
+    display: none;
+    width: 197px;
+    height: 97px;
+    overflow: hidden;
+    top: 50%;
+    right: 10px;
+    margin: -50px 0 0 -100px
+}
+
+.fyz_activity a img {
+    display: inline-block;
+}
+
+.experDixiao {
+    width: auto;
+    background: none;
+    height: 70px;
+    line-height: 70px;
+}
+
+.nav-right {
+    float: right;
+}
+
+.nav-right li {
+    line-height: 70px;
+    height: 70px;
+    float: left;
+}
+
+.nav-right li a {
+    font-size: 16px;
+    font-weight: 400;
+    display: inline-block;
+    color: #333;
+    margin: 0px 10px
+}
+
+.nav-right li a:hover {
+    color: #008DD1
+}
+
+.nav-right a:active {
+    color: #008DD1
+}

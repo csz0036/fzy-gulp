@@ -59,6 +59,13 @@
 
     <script src="./js/jquery-1.9.1.min.js"></script>
     <script src="./js/basis.min.js"></script>
+    <script>
+        $(function () {
+            $(".join-type li").on('click', function () {
+                $(this).addClass('active').siblings('li').removeClass('active')
+            })
+        })
+    </script>
 </body>
 
 </html>
