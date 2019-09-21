@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name=keywords content=法智易,法智易合同管理系统,法务管理系统,智能合同系统,全生命周期合同系统,Saas合同系统,合同的风险防控>
+    <meta name=description content=法智易，以合同管理为核心，用智能化的手段，保证合同管理过程的合规、高效，实现合同审批、履约监控、合同评价的全生命周期管理，未来会扩展到法律事务领域的一体化智能管理。>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>法智易-智能合同管理系统-慧点科技法务领域专业品牌</title>
+    <link rel="stylesheet" href="./css/dataCentre.min.css">
+</head>
+
+<body>
+    <!--S header-->
+    @@include('./head.html',{ "index": "active" })
+
+    <!--E header-->
+
+    <!--S content-->
+    <div id="pageContent">
+        <div class="pageBanner">
+            <div class="bannerConten">
+                <div class="bc_left">
+                    <h3>合同数据中台</h3>
+                    <p class="subTitle">Contracts are strategic data assets</p>
+                    <p class="bc_p">连接与合同数据相关的各个业务系统，包括销售、采购、计划、项目、预算、资金和审计等，为企业经营的各个角色提供完整的数据支撑，并为企业决策者提供合同的全景图。</p>
+                    <p class="but">
+                        <span>预约演示<img src="./images/arrowRight-Blue.png" width="20" height="20" alt=""></span>
+                    </p>
+                </div>
+                <div class="bc_right"><img src="./images/dataCentre/banner-rt.png" alt="" width="460" height="350">
+                </div>
+            </div>
+        </div>
+
+        <div class="width_1028 content">
+            <h2 class="c_title">实现全集团多级次合同数据的及时获取和智能分析“一点落地、多点共享”。</h2>
+            <ul class="dataList">
+                <li>
+                    <img src="./images/dataCentre/icon-1.png" alt="" width="80" height="80">
+                    <p class="listTitle">合同管理</p>
+                    <p class="listCt">实现集团公司合同全生命周期的管理，并发布合同数据管理标准，促进全集团合同管控的数字化转型</p>
+                </li>
+                <li>
+                    <img src="./images/dataCentre/icon-2.png" alt="" width="80" height="80">
+                    <p class="listTitle">风险管控</p>
+                    <p class="listCt">加强数据资产管理，强化合同风险的管控水平，实现风险控制手段的纵向落实</p>
+                </li>
+                <li>
+                    <img src="./images/dataCentre/icon-3.png" alt="" width="80" height="80">
+                    <p class="listTitle">数据共享</p>
+                    <p class="listCt">运用人工智能技术，管理全集团的合同数据资产，搭建合同业务中台，并实现多级次的合同数据汇集和共享</p>
+                </li>
+                <li>
+                    <img src="./images/dataCentre/icon-4.png" alt="" width="80" height="80">
+                    <p class="listTitle">数据驱动</p>
+                    <p class="listCt">以合同数据为核心，关联合同相关的财务、投资、项目、风险等相关数据，以数据驱动经营决策和风险控制</p>
+                </li>
+            </ul>
+            <h3 class="title_2">解决方案</h3>
+            <p class="ban_2 margin-0-auot"><img src="./images/dataCentre/ban-1.png" alt="" width="926" height="427"></p>
+            <h3 class="title_3">合同数据贯穿于企业的整个经营过程，<br />需要和财务、项目、销售、采购、风控、审计和协同等各个领域的数据贯通</h3>
+            <p class="ban_3 margin-0-auot"><img src="./images/dataCentre/ban-2.png" alt="" width="922" height="252"></p>
+        </div>
+
+    </div>
+    <!--E content-->
+
+    <!--S footer-->
+    @@include('./foot.html')
+
+    <!--E footer-->
+    <script src="./js/jquery-1.9.1.min.js"></script>
+    <script src="./js/beas.min.js"></script>
+    <script>
+        $(function () {
+            $(".but > span").hover(function () {
+                $(this).find('img').stop().animate({
+                    'margin-left': "18px"
+                }, 300)
+            }, function () {
+                $(this).find('img').stop().animate({
+                    'margin-left': "10px"
+                }, 300)
+            })
+        })
+    </script>
+</body>
+
+</html>

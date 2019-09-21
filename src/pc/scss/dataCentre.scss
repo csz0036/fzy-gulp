@@ -1,0 +1,75 @@
+@import "./reset.scss";
+
+.c_title {
+    width: 660px;
+    height: 90px;
+    font-size: 30px;
+    font-family: PingFangSC-Light,
+        PingFangSC;
+    font-weight: 300;
+    color: rgba(91, 94, 95, 1);
+    line-height: 45px;
+    text-align: center;
+    margin: 100px auto 70px;
+}
+
+.dataList {
+    width: 100%;
+    overflow: auto;
+
+    li {
+        float: left;
+        text-align: center;
+        width: 206px;
+        margin-right: 68px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        img {
+            margin: 0 auto;
+        }
+
+        .listTitle {
+            font-size: 18px;
+            font-weight: 500;
+            color: rgba(91, 94, 95, 1);
+            margin: 20px 0 13px;
+        }
+
+        .listCt {
+            font-size: 14px;
+            font-weight: 300;
+            color: rgba(90, 103, 119, 1);
+            line-height: 30px;
+        }
+    }
+}
+
+.title_2 {
+    font-size: 30px;
+    font-weight: 300;
+    color: rgba(91, 94, 95, 1);
+    text-align: center;
+    margin: 100px auto 90px;
+}
+
+.ban_2 {
+    width: 926px
+}
+
+.title_3 {
+    font-size: 24px;
+    font-weight: 300;
+    color: rgba(90, 103, 119, 1);
+    line-height: 40px;
+    margin: 80px auto 60px;
+    width: 792px;
+    text-align: center
+}
+
+.ban_3 {
+    width: 922px;
+    margin-bottom: 90px
+}

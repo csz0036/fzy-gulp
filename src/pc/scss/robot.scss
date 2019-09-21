@@ -1,0 +1,476 @@
+@import "./reset.scss";
+
+.robotsction {
+    margin: 0px auto 0;
+    padding-bottom: 70px;
+    width: 1050px;
+    overflow: auto
+}
+
+.bannerRobot {
+    width: 100%;
+    height: 460px;
+    position: relative;
+    background: url(../images/robot/robot.jpg) top center no-repeat;
+    background-size: contain;
+}
+
+.bannerCon,
+.bannerCon2 {
+    width: 818px;
+    position: absolute;
+    top: 105px;
+    left: 50%;
+    margin-left: -409px;
+    text-align: center
+}
+
+.robotPerson {
+    width: 256px;
+    height: 119px;
+    background: url(../images/robot/robotperson.png) center center no-repeat;
+    background-size: cover;
+    display: inline-block;
+}
+
+.robotList {
+    width: 1050px;
+    margin: 85px auto 75px;
+    overflow: hidden;
+}
+
+.robotList ul {
+    margin-top: 60px;
+}
+
+.roboth2 {
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+.robotList ul li {
+    float: left;
+    margin: 0px 30px;
+    text-align: center;
+}
+
+.robotList ul li p {
+    width: 110px;
+    margin: 0px auto;
+}
+
+.robotList ul .list_one {
+    background: url(../images/robot/robot01.png) no-repeat;
+    background-size: cover;
+    width: 202px;
+    height: 202px;
+}
+
+.robotList ul .list_one p {
+    width: 100px;
+}
+
+.robotList ul .list_two {
+    background: url(../images/robot/robot02.png) no-repeat;
+    background-size: cover;
+    width: 202px;
+    height: 202px;
+}
+
+.robotList ul .list_two p {
+    width: 110px;
+}
+
+.robotList ul .list_thr {
+    background: url(../images/robot/robot03.png) no-repeat;
+    background-size: cover;
+    width: 202px;
+    height: 202px;
+}
+
+.robotList ul .list_thr p {
+    width: 100px;
+}
+
+.robotList ul .list_four {
+    background: url(../images/robot/robot04.png) no-repeat;
+    background-size: cover;
+    width: 202px;
+    height: 202px;
+}
+
+.robotList ul .list_four p {
+    width: 114px;
+}
+
+.robotList ul li h3 {
+    font-size: 20px;
+    line-height: 2;
+    margin-top: 60px;
+    font-weight: 400;
+}
+
+.robotList ul li p {
+    font-size: 14px;
+    line-height: 2;
+}
+
+.margintp2 {
+    margin: 40px 0 60px;
+}
+
+.robotbg1 {
+    background: #f6f7f9;
+}
+
+.robotbg2 {
+    background: #fff;
+}
+
+.borderbtbg {
+    border-bottom: 1px solid #DFDFDF;
+}
+
+.paddinbt0 {
+    padding-bottom: 0;
+}
+
+.robotIntro {
+    margin-top: 110px;
+}
+
+.robot1 {
+    width: 479px;
+    height: 303px;
+}
+
+.robot2 {
+    width: 422px;
+    height: 382px;
+}
+
+.robot3 {
+    width: 493px;
+    height: 330px;
+}
+
+.robot4 {
+    width: 468px;
+    height: 387px
+}
+
+.robot_pdtp90 {
+    padding-top: 90px;
+}
+
+.robotIntro3 {
+    width: 360px;
+}
+
+.info-list li .lab {
+    width: 100%;
+}
+
+.txt {
+    box-sizing: border-box;
+    width: 100%;
+    display: inline-block;
+}
+
+.arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+    border-style: solid dashed dashed dashed;
+    border-width: 6px 6px 0 6px;
+    border-color: #666 transparent transparent transparent;
+    position: absolute;
+    top: 15px;
+    right: 8px;
+}
+
+.select {
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    display: inline-block;
+    height: 38px;
+    text-align: left;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+li .error {
+    position: absolute;
+    left: 320px;
+    top: 0px;
+    width: 100%;
+    margin-right: 10px;
+    overflow: hidden;
+    display: none;
+}
+
+li .error em {
+    width: 20px;
+    height: 20px;
+    background: url(../images/robot/error.png) no-repeat;
+    background-size: 100% 100%;
+    margin-right: 10px;
+    margin-top: 10px;
+    float: left;
+}
+
+.Yzm_fixed {
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+}
+
+.Yzm_cont {
+    width: 450px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -65px 0 0 -240px;
+    padding: 30px 15px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.invite-right {
+    float: left;
+}
+
+.invite-left {
+    float: left;
+    width: 120px;
+    text-align: left;
+    font-size: 14px;
+    color: #666;
+    height: 30px;
+    line-height: 30px;
+}
+
+.invite-right input {
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #ccc;
+}
+
+.invite-right img {
+    width: 86px;
+    height: 30px;
+    margin: 1px 25px;
+}
+
+.invite-right .red {
+    color: #f00;
+}
+
+.invite-right.tip {
+    color: #666;
+}
+
+.invite-foot {
+    width: 100%;
+    float: left;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.Yzm_cont .lef_btn {
+    padding: 5px 25px;
+    background: #008DD1;
+    margin: 0px 15px;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.Yzm_cont .bg_lef_btn {
+    background: #ccc;
+    color: #000;
+}
+
+.margintp10 {
+    margin: 10px 0 0;
+}
+
+.info-list li .smswrap input {
+    border: none 0;
+    line-height: 18px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.smswrap a.getauth {
+    background: #fff;
+    display: block;
+    width: 70px;
+    padding-left: 15px;
+    border-left: 1px solid #ccc;
+    color: #999;
+    text-align: center;
+    float: right;
+}
+
+.smswrap .authcode {
+    background: #fff;
+    margin: 0 160px 0 0;
+}
+
+.smswrap .authcode input {
+    border: none 0;
+    line-height: 18px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.smswrap a:hover {
+    color: #29e;
+}
+
+.zn_person {
+    background: url(../images/robot/robot_btn.png) no-repeat;
+    width: 94px;
+    height: 42px;
+    background-size: cover;
+    position: absolute;
+    top: 8px;
+    left: 55%;
+    margin-left: 85px;
+}
+
+.zn_person:hover {
+    background: url(../images/robot/robot_btnhover.png) no-repeat;
+    width: 94px;
+    height: 42px;
+    background-size: cover;
+}
+
+.bannerCon h1,
+.bannerCon2 h1 {
+    font-size: 40px;
+    color: #fff;
+    font-weight: 300
+}
+
+.bannerCon p {
+    width: 588px;
+    margin: 25px auto 45px;
+    color: #fff;
+    line-height: 28px;
+    letter-spacing: 1px;
+}
+
+.productCon,
+.productCon2 {
+    background: #f6f7f9;
+    margin: 0 auto;
+    padding: 75px 0;
+}
+
+.productIntro {
+    padding-top: 130px
+}
+
+.productIntro h2 {
+    font-size: 30px;
+    color: #5B5E5F;
+    line-height: 40px
+}
+
+.productIntro span {
+    color: #EE6723;
+}
+
+.productIntro ul {
+    margin-top: 20px
+}
+
+.productIntro ul li {
+    font-size: 16px;
+    line-height: 30px
+}
+
+.productIntro2 {
+    padding-top: 60px;
+    margin-right: 45px
+}
+
+.productIntro2 h2,
+.productIntro3 h2 {
+    width: 300px
+}
+
+.productIntro2 ul {
+    width: 410px
+}
+
+.product2 {
+    width: 541px;
+    height: 399px
+}
+
+.productIntro3 {
+    width: 330px;
+    margin-right: 90px
+}
+
+.productIntro4 {
+    padding-top: 100px
+}
+
+.productIntro4 h2 {
+    width: 360px
+}
+
+.productIntro5 {
+    width: 390px;
+    padding-top: 70px;
+    margin-right: 70px
+}
+
+.fl {
+    float: left;
+}
+
+.robot1 {
+    width: 479px;
+    height: 303px;
+}
+
+.robot2 {
+    width: 422px;
+    height: 382px;
+}
+
+.robot3 {
+    width: 493px;
+    height: 330px;
+}
+
+.robot4 {
+    width: 468px;
+    height: 387px
+}
+
+.padLeft60 {
+    padding-left: 60px;
+}

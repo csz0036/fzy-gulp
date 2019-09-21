@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name=keywords content=法智易,法智易合同管理系统,法务管理系统,智能合同系统,全生命周期合同系统,Saas合同系统,合同的风险防控>
+    <meta name=description content=法智易，以合同管理为核心，用智能化的手段，保证合同管理过程的合规、高效，实现合同审批、履约监控、合同评价的全生命周期管理，未来会扩展到法律事务领域的一体化智能管理。>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>法智易-智能合同管理系统-慧点科技法务领域专业品牌</title>
+    <link rel="stylesheet" href="./css/dataCentre.min.css">
+    <link rel="stylesheet" href="./css/infoConsult.min.css">
+</head>
+
+<body>
+    <!--S header-->
+    @@include('./head.html',{ "index": "active" })
+
+    <!--E header-->
+
+    <!--S content-->
+    <div id="pageContent">
+        <div class="pageBanner">
+            <div class="bannerConten">
+                <div class="bc_left">
+                    <h3>合同信息化咨询</h3>
+                    <p class="subTitle">Contract Informatization Consulting</p>
+                    <p class="bc_p">对标500强企业及行业百强企业的合同管理信息化实践，规划业务蓝图、技术蓝图及演进路径。</p>
+                    <p class="but">
+                        <span>预约演示<img src="./images/arrowRight-Blue.png" width="20" height="20" alt=""></span>
+                    </p>
+                </div>
+                <div class="bc_right"><img src="./images/infoConsult/banner.png" alt="" width="460" height="350">
+                </div>
+            </div>
+        </div>
+
+        <div class="width_1028 content">
+            <ul class="dataList" id="dataListInfo">
+                <li>
+                    <img src="./images/infoConsult/icon-1.png" alt="" width="80" height="80">
+                    <p class="listTitle">管控模式</p>
+                    <p class="listCt">合同管理分散，碎片化管理，包括合同分类、合同管理职责、合同管理流程及合同授权体系</p>
+                </li>
+                <li>
+                    <img src="./images/infoConsult/icon-2.png" alt="" width="80" height="80">
+                    <p class="listTitle">合规审查</p>
+                    <p class="listCt">审查程序流于形式，无法有效识别防范相关风险</p>
+                </li>
+                <li>
+                    <img src="./images/infoConsult/icon-3.png" alt="" width="80" height="80">
+                    <p class="listTitle">履约监督</p>
+                    <p class="listCt">缺少过程管控，风险被动应对</p>
+                </li>
+                <li>
+                    <img src="./images/infoConsult/icon-4.png" alt="" width="80" height="80">
+                    <p class="listTitle">数据利用</p>
+                    <p class="listCt">挖掘利用程度不够，难以有效服务经营决策</p>
+                </li>
+            </ul>
+            <h3 class="title_2">解决方案</h3>
+            <p class="ban_2 margin-0-auot"><img src="./images/infoConsult/img-1.png" alt="" width="961" height="522">
+            </p>
+        </div>
+
+    </div>
+    <!--E content-->
+
+    <!--S footer-->
+    @@include('./foot.html')
+
+    <!--E footer-->
+    <script src="./js/jquery-1.9.1.min.js"></script>
+    <script src="./js/beas.min.js"></script>
+    <script>
+        $(function () {
+            $(".but > span").hover(function () {
+                $(this).find('img').stop().animate({
+                    'margin-left': "18px"
+                }, 300)
+            }, function () {
+                $(this).find('img').stop().animate({
+                    'margin-left': "10px"
+                }, 300)
+            })
+        })
+    </script>
+</body>
+
+</html>

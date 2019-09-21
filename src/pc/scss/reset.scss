@@ -104,6 +104,33 @@ h5 {
   width: 1200px;
 }
 
+.width_1028 {
+  width: 1028px;
+  margin: 0 auto
+}
+
+.margin-0-auot {
+  margin: 0 auto;
+}
+
+.width100 {
+  width: 100%;
+  overflow: auto
+}
+
+.width960 {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.bg_fff {
+  background-color: #fff;
+}
+
+.bg_f1 {
+  background-color: #F1F3F7
+}
+
 // 头部
 header {
   width: 100%;
@@ -117,6 +144,47 @@ header {
   align-items: center;
   margin: auto;
 }
+
+#productNavList {
+  position: absolute;
+  width: 230px;
+  height: 357px;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 5px 15px 0px rgba(95, 122, 140, 0.3);
+  border-radius: 8px;
+  display: none;
+  top: 60px;
+  z-index: 11;
+  left: -26px;
+
+  .h {
+    width: 170px;
+    height: 1px;
+    background: rgba(216, 216, 216, 1);
+    margin: 28px auto 0;
+    display: block;
+  }
+
+  a {
+    display: block;
+    font-size: 14px;
+    padding: 20px 0 0 30px;
+    height: 30px;
+    line-height: 30px;
+
+    .navImg {
+      padding-right: 10px;
+
+      img {
+        width: 22px;
+        height: 22px;
+        position: relative;
+        top: 5px;
+      }
+    }
+  }
+}
+
 
 .header-top {
   height: 44px;
@@ -193,7 +261,8 @@ header {
 
 .nav-list li {
   height: 70px;
-  margin-right: 62px;
+  padding-right: 62px;
+  position: relative;
 
   &:last-child {
     margin-right: 62px;
@@ -233,8 +302,7 @@ header {
 
 .zn_person {
   align-self: flex-start;
-  background: url("../images/index/header-main-robot.png") no-repeat center
-    center;
+  background: url("../images/index/header-main-robot.png") no-repeat center center;
   width: 96px;
   height: 45px;
   margin-top: 8px;
@@ -254,6 +322,81 @@ header {
   letter-spacing: 0;
   text-align: center;
   padding-top: 20px;
+}
+
+// 页面头部banner
+.pageBanner {
+  width: 100%;
+  height: 412px;
+  background: url(../images/contract/bannerBg.png) center center no-repeat;
+  // background-size: 1440px;
+  background-size: 100%;
+}
+
+.but {
+  span {
+    display: inline-block;
+    width: 180px;
+    height: 60px;
+    background-color: #fff;
+    color: #0095FB;
+    font-size: 22px;
+    box-shadow: 0px 3px 6px 0px rgba(121, 121, 121, 0.4);
+    border-radius: 6px;
+    line-height: 60px;
+    padding-left: 30px;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    img {
+      margin-left: 10px;
+    }
+  }
+}
+
+.bannerConten {
+  display: flex;
+  width: 990px;
+  margin: 0 auto;
+  align-items: center;
+  height: 412px;
+
+  .bc_left {
+    width: 566px;
+    height: 282px;
+
+    h3 {
+      height: 40px;
+      font-size: 40px;
+      font-family: PingFangSC-Light,
+        PingFangSC;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 1);
+      line-height: 40px
+    }
+
+    .subTitle {
+      height: 22px;
+      font-size: 19px;
+      font-family: PingFangSC-Thin,
+        PingFangSC;
+      font-weight: 100;
+      color: rgba(255, 255, 255, .5);
+      line-height: 22px;
+      letter-spacing: 1px;
+      margin: 10px 0 25px;
+    }
+
+    .bc_p {
+      font-size: 14px;
+      font-family: PingFangSC-Light,
+        PingFangSC;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 1);
+      line-height: 28px;
+      margin-bottom: 40px;
+    }
+  }
 }
 
 // footer
@@ -389,7 +532,7 @@ header {
   float: left;
 }
 
-.swiper-container-vertical > .swiper-wrapper {
+.swiper-container-vertical>.swiper-wrapper {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -421,13 +564,13 @@ header {
   transform: translate3d(0, 0, 0);
 }
 
-.swiper-container-multirow > .swiper-wrapper {
+.swiper-container-multirow>.swiper-wrapper {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-.swiper-container-free-mode > .swiper-wrapper {
+.swiper-container-free-mode>.swiper-wrapper {
   -webkit-transition-timing-function: ease-out;
   -o-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
@@ -499,113 +642,81 @@ header {
 }
 
 .swiper-container-3d .swiper-slide-shadow-left {
-  background-image: -webkit-gradient(
-    linear,
-    right top,
-    left top,
-    from(rgba(0, 0, 0, 0.5)),
-    to(rgba(0, 0, 0, 0))
-  );
-  background-image: -webkit-linear-gradient(
-    right,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0)
-  );
-  background-image: -o-linear-gradient(
-    right,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0)
-  );
-  background-image: linear-gradient(
-    to left,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0)
-  );
+  background-image: -webkit-gradient(linear,
+      right top,
+      left top,
+      from(rgba(0, 0, 0, 0.5)),
+      to(rgba(0, 0, 0, 0)));
+  background-image: -webkit-linear-gradient(right,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0));
+  background-image: -o-linear-gradient(right,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to left,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0));
 }
 
 .swiper-container-3d .swiper-slide-shadow-right {
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(rgba(0, 0, 0, 0.5)),
-    to(rgba(0, 0, 0, 0))
-  );
-  background-image: -webkit-linear-gradient(
-    left,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0)
-  );
-  background-image: -o-linear-gradient(
-    left,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0)
-  );
-  background-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0)
-  );
+  background-image: -webkit-gradient(linear,
+      left top,
+      right top,
+      from(rgba(0, 0, 0, 0.5)),
+      to(rgba(0, 0, 0, 0)));
+  background-image: -webkit-linear-gradient(left,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0));
+  background-image: -o-linear-gradient(left,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to right,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0));
 }
 
 .swiper-container-3d .swiper-slide-shadow-top {
-  background-image: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    from(rgba(0, 0, 0, 0.5)),
-    to(rgba(0, 0, 0, 0))
-  );
-  background-image: -webkit-linear-gradient(
-    bottom,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0)
-  );
-  background-image: -o-linear-gradient(
-    bottom,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0)
-  );
-  background-image: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0)
-  );
+  background-image: -webkit-gradient(linear,
+      left bottom,
+      left top,
+      from(rgba(0, 0, 0, 0.5)),
+      to(rgba(0, 0, 0, 0)));
+  background-image: -webkit-linear-gradient(bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0));
+  background-image: -o-linear-gradient(bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to top,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0));
 }
 
 .swiper-container-3d .swiper-slide-shadow-bottom {
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(rgba(0, 0, 0, 0.5)),
-    to(rgba(0, 0, 0, 0))
-  );
-  background-image: -webkit-linear-gradient(
-    top,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0)
-  );
-  background-image: -o-linear-gradient(
-    top,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0)
-  );
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0)
-  );
+  background-image: -webkit-gradient(linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.5)),
+      to(rgba(0, 0, 0, 0)));
+  background-image: -webkit-linear-gradient(top,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0));
+  background-image: -o-linear-gradient(top,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0));
 }
 
 .swiper-container-wp8-horizontal,
-.swiper-container-wp8-horizontal > .swiper-wrapper {
+.swiper-container-wp8-horizontal>.swiper-wrapper {
   -ms-touch-action: pan-y;
   touch-action: pan-y;
 }
 
 .swiper-container-wp8-vertical,
-.swiper-container-wp8-vertical > .swiper-wrapper {
+.swiper-container-wp8-vertical>.swiper-wrapper {
   -ms-touch-action: pan-x;
   touch-action: pan-x;
 }
@@ -684,7 +795,7 @@ header {
   opacity: 0;
 }
 
-.swiper-container-horizontal > .swiper-pagination-bullets,
+.swiper-container-horizontal>.swiper-pagination-bullets,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
   bottom: 10px;
@@ -769,22 +880,19 @@ button.swiper-pagination-bullet {
   background: #007aff;
 }
 
-.swiper-container-vertical > .swiper-pagination-bullets {
+.swiper-container-vertical>.swiper-pagination-bullets {
   right: 10px;
   top: 50%;
   -webkit-transform: translate3d(0, -50%, 0);
   transform: translate3d(0, -50%, 0);
 }
 
-.swiper-container-vertical
-  > .swiper-pagination-bullets
-  .swiper-pagination-bullet {
+.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 6px 0;
   display: block;
 }
 
-.swiper-container-vertical
-  > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+.swiper-container-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -792,9 +900,7 @@ button.swiper-pagination-bullet {
   width: 8px;
 }
 
-.swiper-container-vertical
-  > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic
-  .swiper-pagination-bullet {
+.swiper-container-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
   display: inline-block;
   -webkit-transition: 0.2s top, 0.2s -webkit-transform;
   transition: 0.2s top, 0.2s -webkit-transform;
@@ -803,14 +909,11 @@ button.swiper-pagination-bullet {
   transition: 0.2s transform, 0.2s top, 0.2s -webkit-transform;
 }
 
-.swiper-container-horizontal
-  > .swiper-pagination-bullets
-  .swiper-pagination-bullet {
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 4px;
 }
 
-.swiper-container-horizontal
-  > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+.swiper-container-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
   left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -818,9 +921,7 @@ button.swiper-pagination-bullet {
   white-space: nowrap;
 }
 
-.swiper-container-horizontal
-  > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic
-  .swiper-pagination-bullet {
+.swiper-container-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
   -webkit-transition: 0.2s left, 0.2s -webkit-transform;
   transition: 0.2s left, 0.2s -webkit-transform;
   -o-transition: 0.2s transform, 0.2s left;
@@ -828,9 +929,7 @@ button.swiper-pagination-bullet {
   transition: 0.2s transform, 0.2s left, 0.2s -webkit-transform;
 }
 
-.swiper-container-horizontal.swiper-container-rtl
-  > .swiper-pagination-bullets-dynamic
-  .swiper-pagination-bullet {
+.swiper-container-horizontal.swiper-container-rtl>.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
   -webkit-transition: 0.2s right, 0.2s -webkit-transform;
   transition: 0.2s right, 0.2s -webkit-transform;
   -o-transition: 0.2s transform, 0.2s right;
@@ -858,26 +957,22 @@ button.swiper-pagination-bullet {
   transform-origin: left top;
 }
 
-.swiper-container-rtl
-  .swiper-pagination-progressbar
-  .swiper-pagination-progressbar-fill {
+.swiper-container-rtl .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
   -webkit-transform-origin: right top;
   -ms-transform-origin: right top;
   transform-origin: right top;
 }
 
-.swiper-container-horizontal > .swiper-pagination-progressbar,
-.swiper-container-vertical
-  > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+.swiper-container-horizontal>.swiper-pagination-progressbar,
+.swiper-container-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
   width: 100%;
   height: 4px;
   left: 0;
   top: 0;
 }
 
-.swiper-container-horizontal
-  > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite,
-.swiper-container-vertical > .swiper-pagination-progressbar {
+.swiper-container-horizontal>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite,
+.swiper-container-vertical>.swiper-pagination-progressbar {
   width: 4px;
   height: 100%;
   left: 0;
@@ -892,8 +987,7 @@ button.swiper-pagination-bullet {
   background: rgba(255, 255, 255, 0.25);
 }
 
-.swiper-pagination-progressbar.swiper-pagination-white
-  .swiper-pagination-progressbar-fill {
+.swiper-pagination-progressbar.swiper-pagination-white .swiper-pagination-progressbar-fill {
   background: #fff;
 }
 
@@ -905,8 +999,7 @@ button.swiper-pagination-bullet {
   background: rgba(0, 0, 0, 0.25);
 }
 
-.swiper-pagination-progressbar.swiper-pagination-black
-  .swiper-pagination-progressbar-fill {
+.swiper-pagination-progressbar.swiper-pagination-black .swiper-pagination-progressbar-fill {
   background: #000;
 }
 
@@ -921,7 +1014,7 @@ button.swiper-pagination-bullet {
   background: rgba(0, 0, 0, 0.1);
 }
 
-.swiper-container-horizontal > .swiper-scrollbar {
+.swiper-container-horizontal>.swiper-scrollbar {
   position: absolute;
   left: 1%;
   bottom: 3px;
@@ -930,7 +1023,7 @@ button.swiper-pagination-bullet {
   width: 98%;
 }
 
-.swiper-container-vertical > .swiper-scrollbar {
+.swiper-container-vertical>.swiper-scrollbar {
   position: absolute;
   right: 3px;
   top: 1%;
@@ -975,9 +1068,9 @@ button.swiper-pagination-bullet {
   text-align: center;
 }
 
-.swiper-zoom-container > canvas,
-.swiper-zoom-container > img,
-.swiper-zoom-container > svg {
+.swiper-zoom-container>canvas,
+.swiper-zoom-container>img,
+.swiper-zoom-container>svg {
   max-width: 100%;
   max-height: 100%;
   -o-object-fit: contain;
@@ -1098,7 +1191,7 @@ button.swiper-pagination-bullet {
 
 .swiper-container-cube .swiper-slide-active,
 .swiper-container-cube .swiper-slide-next,
-.swiper-container-cube .swiper-slide-next + .swiper-slide,
+.swiper-container-cube .swiper-slide-next+.swiper-slide,
 .swiper-container-cube .swiper-slide-prev {
   pointer-events: auto;
   visibility: visible;
