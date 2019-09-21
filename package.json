@@ -21,7 +21,7 @@
     "babel-preset-es2015": "^6.24.1",
     "browser-sync": "^2.26.3",
     "del": "^5.0.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-babel": "^7.0.1",
     "gulp-file-include": "^2.1.0",
@@ -31,6 +31,9 @@
     "gulp-processhtml": "^1.2.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
-    "gulp-uglify": "^3.0.1"
+    "gulp-tinypng-nokey": "^1.1.0",
+    "gulp-uglify": "^3.0.1",
+    "gulp-watch": "^5.0.1",
+    "pump": "^3.0.0"
   }
 }
