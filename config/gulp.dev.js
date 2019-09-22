@@ -41,7 +41,7 @@ gulp.task('scripts', function (done) {
 
 /* 编译scss 自动补全前缀 */
 gulp.task('style', function (done) {
-    return gulp.src(path.css.dev)
+    gulp.src(path.css.dev)
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({
             overrideBrowserslist: ['last 2 versions', 'safari 5', 'opera 12.1', 'ios 6', 'android 4']
@@ -79,18 +79,23 @@ gulp.task('html', function (done) {
     done()
 });
 
-//series里的任务是顺序执行的，parallel里的任务是同时执行的。
-gulp.task('serve', gulp.series('clean', gulp.parallel('scripts', 'style', 'image', 'html'), function () {
+gulp.task('serve', function (done) {
     browsersync.init({
         port: 3000,
         server: {
-            baseDir: ['../dist/' + nodeEvn]
+            baseDir: ['../dist/' + nodeEvn],
+            index: 'index.html'
         }
     });
     watch(path.css.dev, gulp.series('style'));
     watch(path.js.dev, gulp.series('scripts'));
     watch(path.image.dev, gulp.series('image'));
     watch(path.html.dev, gulp.series('html'));
-}));
+    done()
+})
 
-gulp.task('default', gulp.series('serve'));
+//series里的任务是顺序执行的，parallel里的任务是同时执行的。
+// gulp.task('default', gulp.series('clean', gulp.parallel('scripts', 'style', 'image', 'html'), 'serve'));
+gulp.task('default', gulp.series(gulp.parallel('scripts', 'style', 'image', 'html'), 'serve'));
+
+// gulp.task('default', gulp.series('serve'));

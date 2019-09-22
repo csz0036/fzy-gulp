@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name=keywords content=法智易,法智易合同管理系统,法务管理系统,智能合同系统,全生命周期合同系统,Saas合同系统,合同的风险防控>
+    <meta name=description content=法智易，以合同管理为核心，用智能化的手段，保证合同管理过程的合规、高效，实现合同审批、履约监控、合同评价的全生命周期管理，未来会扩展到法律事务领域的一体化智能管理。>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>法智易-智能合同管理系统-慧点科技法务领域专业品牌</title>
+    <link rel="stylesheet" href="./css/purchase.min.css">
+</head>
+
+<body>
+    <!--S header-->
+    @@include('./head.html',{ "index": "active" })
+
+    <!--E header-->
+
+    <!--S content-->
+    <div id="pageContent">
+        <div class="pageBanner">
+            <div class="bannerConten">
+                <div class="bc_left">
+                    <h3>集中采购管理</h3>
+                    <p class="subTitle">Bidding and Procurement Management</p>
+                    <p class="bc_p">建立统一的采购相关流程和数据的标准，保障所有的采购过程阳光透明，并能够进行数据追溯和分析。</p>
+                    <p class="but">
+                        <span>预约演示<img src="./images/arrowRight-Blue.png" width="20" height="20" alt=""></span>
+                    </p>
+                </div>
+                <div class="bc_right"><img src="./images/purchase/banner.png" alt="" width="463" height="293">
+                </div>
+            </div>
+        </div>
+
+        <div class="img_1"><img src="./images/purchase/img-1.png" width="894" height="425" alt=""></div>
+        <div class="width100 purList">
+            <div class="purListContent">
+                <ul id="plLeft">
+                    <li class="plTitle">职能转换</li>
+                    <li class="plTitle active">降低成本</li>
+                    <li class="plTitle">供方管理</li>
+                    <li class="plTitle">数据管理</li>
+                    <li class="plTitle">效率提成</li>
+                </ul>
+                <div id="plRight">
+                    <div class="plText">
+                        <p class="plTextTitle">降低成本1</p>
+                        <div class="plTextCentre">
+                            <p>如何高效协同内部采购人员和外部供应商、代理商在统一的工作平台上工作，避免重复沟通？</p>
+                            <p>如何实现线上采购、线上签约，减少数据重复录入，分散管理的成本？</p>
+                        </div>
+                    </div>
+                    <div class="plText active">
+                        <p class="plTextTitle">降低成本2</p>
+                        <div class="plTextCentre">
+                            <p>如何高效协同内部采购人员和外部供应商、代理商在统一的工作平台上工作，避免重复沟通？</p>
+                            <p>如何实现线上采购、线上签约，减少数据重复录入，分散管理的成本？</p>
+                        </div>
+                    </div>
+                    <div class="plText">
+                        <p class="plTextTitle">降低成本3</p>
+                        <div class="plTextCentre">
+                            <p>如何高效协同内部采购人员和外部供应商、代理商在统一的工作平台上工作，避免重复沟通？</p>
+                            <p>如何实现线上采购、线上签约，减少数据重复录入，分散管理的成本？</p>
+                        </div>
+                    </div>
+                    <div class="plText">
+                        <p class="plTextTitle">降低成本4</p>
+                        <div class="plTextCentre">
+                            <p>如何高效协同内部采购人员和外部供应商、代理商在统一的工作平台上工作，避免重复沟通？</p>
+                            <p>如何实现线上采购、线上签约，减少数据重复录入，分散管理的成本？</p>
+                        </div>
+                    </div>
+                    <div class="plText">
+                        <p class="plTextTitle">降低成本5</p>
+                        <div class="plTextCentre">
+                            <p>如何高效协同内部采购人员和外部供应商、代理商在统一的工作平台上工作，避免重复沟通？</p>
+                            <p>如何实现线上采购、线上签约，减少数据重复录入，分散管理的成本？</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="width100 purC">
+            <p class="pur_p_1">高效、高质、规范的统一采购信息系统平台，支撑公司纳入集中采购目录内所有项目的采购工作开展</p>
+            <img src="./images/purchase/img-2.png" width="943" height="338" alt="">
+            <p class="pur_p_1">集中采购管理平台面向供应商、代理机构、业务部门以及采购管理部门，统一的多方协同、规范管理工作平台，所有数据和流程可管理、可追溯。</p>
+            <img src="./images/purchase/img-3.png" width="860" height="518" alt="">
+        </div>
+    </div>
+    <!--E content-->
+
+    <!--S footer-->
+    @@include('./foot.html')
+
+    <!--E footer-->
+    <script src="./js/jquery-1.9.1.min.js"></script>
+    <script src="./js/beas.min.js"></script>
+    <script>
+        $(function () {
+            $(".but > span").hover(function () {
+                $(this).find('img').stop().animate({
+                    'margin-left': "18px"
+                }, 300)
+            }, function () {
+                $(this).find('img').stop().animate({
+                    'margin-left': "10px"
+                }, 300)
+            });
+
+            $("#plLeft > .plTitle").on('click', function () {
+                $(this).addClass('active').siblings().removeClass('active');
+                // $(this).index()
+                $("#plRight > .plText").eq($(this).index()).addClass('active').siblings().removeClass(
+                    'active');
+            })
+
+        })
+    </script>
+</body>
+
+</html>

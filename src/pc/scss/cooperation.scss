@@ -1,0 +1,122 @@
+@import './reset.scss';
+
+.coopCentre {
+    background: rgba(241, 243, 247, 1);
+    color: rgba(91, 94, 95, 1);
+
+    .tl {
+        text-align: center;
+        font-size: 30px;
+        padding: 100px 0 80px;
+    }
+
+    .list {
+        width: 960px;
+        margin: 0 auto;
+        overflow: auto;
+
+        li {
+            float: left;
+            margin: 0 40px 40px 0;
+            width: 460px;
+            height: 300px;
+
+            &:nth-child(2n) {
+                margin-right: 0
+            }
+
+            .had {
+                height: 100px;
+                color: #fff;
+                padding: 21px 0 0 40px;
+                box-sizing: border-box;
+                position: relative;
+
+                .tit {
+                    font-size: 26px;
+                    font-weight: 500;
+                }
+
+                .egh {
+                    font-size: 18px;
+                    font-family: PingFangSC-Regular,
+                        PingFangSC;
+                    font-weight: 400;
+                    color: rgba(253, 253, 253, .5);
+                    text-transform: uppercase;
+                }
+
+                .icon {
+                    background: url(../images/cooperation/icon-1.png) bottom right no-repeat;
+                    background-size: 85px;
+                    position: absolute;
+                    width: 103px;
+                    height: 82px;
+                    bottom: 0;
+                    right: 10px;
+                }
+            }
+
+            .listC {
+                background-color: #fff;
+                height: 200px;
+                padding: 25px 40px;
+                box-sizing: border-box;
+                font-size: 14px;
+                line-height: 28px;
+            }
+
+            .had_1 {
+                background: linear-gradient(270deg, rgba(86, 164, 255, 1) 0%, rgba(57, 154, 255, 1) 100%);
+
+                .icon {
+                    background-image: url(../images/cooperation/icon-1.png)
+                }
+            }
+
+            .had_2 {
+                background: linear-gradient(90deg, rgba(36, 203, 141, 1) 0%, rgba(52, 230, 164, 1) 100%);
+
+                .icon {
+                    background-image: url(../images/cooperation/icon-2.png)
+                }
+            }
+
+            .had_3 {
+                background: linear-gradient(90deg, rgba(129, 100, 251, 1) 0%, rgba(147, 121, 255, 1) 100%);
+
+                .icon {
+                    background-image: url(../images/cooperation/icon-3.png)
+                }
+            }
+
+            .had_4 {
+                background: linear-gradient(270deg, rgba(233, 211, 171, 1) 0%, rgba(208, 177, 117, 1) 100%);
+
+                .icon {
+                    background-image: url(../images/cooperation/icon-4.png)
+                }
+            }
+        }
+    }
+}
+
+.but {
+    width: 268px;
+    height: 62px;
+    background: linear-gradient(121deg, rgba(0, 102, 204, 1) 0%, rgba(0, 153, 255, 1) 100%);
+    box-shadow: 0px 3px 6px 0px rgba(121, 121, 121, 0.4);
+    border-radius: 6px;
+    margin: 60px auto 90px;
+    color: #fff;
+    font-size: 22px;
+    line-height: 62px;
+    position: relative;
+    padding-left: 35px;
+
+    img {
+        position: relative;
+        top: 3px;
+        margin-left: 10px;
+    }
+}
