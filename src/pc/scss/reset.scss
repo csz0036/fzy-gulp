@@ -145,6 +145,31 @@ header {
   margin: auto;
 }
 
+#resourceList {
+  width: 116px;
+  height: 177px;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 5px 15px 0px rgba(95, 122, 140, 0.3);
+  border-radius: 8px;
+  position: absolute;
+  top: 60px;
+  z-index: 11;
+  left: -26px;
+  display: none;
+
+  a {
+    height: 60px;
+    font-size: 14px;
+    font-family: PingFangSC-Regular,
+      PingFangSC;
+    font-weight: 400;
+    color: rgba(110, 130, 153, 1);
+    line-height: 60px;
+    display: block;
+    text-align: center;
+  }
+}
+
 #productNavList {
   position: absolute;
   width: 230px;
@@ -495,6 +520,13 @@ header {
           width: 120px;
           height: 120px;
         }
+
+        a:hover,
+        a:link,
+        a:visited,
+        a:active {
+          color: #fff
+        }
       }
     }
 
@@ -623,12 +655,10 @@ header {
     .consult,
     .tel {
       position: absolute;
-      right: 60px;
+      right: 50px;
       bottom: 3px;
       width: 128px;
       height: 48px;
-      background: rgba(255, 255, 255, 1);
-      border: 1px solid rgba(227, 229, 232, 1);
       line-height: 48px;
       text-align: center;
       font-size: 18px;
@@ -642,6 +672,10 @@ header {
     .listImg {
       width: 48px;
       height: 48px;
+    }
+
+    &#return_top {
+      cursor: pointer;
     }
   }
 }

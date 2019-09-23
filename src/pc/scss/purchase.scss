@@ -39,8 +39,11 @@
         }
 
         #plRight {
+            flex: 1;
+
             .plText {
                 display: none;
+                height: 200px;
 
                 &.active {
                     display: block
