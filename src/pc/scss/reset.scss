@@ -593,3 +593,55 @@ header {
 .padCT {
   padding: 30px 0 90px;
 }
+
+//悬浮
+#suspended {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+
+  li {
+    margin-bottom: 4px;
+    position: relative;
+
+    &.showEWM:hover .ewm {
+      display: block
+    }
+
+    .ewm {
+      position: absolute;
+      right: 60px;
+      bottom: 0;
+      display: none
+    }
+
+    &.lineConsult:hover .consult,
+    &.telCall:hover .tel {
+      display: block
+    }
+
+    .consult,
+    .tel {
+      position: absolute;
+      right: 60px;
+      bottom: 3px;
+      width: 128px;
+      height: 48px;
+      background: rgba(255, 255, 255, 1);
+      border: 1px solid rgba(227, 229, 232, 1);
+      line-height: 48px;
+      text-align: center;
+      font-size: 18px;
+      display: none;
+    }
+
+    .tel {
+      width: 178px;
+    }
+
+    .listImg {
+      width: 48px;
+      height: 48px;
+    }
+  }
+}
