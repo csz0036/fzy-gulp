@@ -38,6 +38,7 @@
             font-size: 14px;
             color: rgba(119, 136, 156, 1);
         }
+
     }
 }
 
@@ -133,7 +134,7 @@
 .step2List {
     width: 960px;
     margin: 60px auto 100px;
-    overflow: auto;
+    height: 340px;
 
     li {
         width: 240px;
@@ -143,6 +144,7 @@
         box-sizing: border-box;
         padding: 35px 30px 0;
         box-shadow: inset 5px 0 12px -4px rgba(0, 0, 0, .2);
+        position: relative;
 
         .s2Title {
             font-size: 18px;
@@ -162,7 +164,33 @@
         }
 
         &:first-child {
-            box-shadow: none
+            box-shadow: none;
+            z-index: 5;
+        }
+
+        &:nth-child(2) {
+            z-index: 4;
+        }
+
+        &:nth-child(3) {
+            z-index: 3;
+        }
+
+        &:nth-child(4) {
+            &::after {
+                display: none
+            }
+        }
+
+        &::after {
+            width: 60px;
+            height: 60px;
+            content: '';
+            background: url(../images/affair/arrows-rt.png) center center no-repeat;
+            position: absolute;
+            right: -30px;
+            top: 50%;
+            margin-top: -30px;
         }
     }
 }

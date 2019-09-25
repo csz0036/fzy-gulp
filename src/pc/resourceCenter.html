@@ -25,21 +25,24 @@
                     <h3>公司新闻</h3>
                     <p class="bc_p">法智易合同管理产品是北京慧点科技在合同管理领域推出的专业产品，它专注服务企业法务部门，围绕企业合同管理，运用智能化技术，帮助企业促成交易，防控法律风险。</p>
                     <p class="but">
-                        <span>预约演示<img src="./images/arrowRight-Blue.png" width="20" height="20" alt=""></span>
+                        <a href="/applyLoding.html" target="_blank">预约演示<img src="./images/arrowRight-Blue.png"
+                                width="20" height="20" alt=""></a>
                     </p>
                 </div>
                 <div class="bc_left bannerCentre_1">
                     <h3>专业分析</h3>
                     <p class="bc_p">法智易合同管理产品是北京慧点科技在合同管理领域推出的专业产品，它专注服务企业法务部门，围绕企业合同管理，运用智能化技术，帮助企业促成交易，防控法律风险。</p>
                     <p class="but">
-                        <span>预约演示<img src="./images/arrowRight-Blue.png" width="20" height="20" alt=""></span>
+                        <a href="/applyLoding.html" target="_blank">预约演示<img src="./images/arrowRight-Blue.png"
+                                width="20" height="20" alt=""></a>
                     </p>
                 </div>
                 <div class="bc_left bannerCentre_1">
                     <h3>行业报告</h3>
                     <p class="bc_p">法智易合同管理产品是北京慧点科技在合同管理领域推出的专业产品，它专注服务企业法务部门，围绕企业合同管理，运用智能化技术，帮助企业促成交易，防控法律风险。</p>
                     <p class="but">
-                        <span>预约演示<img src="./images/arrowRight-Blue.png" width="20" height="20" alt=""></span>
+                        <a href="/applyLoding.html" target="_blank">预约演示<img src="./images/arrowRight-Blue.png"
+                                width="20" height="20" alt=""></a>
                     </p>
                 </div>
             </div>
@@ -55,6 +58,7 @@
             </div>
             <div class="caseNewList">
 
+                <!-- 公司新闻 start -->
                 <div class="newList list_2 active">
                     <ul>
                         <li>
@@ -66,8 +70,11 @@
                             </p>
                         </li>
                     </ul>
+                    <div class="ht-page" id="newPage"></div>
                 </div>
+                <!-- 公司新闻 end -->
 
+                <!-- 专业分析 start -->
                 <div class="newList list_2 ">
                     <ul>
                         <li>
@@ -87,8 +94,11 @@
                             </p>
                         </li>
                     </ul>
+                    <div class="ht-page" id="analyzePage"></div>
                 </div>
+                <!-- 专业分析 end -->
 
+                <!-- 行业报告 start -->
                 <div class="newList list_2 ">
                     <ul>
                         <li>
@@ -137,7 +147,9 @@
                             </p>
                         </li>
                     </ul>
+                    <div class="ht-page" id="report"></div>
                 </div>
+                <!-- 行业报告 end -->
 
             </div>
         </div>
@@ -154,6 +166,7 @@
 
     <script src="./js/jquery-1.9.1.min.js"></script>
     <script src="./js/beas.min.js"></script>
+    <script src="./js/pagination.min.js"></script>
     <script>
         $(function () {
             $(".but > span").hover(function () {
@@ -178,7 +191,33 @@
 
             // 根据URL 参数 触发
             var tabId = GetQueryString("tabId") - 1
-            $("#rcCentreNev li").eq(tabId).trigger("click")
+            $("#rcCentreNev li").eq(tabId).trigger("click");
+
+
+            $.ajax({
+                url: "http://yapi.demo.qunar.com/mock/97875/v1/news/list",
+                type: "GET",
+                dataType: "json",
+                data: {
+                    type: 0
+                },
+                success: function (obr) {
+                    console.log(obr);
+
+
+                }
+            })
+
+            /*
+             * 首次调用
+             * @param object:翻页容器对象
+             * @param number:当前页
+             * @param number:总页数
+             * @param number:每页数据条数
+             * */
+            Pagination.Page($("#newPage"), 1, 1, 10);
+            Pagination.Page($("#analyzePage"), 1, 10, 10);
+            Pagination.Page($("#report"), 3, 100, 10);
 
         })
     </script>

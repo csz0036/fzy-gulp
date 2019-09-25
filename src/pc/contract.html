@@ -26,7 +26,8 @@
                     <p class="subTitle">Contract Lifecycle Management</p>
                     <p class="bc_p">以“效率、风险、数据”为核心，通过智能化技术帮助企业实现合同全生命周期的管理；通过CLM+eSignature（电子签名） 实现合同全程电子化。</p>
                     <p class="but">
-                        <span>预约演示<img src="./images/arrowRight-Blue.png" width="20" height="20" alt=""></span>
+                        <a href="/applyLoding.html" target="_blank">预约演示<img src="./images/arrowRight-Blue.png"
+                                width="20" height="20" alt=""></a>
                     </p>
                 </div>
                 <div class="bc_right"><img src="./images/contract/bannerRight.png" alt="" width="460" height="350">
@@ -126,6 +127,11 @@
             <span class="playBtn" id="playBtn"></span>
         </div>
 
+        <div id="videoWarp">
+            <video src="http://www.smartdot.com/fzy/website/dist/img/video.mp4" width="1000" height="532"
+                id="videoSource"></video>
+        </div>
+
 
     </div>
     <!--E content-->
@@ -146,6 +152,15 @@
                 $(this).find('img').stop().animate({
                     'margin-left': "10px"
                 }, 300)
+            })
+
+            $("#playBtn").on('click', function () {
+                $("#videoWarp").show()
+                document.getElementById('videoSource').play()
+            })
+            $("#videoWarp").on('click', function () {
+                $(this).hide()
+                document.getElementById('videoSource').pause()
             })
         })
     </script>

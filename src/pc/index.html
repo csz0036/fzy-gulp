@@ -20,11 +20,13 @@
     <!--S content-->
     <div id="pageContent">
         <div class="wrapper content">
-            <div class=conOne>
-                <h1 class=conTit>重新定义智能时代的合同管理</h1>
-                <p class=conIntro><span>15年</span>深耕，<span>300+</span>大中型企业的共同选择</p>
-                <div class=btn><a class=experBtn href="experience.html" target="_blank">预约演示<span></span></a></div>
+            <div class="conOne swiper-container">
+                <div class="swiper-wrapper" id="swiperPlug">
 
+
+                </div>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination"></div>
             </div>
             <div class=conTwo>
                 <h1 class="conTit2 hide scrollEle">中国 CLM（合同全生命周期管理）行业的引领者</h1>
@@ -282,7 +284,7 @@
                                 </ul>
                             </div>
                             <div class=btn>
-                                <a class=experBtn href="experience.html" target="_blank">预约演示<span></span></a>
+                                <a class=experBtn href="applyLoding.html" target="_blank">预约演示<span></span></a>
                             </div>
                         </div>
                     </div>
@@ -331,7 +333,32 @@
                         $(this).find('.hoverShow').stop().animate({
                             "top": "260px"
                         }, 300)
+                    });
+
+
+                    $.ajax({
+                        url: "http://yapi.demo.qunar.com/mock/97875/v1/banner/list",
+                        type: "GET",
+                        dataType: "json",
+                        success: function (obr) {
+                            console.log(obr.body.banner_arr);
+                            var list = obr.body.banner_arr;
+                            $.each(list, function (n, obj) {
+                                $("#swiperPlug").append(`<div class='swiper-slide'><img src="${obj.web_pic_url}"
+                        width='100%' height='100%' /></div>`)
+                            });
+                            var mySwiper = new Swiper('.swiper-container', {
+                                autoplay: true, // 自动播放
+                                loop: true, // 循环模式选项
+                                // 如果需要分页器
+                                pagination: {
+                                    el: '.swiper-pagination',
+                                },
+                            })
+                        }
                     })
+
+
 
                 })
             </script>
