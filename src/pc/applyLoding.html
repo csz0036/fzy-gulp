@@ -56,16 +56,13 @@
                                 type="text" id="input_4" placeholder="公司邮箱"></label>
                     </div>
                     <div class="inputLab2">
-                        <textarea name="" id="" placeholder="备注"></textarea>
+                        <textarea name="" id="textareaId" placeholder="备注"></textarea>
                     </div>
                     <div class="inputLab">
                         <label for="input_5"><img src="./images/apply/ic_5.png" class="iconImg" alt=""><input
                                 type="text" id="input_5" placeholder="手机号码"></label>
                     </div>
-                    <div class="inputLab">
-                        <label for="input_6"><input type="text" id="input_6" placeholder="验证码"><span
-                                class="getYZM">获取验证码</span></label>
-                    </div>
+
                     <p id="submitBut">申请申请，免费体验</p>
                 </div>
             </div>
@@ -79,6 +76,58 @@
     <!--E footer-->
     <script src="./js/jquery-1.9.1.min.js"></script>
     <script src="./js/beas.min.js"></script>
+    <script>
+        $(function () {
+            $("#submitBut").on('click', function () {
+                var name = $.trim($("#input_1").val());
+                var company_scale = $("#input_3").val();
+                var company_email = $.trim($("#input_4").val());
+                var company = $.trim($("#input_2").val());
+                var phone = $.trim($("#input_5").val());
+
+                if (!name) {
+                    alert('请输入您的名字');
+                    return false;
+                }
+                if (!company_scale) {
+                    alert('请选择企业规模');
+                    return false;
+                }
+                var reg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
+                if (!reg.test(company_email)) {
+                    alert('邮箱格式不正确');
+                    return false;
+                }
+                if (!company) {
+                    alert('请输入公司名称');
+                    return false;
+                }
+                if (!(/^1[3456789]\d{9}$/.test(phone))) {
+                    alert('手机号码有误，请重填');
+                    return false;
+                }
+
+
+
+                $.ajax({
+                    url: "http://172.16.5.59:5000/api/v1/user/post_info",
+                    type: "POST",
+                    dataType: "json",
+                    data: {
+                        name: name,
+                        company_scale: company_scale,
+                        company_email: company_email,
+                        company: company,
+                        phone: phone,
+                        memo: $("#textareaId").val(),
+                    },
+                    success: function (reuslt) {
+                        alert('提交申请成功');
+                    }
+                })
+            })
+        })
+    </script>
 
 </body>
 

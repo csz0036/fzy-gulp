@@ -50,6 +50,16 @@
 .newList {
     display: none;
 
+    .img {
+        width: 290px;
+        height: 160px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
     .ct {
         margin: 20px 0;
     }
@@ -67,8 +77,12 @@
             padding-left: 35px;
             line-height: 30px;
             box-sizing: border-box;
-            color: rgba(0, 134, 236, 1);
             cursor: pointer;
+
+            a {
+                display: block;
+                color: rgba(0, 134, 236, 1);
+            }
         }
 
         .new {

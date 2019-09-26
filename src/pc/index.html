@@ -337,9 +337,13 @@
 
 
                     $.ajax({
-                        url: "http://yapi.demo.qunar.com/mock/97875/v1/banner/list",
+                        url: "http://172.16.5.59:5000/api/v1/banner/list",
                         type: "GET",
                         dataType: "json",
+                        data: {
+                            page: 1,
+                            pageSize: 100
+                        },
                         success: function (obr) {
                             console.log(obr.body.banner_arr);
                             var list = obr.body.banner_arr;
