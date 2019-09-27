@@ -7,7 +7,7 @@ const babel = require("gulp-babel"); // ES6 转换成 ES5
 const uglify = require("gulp-uglify"); // js压缩
 const browsersync = require("browser-sync").create(); // 自动刷新页面
 const imagemin = require('gulp-imagemin');
-const pump = require('pump')
+// const pump = require('pump')
 // const tiny = require('gulp-tinypng-nokey');
 const htmlmin = require('gulp-htmlmin');
 const fileinclude = require('gulp-file-include');
@@ -61,9 +61,8 @@ gulp.task('style', function (done) {
 
 //图片压缩插件
 gulp.task('image', function (done, cb) {
-    pump([
-        // 获取原目录下所有的html文件
-        gulp.src(path.image.dev),
+    // 获取原目录下所有的html文件
+    gulp.src(path.image.dev),
         imagemin({
             optimizationLevel: 5, //类型：Number  默认：3  取值范围：0-7（优化等级）
             progressive: true, //类型：Boolean 默认：false 无损压缩jpg图片
@@ -75,8 +74,6 @@ gulp.task('image', function (done, cb) {
         }),
         // 输出至目标目录
         gulp.dest(path.image.build)
-
-    ], cb);
     done()
 });
 
