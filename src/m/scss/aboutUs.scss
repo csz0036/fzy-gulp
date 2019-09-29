@@ -1,0 +1,119 @@
+@import './reset.scss';
+
+.reportList {
+    padding: .8rem .3rem .9rem;
+}
+
+.reportTitle {
+    font-size: .4rem;
+    font-weight: 300;
+    text-align: center;
+    padding: .7rem 0 .57rem;
+
+    span {
+        color: #0068CE;
+    }
+}
+
+.titl_3 {
+    padding: 0rem 0 .5rem;
+}
+
+.logoList {
+    overflow: auto;
+    padding: 0 .15rem;
+
+    li {
+        float: left;
+        margin: 0 .05rem .1rem 0;
+        width: 2.16rem;
+        height: .85rem;
+
+        &:nth-child(3n) {
+            margin-right: 0
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    }
+}
+
+.demonstration {
+    width: 2.88rem;
+    height: 1.11rem;
+    background: url(../images/index/yyyx.png) center center no-repeat;
+    background-size: auto 100%;
+    color: transparent;
+    margin: .53rem auto .42rem;
+    display: block;
+
+}
+
+.box1 {
+    padding: .55rem .2rem;
+
+    .img_1,
+    .img_2,
+    .img_3 {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .img_1 {
+        width: 7.1rem;
+        height: 3.31rem;
+    }
+
+    .img_2 {
+        width: 7.1rem;
+        height: 5.1rem;
+    }
+
+    .img_3 {
+        width: 5.3rem;
+        height: 6.95rem;
+    }
+}
+
+.h3Style2 {
+    color: #5B5E5F;
+    font-size: .35rem;
+    margin-bottom: .3rem;
+    text-align: center;
+}
+
+.p_1 {
+    font-size: .28rem;
+    line-height: .45rem;
+    color: #333;
+}
+
+.timeList {
+    overflow: auto;
+    padding: 1rem .45rem .9rem;
+    display: flex;
+
+    .liTime {
+        border-left: #0095FB .13rem solid;
+        padding-left: .16rem;
+        width: 2.1rem;
+
+        &:last-child {
+            width: 2.4rem
+        }
+
+        .time {
+            color: #333333;
+            font-size: .3rem;
+            margin-bottom: .15rem;
+        }
+
+        .info {
+            color: #5B5E5F;
+            font-size: .23rem;
+        }
+    }
+}

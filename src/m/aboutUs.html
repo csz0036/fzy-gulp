@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./headConfig.html')
+    <title>法智易-智能合同管理系统-慧点科技法务领域专业品牌</title>
+    <link rel="stylesheet" href="./css/aboutUs.min.css">
+</head>
+
+<body>
+    <!--S header-->
+    @@include('./head.html',{ "index": "active" })
+    <!--E header-->
+
+    <!--S content-->
+    <div id="pageContent" class="contract">
+        <div class="bannerBox bannerHeight_2 affairCentreBanner">
+            <h2 class="title" id="titleText">公司新闻</h2>
+            <p class="content">法智易合同管理产品是北京慧点科技在合同管理领域推出的专业产品，它专注服务企业法务部门，围绕企业合同管理，运用智能化技术，帮助企业促成交易，防控法律风险。</p>
+            <p class="but"><a href="#">预约演示</a></p>
+        </div>
+
+        <div class="bg_ff box1">
+            <h3 class="h3Style2">公司介绍</h3>
+            <p class="p_1">
+                北京慧点科技有限公司于1998年创立，中国电子科技集团太极股份成员企业，是中国领先的管理软件与服务提供商。公司成立以来，秉承“自强不息、厚德载物、创新协作、脚踏实地”的精神，为千余家集团企业和政府客户提供了包括软件产品、应用开发、管理咨询和系统集成在内的优质服务，成为了中国高端企业和政府客户市场的领导品牌。
+            </p>
+            <div class="timeList">
+                <div class="liTime">
+                    <p class="time">20年</p>
+                    <p class="info">公司成立</p>
+                </div>
+                <div class="liTime">
+                    <p class="time">1000+</p>
+                    <p class="info">大中型客户</p>
+                </div>
+                <div class="liTime">
+                    <p class="time">70%</p>
+                    <p class="info">老客户再次签约率</p>
+                </div>
+            </div>
+            <h3 class="h3Style2">资质证书</h3>
+            <img src="./images/aboutUs/img-1.png" class="img_1" alt="">
+            <h3 class="h3Style2" style="padding-top: .4rem">企业证书</h3>
+            <img src="./images/aboutUs/img-2.png" class="img_2" alt="">
+            <h3 class="h3Style2" style="padding-top: .7rem">产品发展</h3>
+            <p class="p_1">
+                法智易作为北京慧点科技有限公司旗下专注于企业合同法务管理的品牌，多年深耕CLM（合同全生命周期管理）领域，服务于中国500强及行业百强企业。法智易提供面向企业的合同法务“一站式”解决方案体系，以此帮助企业将合同转化为战略业务资产，为企业提供强大的支撑，高效助力企业提高收入，控制成本和管理风险。
+            </p>
+            <img src="./images/aboutUs/img-3.png" class="img_3" alt="">
+        </div>
+
+        <div class="bg_f1 reportList">
+            <h3 class="reportTitle titl_3"><span>20年</span>深耕，中国<span></span>百强企业</span>的共同选择</h3>
+            <ul class="logoList">
+                <li><img src="./images/index/logo-1.png" alt=""></li>
+                <li><img src="./images/index/logo-2.png" alt=""></li>
+                <li><img src="./images/index/logo-3.png" alt=""></li>
+                <li><img src="./images/index/logo-4.png" alt=""></li>
+                <li><img src="./images/index/logo-5.png" alt=""></li>
+                <li><img src="./images/index/logo-6.png" alt=""></li>
+                <li><img src="./images/index/logo-7.png" alt=""></li>
+                <li><img src="./images/index/logo-8.png" alt=""></li>
+                <li><img src="./images/index/logo-9.png" alt=""></li>
+                <li><img src="./images/index/logo-10.png" alt=""></li>
+                <li><img src="./images/index/logo-11.png" alt=""></li>
+                <li><img src="./images/index/logo-12.png" alt=""></li>
+                <li><img src="./images/index/logo-13.png" alt=""></li>
+                <li><img src="./images/index/logo-14.png" alt=""></li>
+                <li><img src="./images/index/logo-15.png" alt=""></li>
+                <li><img src="./images/index/logo-16.png" alt=""></li>
+                <li><img src="./images/index/logo-17.png" alt=""></li>
+                <li><img src="./images/index/logo-18.png" alt=""></li>
+                <li><img src="./images/index/logo-19.png" alt=""></li>
+                <li><img src="./images/index/logo-20.png" alt=""></li>
+                <li><img src="./images/index/logo-21.png" alt=""></li>
+                <li><img src="./images/index/logo-22.png" alt=""></li>
+                <li><img src="./images/index/logo-23.png" alt=""></li>
+                <li><img src="./images/index/logo-24.png" alt=""></li>
+            </ul>
+            <a href="#" class="demonstration"></a>
+        </div>
+    </div>
+    <!--S footer-->
+    @@include('./foot.html')
+    <!--E footer-->
+
+    <script src="./js/jquery-1.9.1.min.js"></script>
+    <script src="./js/basis.min.js"></script>
+    <script>
+        $(function () {
+            $("#resourceCenterNav span").on('click', function () {
+                $(this).addClass('activet').parent('p').siblings('p').find("span").removeClass(
+                    'activet');
+                let ind = $(this).parent('p').index();
+                switch (ind) {
+                    case 0:
+                        $("#titleText").text('公司新闻');
+                        break;
+                    case 1:
+                        $("#titleText").text('专业分析');
+                        break;
+                    case 2:
+                        $("#titleText").text('行业报告');
+                        break;
+                }
+                $("#listScroll").find('.caseList').eq(ind).addClass('active').siblings().removeClass(
+                    'active')
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+@import './reset.scss';
+
+.contractBanner {
+    background: url(../images/contract/bg.png) center center no-repeat;
+    background-size: 100% 100%;
+}
+
+.padding_1 {
+    padding: .8rem 0 .6rem;
+}
+
+.img1 {
+    width: 6.74rem;
+    height: 4.63rem;
+    padding-bottom: .6rem;
+}
+
+.padding_2 {
+    padding: .4rem 0 .6rem;
+}
+
+.img2 {
+    width: 6rem;
+    height: 2.96rem;
+    padding-bottom: .65rem;
+}
+
+.centreBg {
+    background: url(../images/contract/bg_2.png) center center no-repeat;
+    width: 100%;
+    height: 1.8rem;
+    background-size: 100% 100%;
+    line-height: 1.8rem;
+    text-align: center;
+    font-weight: 500;
+    color: rgba(69, 88, 108, 1);
+    font-size: .3rem;
+}
+
+.img3,
+.img5 {
+    width: 5.67rem;
+    height: 4rem;
+    padding-top: .7rem;
+}
+
+.ct_p {
+    color: rgba(91, 94, 95, 1);
+    font-size: .3rem;
+    line-height: .35rem;
+    margin-bottom: .7rem;
+    text-align: center;
+    margin-top: .15rem;
+}
+
+.img4 {
+    width: 5.4rem;
+    height: 3.84rem;
+    padding-top: .7rem
+}
+
+.img6 {
+    width: 4.68rem;
+    height: 3.32rem;
+    padding-top: .7rem
+}
+
+.img7 {
+    width: 5.9rem;
+    height: 3.88rem;
+    padding-top: .7rem
+}
+
+.img8 {
+    width: 5.43rem;
+    height: 3.8rem;
+    padding-top: .7rem
+}
+
+.img9 {
+    width: 5.4rem;
+    height: 3.84rem;
+    padding-top: .7rem
+}
+
+.video {
+    width: 100%;
+    height: 4.5rem;
+}

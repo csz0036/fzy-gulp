@@ -1,0 +1,220 @@
+@import './reset.scss';
+@import './swiper.scss';
+
+.affairCentreBanner {
+    background: url(../images/dataCentre/bg.png) center center no-repeat;
+    background-size: 100% 100%;
+}
+
+.pad_1 {
+    padding: .8rem 0;
+}
+
+.affairList {
+    padding: 0 .5rem .92rem;
+    box-sizing: border-box;
+    overflow: auto;
+
+    li {
+        float: left;
+        border-right: 1px solid #f0f0f0;
+        border-bottom: 1px solid #f0f0f0;
+        box-sizing: border-box;
+        padding: .4rem .4rem 0;
+        width: 2.48rem;
+        height: 3.1rem;
+        text-align: center;
+
+        &:nth-child(3n) {
+            border-right: none;
+            padding-right: 0;
+            width: 2rem
+        }
+
+        &:nth-child(3n+1) {
+            width: 2rem;
+            padding-left: 0;
+        }
+
+        &:nth-child(7),
+        &:nth-child(8),
+        &:nth-child(9) {
+            border-bottom: none;
+        }
+
+        .listImg {
+            width: .94rem;
+            height: .94rem;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .listTitle {
+            font-weight: 400;
+            color: rgba(91, 94, 95, 1);
+            font-size: .26rem;
+            margin: .2rem 0 .2rem;
+            text-align: center;
+        }
+
+        .listContent {
+            font-size: .20rem;
+            font-weight: 300;
+            color: rgba(119, 136, 156, 1);
+            line-height: .3rem;
+        }
+    }
+}
+
+.box_2 {
+    padding: .7rem .46rem .7rem;
+}
+
+.stepList {
+    margin-top: .4rem;
+    overflow: auto;
+
+    li {
+        float: left;
+        width: 3.08rem;
+        height: 3.78rem;
+        position: relative;
+        margin-right: .4rem;
+        margin-bottom: .4rem;
+        padding-left: .28rem;
+        box-sizing: border-box;
+
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+
+        .stepNumber {
+            position: absolute;
+            width: 1.9rem;
+            height: .58rem;
+            line-height: .58rem;
+            text-align: center;
+            color: #fff;
+            background: rgba(37, 167, 255, 1);
+            border: 1px solid rgba(240, 240, 240, 1);
+            top: .49rem;
+            left: 0;
+            font-size: .25rem;
+        }
+
+        .stepContent {
+            background: #fff url(../images/affair/icon-2-1.png) right bottom no-repeat;
+            background-size: 1.22rem 1.05rem;
+            padding: 1.42rem .28rem 0;
+            font-size: .2rem;
+            color: #5A6777;
+            line-height: .3rem;
+            height: 3.78rem;
+            width: 2.8rem;
+            box-sizing: border-box;
+            box-shadow: 0px 11px 10px 0px rgba(23, 58, 130, 0.05);
+        }
+
+        &:nth-child(2) {
+            .stepContent {
+                background-image: url(../images/affair/icon-2-2.png);
+            }
+        }
+
+        &:nth-child(3) {
+            .stepContent {
+                background-image: url(../images/affair/icon-2-3.png);
+            }
+        }
+
+        &:nth-child(4) {
+            .stepContent {
+                background-image: url(../images/affair/icon-2-4.png);
+            }
+        }
+    }
+}
+
+.box_3 {
+    padding: .7rem .6rem;
+}
+
+.img_1 {
+    width: 6.44rem;
+    height: 1.83rem;
+    margin-top: .4rem;
+    display: block;
+}
+
+.box_4 {
+    text-align: center;
+    padding: .7rem 0;
+}
+
+.p_2 {
+    font-size: .22rem;
+    font-weight: 300;
+    color: rgba(91, 94, 95, 1);
+    line-height: .34rem;
+    margin: .16rem auto .6rem;
+}
+
+#scrollWrap2 {
+    .swiper-slide {
+        width: 3.6rem;
+        height: 5.1rem;
+        position: relative;
+        background-color: #fff;
+        padding: .52rem .45rem 0;
+        box-sizing: border-box;
+        text-align: center;
+
+        .slideTitle {
+            font-size: .27rem;
+            font-weight: 400;
+            color: #333;
+        }
+
+        .slideImg {
+            img {
+                width: 1.33rem;
+                height: 1.19rem;
+                display: block;
+                margin: .7rem auto;
+            }
+        }
+
+        .slideContent {
+            color: #5A6777;
+            font-size: .20rem;
+            line-height: .35rem;
+        }
+    }
+
+    .slide_2,
+    .slide_3,
+    .slide_4 {
+        &::after {
+            background: linear-gradient(270deg, rgba(238, 238, 238, 0) 0%, rgba(216, 216, 216, .4) 100%);
+            width: .3rem;
+            height: 100%;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &:before {
+            width: .6rem;
+            height: .6rem;
+            content: '';
+            background: url(../images/affair/icon-3-0.png) center center no-repeat;
+            background-size: 100%;
+            position: absolute;
+            left: -.3rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2
+        }
+    }
+}

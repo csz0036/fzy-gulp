@@ -1,0 +1,128 @@
+@import './reset.scss';
+
+.box1 {
+    padding: .5rem .7rem 0
+}
+
+.circleList {
+    padding-top: .94rem;
+
+    li {
+        width: 2.76rem;
+        height: 2.76rem;
+        margin: 0 .55rem .73rem 0;
+        float: left;
+        text-align: center;
+        color: #333333;
+        background: url(../images/robot/icon-bg.png) center center no-repeat;
+        position: relative;
+        background-size: 100% 100%;
+
+        &:nth-child(2n) {
+            margin-right: 0
+        }
+
+        .why {
+            font-size: .27rem;
+            padding-top: .95rem;
+        }
+
+        .answer {
+            font-size: .19rem;
+            line-height: .3rem;
+            margin-top: .24rem
+        }
+
+        &.circle2,
+        &.circle3,
+        &.circle4 {
+            background: none;
+
+            &::after {
+                content: '';
+                width: 2.76rem;
+                height: 2.76rem;
+                background: url(../images/robot/icon-bg.png) center center no-repeat;
+                position: absolute;
+                background-size: 100% 100%;
+                transform: rotate(86deg);
+                transform-origin: center center;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        &.circle3 {
+            &::after {
+                transform: rotate(150deg);
+            }
+        }
+
+        &.circle4 {
+            &::after {
+                transform: rotate(250deg);
+            }
+        }
+    }
+}
+
+.box2 {
+    padding: .7rem .5rem .9rem;
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .img1 {
+        width: 4.92rem;
+        height: 3.6rem;
+        margin-top: .7rem;
+    }
+
+    .title {
+        color: #5B5E5F;
+        font-size: .35rem;
+        margin-bottom: .3rem;
+    }
+
+    .info {
+        color: #333;
+        font-size: .24rem;
+        line-height: .4rem;
+
+        span {
+            color: #FF8722;
+        }
+    }
+
+    .img2 {
+        width: 4.51rem;
+        height: 3.3rem;
+        margin-top: 1rem;
+    }
+
+    .img3 {
+        width: 4.79rem;
+        height: 3.03rem;
+        margin-top: .4rem;
+    }
+
+    .img4 {
+        width: 4.22rem;
+        height: 3.82rem;
+        margin-top: 1.18rem;
+    }
+
+    .img5 {
+        width: 4.93rem;
+        height: 3.3rem;
+        margin-top: 1.2rem;
+    }
+
+    .img6 {
+        width: 4.68rem;
+        height: 3.87rem;
+        margin-top: .69rem;
+    }
+}

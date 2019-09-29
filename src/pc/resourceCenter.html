@@ -152,7 +152,8 @@
                         case 1:
                             $.each(list, function (n, obj) {
                                 $(divId + "List").find('ul').append(`<li>
-                                <p class="img"><img src="${obj.head_url}" alt=""></p>
+                                <p class="img"><a href="./detail.html?news_id=${obj.news_id}"><img src="${obj.head_url}"
+                                            alt=""></a></p>
                                 <p class="ct">${obj.title}</p>
                                 <p class="downLoad">
                                     <span class="new">公司新闻</span>
@@ -164,7 +165,8 @@
                         case 2:
                             $.each(list, function (n, obj) {
                                 $(divId + "List").find('ul').append(`<li>
-                                <p class="img"><img src="${obj.head_url}" alt=""></p>
+                                <p class="img"><a href="./detail.html?news_id=${obj.news_id}"><img src="${obj.head_url}"
+                                            alt=""></a></p>
                                 <p class="ct">${obj.title}</p>
                                 <p class="downLoad">
                                     <span class="dow"><a href="${obj.download_url}"

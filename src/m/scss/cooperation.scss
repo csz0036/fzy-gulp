@@ -1,0 +1,91 @@
+@import './reset.scss';
+
+.box1 {
+    padding: 0 .3rem .3rem;
+
+    .pad1 {
+        padding: .8rem 0 .6rem;
+    }
+}
+
+.cooperationInfoBox {
+    width: 100%;
+    height: 4.5rem;
+    background-color: #fff;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.05);
+    margin-bottom: .6rem;
+
+    .infoBoxTitle {
+        height: 1.5rem;
+        color: #fff;
+        padding-left: .6rem;
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 1.55rem;
+            height: 1.23rem;
+            background: url(../images/cooperation/icon-1.png) center center no-repeat;
+            background-size: 100% 100%;
+            position: absolute;
+            bottom: 0;
+            right: .16rem;
+        }
+
+        &.info_1 {
+            background: linear-gradient(270deg, rgba(86, 164, 255, 1) 0%, rgba(57, 154, 255, 1) 100%);
+
+            &::after {
+                background: url(../images/cooperation/icon-1.png) center center no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+
+        &.info_2 {
+            background: linear-gradient(90deg, rgba(36, 203, 141, 1) 0%, rgba(52, 230, 164, 1) 100%);
+
+            &::after {
+                background: url(../images/cooperation/icon-2.png) center center no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+
+        &.info_3 {
+            background: linear-gradient(90deg, rgba(129, 100, 251, 1) 0%, rgba(147, 121, 255, 1) 100%);
+
+            &::after {
+                background: url(../images/cooperation/icon-3.png) center center no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+
+        &.info_4 {
+            background: linear-gradient(270deg, rgba(233, 211, 171, 1) 0%, rgba(208, 177, 117, 1) 100%);
+
+            &::after {
+                background: url(../images/cooperation/icon-4.png) center center no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+
+        .title {
+            font-size: .4rem;
+            font-weight: 500;
+            line-height: .45rem;
+            padding: .3rem 0 .16rem
+        }
+
+        .subTitle {
+            font-size: .27rem;
+            font-weight: 400;
+            color: rgba(253, 253, 253, .5);
+        }
+    }
+
+    .infoContent {
+        padding: .32rem .6rem 0;
+        color: #333;
+        font-size: .26rem;
+        line-height: .5rem;
+    }
+}

@@ -104,10 +104,12 @@ h5 {
 
 .bg_f1 {
     background-color: #f8f9fb;
+    overflow: auto
 }
 
 .bg_ff {
     background-color: #fff;
+    overflow: auto
 }
 
 .displayBlock {
@@ -263,6 +265,155 @@ h5 {
             font-size: .24rem;
             color: rgba(153, 153, 153, 1);
             line-height: .4rem
+        }
+    }
+}
+
+
+//二级页面banner
+.bannerBox {
+    &.bannerHeight_1 {
+        height: 10.7rem;
+    }
+
+    &.bannerHeight_2 {
+        height: 7rem;
+        background: url(../images/bannerBg2.png) center center no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+    }
+
+    color: #fff;
+    text-align: center;
+    padding: 1.06rem .5rem 0;
+    box-sizing: border-box;
+
+    .title {
+        font-size: .40rem;
+        font-weight: 500;
+        text-align: center;
+
+
+        &.cooperactionTitle {
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+            width: 4.5rem;
+
+            p {
+                span {
+                    font-size: .2rem;
+                    margin-top: .15rem;
+                    display: block;
+                }
+
+                &:first-child {
+                    border-right: 1px solid rgba(255, 255, 255, .4);
+                    padding-right: .55rem;
+                    margin-right: .55rem;
+                }
+            }
+        }
+    }
+
+    .subTitle {
+        font-size: .19rem;
+        font-weight: 100;
+        color: rgba(255, 255, 255, .4);
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: .03rem
+    }
+
+    .content {
+        font-size: .26rem;
+        text-align: left;
+        line-height: .4rem;
+        margin: .58rem 0 .56rem;
+    }
+
+    .but {
+        position: absolute;
+        left: 50%;
+        margin-left: -1.44rem;
+        bottom: 1.04rem;
+
+        a {
+            width: 2.88rem;
+            height: 1.11rem;
+            background-color: #fff;
+            box-shadow: 0px 3px 6px 0px rgba(121, 121, 121, 0.4);
+            border-radius: 6px;
+            line-height: 1.11rem;
+            padding-left: .6rem;
+            display: block;
+            box-sizing: border-box;
+            margin: 0 auto;
+            position: relative;
+            color: #0086EC;
+            font-size: .33rem;
+            text-align: left;
+
+            &::after {
+                content: '';
+                background: url(../images/arrowsBlueRight.png) center center no-repeat;
+                background-size: .3rem .3rem;
+                position: absolute;
+                top: .37rem;
+                right: .42rem;
+                width: .3rem;
+                height: .3rem;
+            }
+        }
+    }
+}
+
+.h3Styel {
+    font-size: .40rem;
+    font-weight: 300;
+    color: rgba(71, 73, 74, 1);
+    line-height: .60rem;
+    text-align: center;
+}
+
+.imgStyle {
+    display: block;
+    margin: 0 auto;
+}
+
+//一行两列
+.dataListLint-2 {
+    overflow: auto;
+    margin-top: .3rem;
+
+    li {
+        float: left;
+        margin: 0 .6rem 1rem 0;
+        width: 2.9rem;
+
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+
+        .liImg {
+            width: 1.14rem;
+            height: 1.14rem;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .title {
+            font-size: .30rem;
+            font-weight: 500;
+            color: rgba(91, 94, 95, 1);
+            text-align: center;
+            margin: .4rem 0 .35rem;
+        }
+
+        .content {
+            font-weight: 300;
+            color: rgba(51, 51, 51, 1);
+            font-size: .24rem
         }
     }
 }

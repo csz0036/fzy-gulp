@@ -1,0 +1,48 @@
+@import './reset.scss';
+
+.dataCentreBanner {
+    background: url(../images/dataCentre/bg.png) center center no-repeat;
+    background-size: 100% 100%;
+}
+
+.box_1 {
+    padding: .8rem .5rem .1rem;
+}
+
+.p_1 {
+    text-align: center;
+    font-size: .3rem;
+    margin: .15rem 0 .7rem;
+    box-sizing: border-box;
+    color: #AAAAAA;
+}
+
+.box_2 {
+    padding: .7rem .5rem .9rem;
+
+    .img_1 {
+        width: 6.52rem;
+        height: 8.09rem;
+        display: block;
+        margin-top: .6rem;
+    }
+}
+
+.box_3 {
+    padding: .6rem .5rem .9rem;
+
+    .p2 {
+        font-weight: 300;
+        color: rgba(71, 73, 74, 1);
+        line-height: .5rem;
+        font-size: .3rem;
+        text-align: center;
+    }
+
+    .img_2 {
+        width: 6.52rem;
+        height: 9.08rem;
+        display: block;
+        margin-top: .7rem;
+    }
+}

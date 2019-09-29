@@ -1,0 +1,42 @@
+@import './reset.scss';
+
+.caseList {
+    overflow: auto;
+    padding: .4rem .33rem;
+
+    li {
+        float: left;
+        width: 3.3rem;
+        height: 3.8rem;
+        background-color: #fff;
+        padding: .2rem;
+        box-sizing: border-box;
+        font-size: .24rem;
+        margin: 0 .24rem .24rem 0;
+
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+
+        .listImg {
+            width: 2.9rem;
+            height: 1.6rem;
+        }
+
+        .listTitle {
+            font-weight: 400;
+            color: #000;
+            margin: .25rem 0 .2rem;
+        }
+
+        .listContent {
+            color: #999;
+            line-height: .35rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            word-break: break-all;
+        }
+    }
+}

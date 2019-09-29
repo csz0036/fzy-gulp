@@ -1,0 +1,86 @@
+@import './reset.scss';
+
+.navList {
+    padding: 0 .3rem;
+    display: flex;
+    border-bottom: 1px solid #DDDDDD;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    font-size: .3rem;
+    color: #6C7680;
+
+    p {
+        flex: 1;
+
+        span.activet {
+            color: #0095FB;
+            border-bottom: .04rem solid #0095FB;
+            display: inline-block;
+        }
+    }
+}
+
+.caseList {
+    overflow: auto;
+    padding: .4rem .33rem;
+    display: none;
+
+    &.active {
+        display: block;
+    }
+
+    li {
+        float: left;
+        width: 3.3rem;
+        height: 3.8rem;
+        background-color: #fff;
+        padding: .2rem;
+        box-sizing: border-box;
+        font-size: .24rem;
+        margin: 0 .24rem .24rem 0;
+
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+
+        .listImg {
+            width: 2.9rem;
+            height: 1.6rem;
+        }
+
+        .listTitle {
+            font-weight: 400;
+            color: #000;
+            margin: .18rem 0;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            word-break: break-all;
+        }
+
+        .listContent {
+            color: #999;
+            margin-bottom: .34rem;
+        }
+
+        .dow {
+            width: 2.8rem;
+            height: .6rem;
+            background: rgba(255, 255, 255, 1);
+            border-radius: .05rem;
+            border: 1px solid rgba(89, 164, 255, 1);
+            line-height: .6rem;
+            text-align: center;
+            color: #0086EC;
+            font-size: .24rem;
+        }
+    }
+
+    &.companyNews {
+        li {
+            height: 4.8rem;
+        }
+    }
+}

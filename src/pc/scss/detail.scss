@@ -14,14 +14,18 @@
         margin-bottom: 40px;
     }
 
-    .p_1 {
-        font-size: 16px;
-        font-family: PingFangSC-Regular,
-            PingFangSC;
-        font-weight: 400;
-        color: rgba(128, 128, 128, 1);
-        line-height: 30px;
-        margin-bottom: 30px;
+    #contentAjax {
+        padding-bottom: 30px;
+
+        p {
+            font-size: 16px;
+            font-family: PingFangSC-Regular,
+                PingFangSC;
+            font-weight: 400;
+            color: rgba(128, 128, 128, 1);
+            line-height: 30px;
+            margin-bottom: 30px;
+        }
     }
 
     .fot {
@@ -36,6 +40,37 @@
         .time {
             flex: 1;
             text-align: right;
+        }
+    }
+
+    .download {
+        width: 180px;
+        height: 50px;
+        margin: 30px auto;
+
+        a {
+            color: #fff;
+            display: block;
+            background: linear-gradient(121deg, rgba(0, 102, 204, 1) 0%, rgba(0, 153, 255, 1) 100%);
+            box-shadow: 0px 3px 6px 0px rgba(121, 121, 121, 0.4);
+            border-radius: 6px;
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            padding-left: 62px;
+            box-sizing: border-box;
+            font-size: 22px;
+            position: relative;
+
+            &::after {
+                content: '';
+                width: 20px;
+                height: 20px;
+                background: url(../images/arrowDownload.png) center center no-repeat;
+                position: absolute;
+                top: 15px;
+                left: 30px;
+            }
         }
     }
 }

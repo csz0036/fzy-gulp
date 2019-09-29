@@ -20,18 +20,14 @@
     <!--S content-->
     <div id="pageContent">
         <div class="detailContent">
-            <h2 class="title">中国领先的管理软件与服务提供商</h2>
-            <p class="p_1">
-                北京慧点科技有限公司于1998年创立，中国电子科技集团太极股份成员企业，是中国领先的管理软件与服务提供商。公司成立以来，秉承“自强不息、厚德载物、创新协作、脚踏实地”的精神，为千余家集团企业和政府客户提供了包括软件产品、应用开发、管理咨询和系统集成在内的优质服务，成为了中国高端企业和政府客户市场的领导品牌。
-            </p>
-            <p class="p_1"><img src="./images/contract/videoBg.png" width="790" /></p>
-            <p class="p_1">
-                北京慧点科技有限公司于1998年创立，中国电子科技集团太极股份成员企业，是中国领先的管理软件与服务提供商。公司成立以来，秉承“自强不息、厚德载物、创新协作、脚踏实地”的精神，为千余家集团企业和政府客户提供了包括软件产品、应用开发、管理咨询和系统集成在内的优质服务，成为了中国高端企业和政府客户市场的领导品牌。
-                北京慧点科技有限公司于1998年创立，中国电子科技集团太极股份成员企业，是中国领先的管理软件与服务提供商。公司成立以来，秉承“自强不息、厚德载物、创新协作、脚踏实地”的精神，为千余家集团企业和政府客户提供了包括软件产品、应用开发、管理咨询和系统集成在内的优质服务，成为了中国高端企业和政府客户市场的领导品牌。
-            </p>
+            <h2 class="title" id="titlePage"></h2>
+            <p class="download"><a href="#" download="下载文件">下载文件</a></p>
+            <div id="contentAjax">
+
+            </div>
             <div class="fot">
-                <div class="form">来自：慧点科技</div>
-                <div class="time">时间：2019-12-22</div>
+                <div class="form">来自：<span id="publisher"></span></div>
+                <div class="time">时间：<span id="publish_time"></span></div>
             </div>
         </div>
     </div>
@@ -54,6 +50,39 @@
                     'margin-left': "10px"
                 }, 300)
             });
+
+
+
+            // 根据URL 参数 触发
+            let tabIdPage = GetQueryString("news_id");
+            if (tabIdPage) {
+                $.ajax({
+                    url: "http://172.16.5.59:5000/api/v1/news/detail",
+                    type: "get",
+                    dataType: "json",
+                    data: {
+                        news_id: tabIdPage,
+                        page: 1,
+                        pageSize: 9
+                    },
+                    success: function (reuslt) {
+                        console.log(reuslt)
+                        let {
+                            title,
+                            content,
+                            publisher,
+                            publish_time,
+                            download_url
+                        } = reuslt.body.newsDetail;
+
+                        $("#titlePage").html(title)
+                        $("#contentAjax").html(content)
+                        $("#publisher").html(publisher)
+                        $("#publish_time").html(publish_time)
+                        $(".download a").attr('href', download_url)
+                    }
+                })
+            }
 
         })
     </script>
