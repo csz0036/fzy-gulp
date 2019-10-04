@@ -1,6 +1,17 @@
 @import './reset.scss';
 
+body {
+    -webkit-overflow-scrolling: touch;
+}
+
 .navList {
+    height: 1rem;
+    width: 100%;
+    position: relative;
+    z-index: 11
+}
+
+.navFixed {
     padding: 0 .3rem;
     display: flex;
     border-bottom: 1px solid #DDDDDD;
@@ -9,6 +20,9 @@
     text-align: center;
     font-size: .3rem;
     color: #6C7680;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
 
     p {
         flex: 1;

@@ -118,4 +118,4 @@ gulp.task('html', function (done) {
 
 
 //series里的任务是顺序执行的，parallel里的任务是同时执行的。
-gulp.task('default', gulp.series('clean', gulp.parallel('scripts', 'style', 'image', 'html')));
+gulp.task('default', gulp.series(gulp.parallel('scripts', 'style', 'image', 'html')));
