@@ -369,6 +369,8 @@ h5 {
     &.bannerHeight_1 {
         height: 10.7rem;
         position: relative;
+        background: url(../images/banner_bg_2.png) center top no-repeat;
+        background-size: 100%;
 
         .innerBox {
             position: relative;
@@ -394,7 +396,7 @@ h5 {
             background: linear-gradient(135deg, rgba(0, 102, 204, 1) 0%, rgba(0, 153, 255, 1) 100%);
             top: 0;
             left: 0;
-            z-index: 0;
+            z-index: -1;
         }
     }
 

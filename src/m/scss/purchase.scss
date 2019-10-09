@@ -5,6 +5,15 @@
     background-size: 100% 100%;
 }
 
+.bannerBox .but {
+    position: static;
+    margin-left: 0;
+}
+
+.bannerImg {
+    width: 90%;
+}
+
 .navList {
     padding: 1.37rem .8rem 1.14rem;
     overflow: auto;
@@ -67,5 +76,52 @@
         height: 3.79rem;
         display: block;
         margin: .7rem auto .9rem;
+    }
+}
+
+.infoList {
+    color: #fff;
+    width: 100%;
+    overflow: hidden;
+
+    .listWrap {
+        height: 1.3rem;
+        overflow: hidden
+    }
+
+    #listNav {
+        overflow-x: auto;
+        white-space: nowrap;
+        box-sizing: border-box;
+        height: 1.5rem;
+        padding-left: .4rem;
+
+        li {
+            display: inline-block;
+            font-size: .28rem;
+            font-weight: 500;
+            width: 1.7rem;
+            height: .7rem;
+            line-height: .7rem;
+            text-align: center;
+
+            &.active {
+                background-color: #0083E9;
+            }
+        }
+    }
+
+    #listContent {
+        font-size: .32rem;
+        line-height: .58rem;
+        padding: .1rem .4rem;
+
+        .plText {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
     }
 }

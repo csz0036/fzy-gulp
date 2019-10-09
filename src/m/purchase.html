@@ -15,10 +15,13 @@
     <!--S content-->
     <div id="pageContent" class="contract">
         <div class="bannerBox bannerHeight_1 affairCentreBanner">
-            <h2 class="title">集中采购管理</h2>
-            <p class="subTitle">Bidding and Procurement Management</p>
-            <p class="content">建立统一的采购相关流程和数据的标准，保障所有的采购过程阳光透明，并能够进行数据追溯和分析。</p>
-            <p class="but"><a href="#">预约演示</a></p>
+            <div class="innerBox">
+                <h2 class="title">集中采购管理</h2>
+                <p class="subTitle">Bidding and Procurement Management</p>
+                <p class="content">建立统一的采购相关流程和数据的标准，保障所有的采购过程阳光透明，并能够进行数据追溯和分析。</p>
+                <p class="but"><a href="./applyLoding.html">预约演示</a></p>
+                <img src="./images/purchase/banner_img.png" class="bannerImg" alt="">
+            </div>
         </div>
         <div class="navList">
             <div class="navLi">
@@ -39,8 +42,44 @@
         </div>
         <!-- 切换 -->
         <div class="infoList">
-
+            <div class="listWrap">
+                <ul id="listNav">
+                    <li class="plTitle active">职能转换</li>
+                    <li class="plTitle">降低成本</li>
+                    <li class="plTitle">供方管理</li>
+                    <li class="plTitle">数据管理</li>
+                    <li class="plTitle">效率提成</li>
+                </ul>
+            </div>
+            <div id="listContent">
+                <div class="plText active">
+                    <div class="plTextCentre">
+                        <p>建立集中采购部门，将为企业的采购带来何种变革？集中采购部门与各部门、成员单位采购的关系？</p>
+                    </div>
+                </div>
+                <div class="plText">
+                    <div class="plTextCentre">
+                        <p>如何高效协同内部采购人员和外部供应商、代理商在统一的工作平台上工作，避免重复沟通？如何实现线上采购、线上签约，减少数据重复录入，分散管理的成本？</p>
+                    </div>
+                </div>
+                <div class="plText">
+                    <div class="plTextCentre">
+                        <p>如何保证供应商准入合规、项目申报合规、招标过程合规？如何监控供应商履行合规性？</p>
+                    </div>
+                </div>
+                <div class="plText">
+                    <div class="plTextCentre">
+                        <p>主数据：如何将供应商信息、项目信息等形成企业级主数据进行标准化管理？流程：如何将集采业务流程固化，提升业务执行力？</p>
+                    </div>
+                </div>
+                <div class="plText">
+                    <div class="plTextCentre">
+                        <p>通过集中采购，如何提高企业的采购效率？如何提高利益相关方（项目、采购、合同、资产、财务），包括供应商的业务协同的效率？</p>
+                    </div>
+                </div>
+            </div>
         </div>
+
         <div class="box3">
             <p class="contentP">高效、高质、规范的统一采购信息系统平台，支撑公司纳<br />入集中采购目录内所有项目的采购工作开展</p>
             <img src="./images/purchase/img-1.png" class="img1" alt="">
@@ -55,7 +94,14 @@
     <script src="./js/jquery-1.9.1.min.js"></script>
     <script src="./js/basis.min.js"></script>
     <script>
-
+        $(function () {
+            $("#listNav .plTitle").on('click', function () {
+                let index = $(this).index();
+                $(this).addClass('active').siblings('.plTitle').removeClass('active')
+                $("#listContent .plText").eq(index).addClass('active').siblings('.plText').removeClass(
+                    'active')
+            })
+        })
     </script>
 </body>
 
