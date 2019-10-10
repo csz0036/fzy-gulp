@@ -69,14 +69,15 @@
             border: 1px solid rgba(240, 240, 240, 1);
             margin: 0 .2rem .2rem 0;
             box-sizing: border-box;
-            padding: 0 .25rem;
+            padding: .4rem .25rem 0;
 
             .lifeListImg {
                 display: block;
                 width: 1rem;
                 height: 1rem;
-                margin: 0 auto;
-                padding: .4rem 0 .2rem;
+                margin: 0 auto .2rem;
+                // padding: .4rem 0 .2rem;
+                border: 1px dashed #888;
             }
 
             .lifeListTitle {
@@ -200,6 +201,22 @@
 
             &.slide_8 {
                 background-image: url(../images/index/p_3_8.png)
+            }
+
+            &.slide_9 {
+                background-image: url(../images/index/p_3_9.png)
+            }
+
+            &.slide_10 {
+                background-image: url(../images/index/p_3_10.png)
+            }
+
+            &.slide_11 {
+                background-image: url(../images/index/p_3_11.png)
+            }
+
+            &.slide_12 {
+                background-image: url(../images/index/p_3_12.png)
             }
 
             background-size: 100% 100%;

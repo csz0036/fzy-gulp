@@ -21,10 +21,8 @@
                 <a href="./applyLoding.html" class="demonstration">预约演示</a>
                 <!-- 焦点图 -->
                 <div id="scrollWrap" class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="./images/index/p_2.png"></div>
-                        <div class="swiper-slide"><img src="./images/index/p_2.png"></div>
-                        <div class="swiper-slide"><img src="./images/index/p_2.png"></div>
+                    <div class="swiper-wrapper" id="swiperPlug">
+
                     </div>
                     <!-- Add Pagination -->
                     <div class="swiper-pagination"></div>
@@ -101,28 +99,44 @@
                         <p class="s-content">从项目的视角管理合同，以及地产行业纠纷案件案件管理，例如群诉管理</p>
                     </div>
                     <div class="swiper-slide slide_3">
-                        <p class="s-title">地产行业</p>
-                        <p class="s-content">从项目的视角管理合同，以及地产行业纠纷案件案件管理，例如群诉管理</p>
+                        <p class="s-title">交通行业</p>
+                        <p class="s-content">精细化合同管理，满足航空公司、机场、公路、铁路、港口、地铁等不同企业需求</p>
                     </div>
                     <div class="swiper-slide slide_4">
-                        <p class="s-title">地产行业</p>
-                        <p class="s-content">从项目的视角管理合同，以及地产行业纠纷案件案件管理，例如群诉管理</p>
+                        <p class="s-title">石化钢铁</p>
+                        <p class="s-content">上下游业务一体化贯通的合同管理，实现产供销一体化</p>
                     </div>
                     <div class="swiper-slide slide_5">
-                        <p class="s-title">地产行业</p>
-                        <p class="s-content">从项目的视角管理合同，以及地产行业纠纷案件案件管理，例如群诉管理</p>
+                        <p class="s-title">投资集团</p>
+                        <p class="s-content">满足监管要求的合规要求，在合同系统中进行全生命周期固化</p>
                     </div>
                     <div class="swiper-slide slide_6">
-                        <p class="s-title">地产行业</p>
+                        <p class="s-title">娱乐文化</p>
                         <p class="s-content">从项目的视角管理合同，以及地产行业纠纷案件案件管理，例如群诉管理</p>
                     </div>
                     <div class="swiper-slide slide_7">
-                        <p class="s-title">地产行业</p>
-                        <p class="s-content">从项目的视角管理合同，以及地产行业纠纷案件案件管理，例如群诉管理</p>
+                        <p class="s-title">制造行业</p>
+                        <p class="s-content">精细化合同管理，满足航空公司、机场、公路、铁路、港口、地铁等不同企业需求</p>
                     </div>
                     <div class="swiper-slide slide_8">
-                        <p class="s-title">地产行业</p>
+                        <p class="s-title">农牧行业</p>
+                        <p class="s-content">上下游业务一体化贯通的合同管理，实现产供销一体化</p>
+                    </div>
+                    <div class="swiper-slide slide_9">
+                        <p class="s-title">烟草行业</p>
+                        <p class="s-content">满足监管要求的合规要求，在合同系统中进行全生命周期固化</p>
+                    </div>
+                    <div class="swiper-slide slide_10">
+                        <p class="s-title">军工行业</p>
                         <p class="s-content">从项目的视角管理合同，以及地产行业纠纷案件案件管理，例如群诉管理</p>
+                    </div>
+                    <div class="swiper-slide slide_11">
+                        <p class="s-title">制药行业</p>
+                        <p class="s-content">精细化合同管理，满足航空公司、机场、公路、铁路、港口、地铁等不同企业需求</p>
+                    </div>
+                    <div class="swiper-slide slide_12">
+                        <p class="s-title">政府</p>
+                        <p class="s-content">上下游业务一体化贯通的合同管理，实现产供销一体化</p>
                     </div>
                 </div>
                 <!-- Add Pagination -->
@@ -205,13 +219,13 @@
                     page: 1,
                     pageSize: 100
                 },
-                success: function (obr) {
-                    console.log('obj-----', obj)
-                    // var list = obr.body.bannerList;
-                    // $.each(list, function (n, obj) {
-                    //     $("#swiperPlug").append(`<div class='swiper-slide'><img src="${obj.web_pic_url}" width='100%'
-                    // height='100%' /></div>`)
-                    // });
+                success: function (result) {
+                    console.log('obj-----', result)
+                    var list = result.body.bannerList;
+                    $.each(list, function (n, obj) {
+                        $("#swiperPlug").append(
+                            `<div class='swiper-slide'><img src="${obj.h5_pic_url}"/></div>`)
+                    });
                     //头部焦点图
                     var swiper = new Swiper('#scrollWrap', {
                         loop: true, // 循环模式选项

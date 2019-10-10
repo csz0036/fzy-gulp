@@ -26,7 +26,17 @@ th,
 td {
     margin: 0;
     padding: 0;
-    font-family: Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+    font-family: "Microsoft YaHei",
+        Heiti,
+        Helvetica,
+        Tahoma,
+        Arial,
+        "Hiragino Sans GB",
+        "Hiragino Sans GB W3",
+        STXihei,
+        STHeiti,
+        SimSun,
+        sans-serif;
     font-size: 100%;
 }
 
@@ -283,11 +293,11 @@ h5 {
 
 // footer
 #pageFooter {
-    background: #464B4F;
+    background: #1B2433;
     text-align: center;
     color: #FFF;
-    height: 3.32rem;
     width: 100%;
+    padding-bottom: .4rem;
 
     .ewm {
         text-align: center;
@@ -309,15 +319,29 @@ h5 {
         margin-bottom: .1rem;
 
         i {
-            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAMAAADypuvZAAABy1BMVEX////7+/tHTFD9/f2NkJPm5+dITVFGS0/KzM1JTlKNkJLX2NlQVFhmam7+/v7Cw8Xp6upiZmnh4uNUWVxbX2NMUVX5+vrc3d7d3t+pq619gIPQ0dLP0dLJysvf4OGytLZQVVnCxMVobG/o6elSV1rZ2ttRVlrS09Slp6lKT1P4+Pjx8fGIi42tr7GeoaOXmpxqbnHExcfU1ta1t7nMzs9ydnny8/ORlJaKjY+vsrOChoh6foFlaWzGx8ldYWXAwsOytLWqra64uryLjpGxs7VXW1+qrK729vZucnXv7+/Bw8SUl5lna27n6Oj19faFiYvn5+hfY2eFiIvR0tOkpqijpqj39/fKy8ydn6FgZWjg4eKztbesrrCdoKJpbXC8vr+PkpRwc3e1t7jw8PFobHCOkZRTV1ulqKp4fH9LUFT5+fnMzc6foaNxdXjx8vK8vsDi4+SBhIenqaufoqTr6+zk5OVcYGSvsbPV1tenqqzOz9Cho6Wgo6Vzd3r09PRscHPs7e2SlZeKjpBdYmXe39+Dh4ns7O2/wMJPVFfk5ea3ubuwsrRVWl7W19hOU1f8/Px0eHv09fWanZ9tcXSTlphlam25u7yMj5FeY2a61rthAAACL0lEQVR42u2WZ1fUQBSGd7NuyBbcviBl6b336gIWQBQBxV4pFrChVAWVpqICIir6c5k792wm2cw5yXD8pvPpnbl5MpO5LbaUI4z/kBl04Y67YzIkCLltMDYf/RCBjgEDY+6nS2wnHM5Kq9ClgmmGlWxbvr3izjUlipS/lg+9XdwvM4K7NROUKm/nQKFrxHKSt5+31A6UvckAxT/T973kHrPpHNgqRpKgcAEe3cOezKivO1NZiDqcBsagVwcVBhPXlKr307e6Tjo564fZCR3UiARbZ851tFHX5l8lOrqggbaYQ9KNEVESUqcvNFAxg46rIfMsJ28Q1zxTZCqlgzXAIJeDUQ+11/Y+m67dA/0YVLXmm/wqczHptluoj/ZAxogo0kB5KjTOC3Z8thRUmEEZCWY41+BZX8ITtSBOM0hyItMcMIZDAAzLoPqImNVExH2EXvOCCKJBATFDxC0NJONWVTzoVMJ9WRjSLGDXMUV5UA8xrILoImJHlxr1lPrNgQbI+k0Q4LRMHfSLOuT7DSPUpigKDcnbRFzRZ+4rulUsV6hYRtIo1egSqrB/min1SRIqyx0Ytw1itXwFXdwt1gC+INWAJ0z1VbzLeho3g6QupHwRyIoopuWbDya1XD5AKljjfsIS82OrSS3vtfFGjkkDaC3nQE6zrnF33ghVm7aaSJUjibksW+hPYx4dk+m11tSGnCpiHy2z2j7l9iWKPP+6IfQfkX/++oN++Z//N/rr0CF3uG33hXuWoQAAAABJRU5ErkJggg==) no-repeat center;
+            background: url(../images/tel.png) center center no-repeat;
             background-size: contain;
-            width: .2rem;
-            height: .2rem;
+            width: .26rem;
+            height: .26rem;
+            display: inline-block;
+            position: relative;
+            top: .02rem;
+            margin-right: .1rem;
         }
     }
 
     .addr {
         font-size: .2rem;
+    }
+
+    .pageTel {
+        width: 1.05rem;
+        height: 1.05rem;
+        background: url(../images/pageTel.png) center center no-repeat;
+        background-size: contain;
+        position: fixed;
+        bottom: .6rem;
+        right: .4rem;
     }
 }
 
