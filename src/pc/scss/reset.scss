@@ -134,6 +134,11 @@ h5 {
 // 头部
 header {
   width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 114px;
+  z-index: 10;
 }
 
 .header-inner {
@@ -335,8 +340,8 @@ header {
 }
 
 .zn_person:hover {
-  // background-image: url(../images/robot_btnhover.png);
-  filter: brightness(80%);
+  background-image: url(../images/indexPage/robot_btnhover.png);
+  // filter: brightness(80%);
 }
 
 .nav-right {
@@ -347,6 +352,10 @@ header {
   letter-spacing: 0;
   text-align: center;
   padding-top: 20px;
+}
+
+#pageContent {
+  padding-top: 114px;
 }
 
 // 页面头部banner
@@ -521,10 +530,13 @@ header {
           height: 120px;
         }
 
-        a:hover,
         a:link,
         a:visited,
         a:active {
+          color: #8D9299
+        }
+
+        a:hover {
           color: #fff
         }
       }
@@ -638,18 +650,32 @@ header {
   li {
     margin-bottom: 4px;
     position: relative;
+    width: 48px;
+    height: 52px;
 
-    &.showEWM:hover .ewm {
-      display: block
+    &:hover {
+      .listImg-1 {
+        display: block
+      }
+
+      .listImg {
+        display: none
+      }
     }
 
     .ewm {
       position: absolute;
-      right: 60px;
+      right: 48px;
       bottom: 0;
-      display: none
+      display: none;
+
+      img {
+        width: 130px;
+        height: 122px;
+      }
     }
 
+    &.showEWM:hover .ewm,
     &.lineConsult:hover .consult,
     &.telCall:hover .tel {
       display: block
@@ -668,13 +694,30 @@ header {
       display: none;
     }
 
-    .tel {
-      width: 178px;
+    .consult {
+      img {
+        width: 130px;
+        height: 50px;
+      }
     }
 
-    .listImg {
+    .tel {
+      width: 178px;
+
+      img {
+        width: 180px;
+        height: 50px;
+      }
+    }
+
+    .listImg,
+    .listImg-1 {
       width: 48px;
       height: 48px;
+    }
+
+    .listImg-1 {
+      display: none
     }
 
     &#return_top {

@@ -21,11 +21,14 @@ body {
 .conThree {
   width: 100%;
   background: #F1F3F7;
+  padding-top: 0;
+  height: 1885px;
 
   .inner {
     width: 1035px;
     margin: auto;
-    padding-top: 85px;
+    height: 1885px;
+    overflow: hidden;
   }
 
   // background: #f8f9fb;
@@ -66,7 +69,7 @@ body {
 
 .btn {
   width: 100%;
-  height: 74px;
+  height: 62px;
   margin-top: 67px;
   margin-bottom: 100px;
   position: relative;
@@ -152,6 +155,7 @@ body {
   width: 1020px;
   margin: 90px auto 0;
   padding-bottom: 100px;
+  overflow: hidden;
 
   .ov {
     display: flex;
@@ -173,6 +177,11 @@ body {
     position: relative;
     overflow: hidden;
 
+    .detal {
+      position: relative;
+      top: -10px;
+    }
+
     .hoverShow {
       width: 320px;
       height: 260px;
@@ -192,7 +201,7 @@ body {
       .conten {
         font-size: 12px;
         line-height: 24px;
-        margin: 20px 0 0;
+        margin: 10px 0 0;
         height: 135px;
         text-align: left;
         color: #fff;
@@ -226,6 +235,7 @@ body {
     .icon {
       width: 80px;
       height: 80px;
+      border: 1px dashed #888;
     }
 
     h4 {
@@ -236,6 +246,7 @@ body {
       font-size: 20px;
       line-height: 20px;
       color: #5B5E5F;
+      justify-content: center;
 
       img {
         width: 16px;
@@ -351,6 +362,7 @@ body {
   width: 319px;
   height: 356px;
   float: right;
+  margin-right: 140px;
 }
 
 .conThreeSec {
@@ -366,8 +378,8 @@ body {
 }
 
 .conThreeImg2 {
-  width: 730px;
-  height: 430px;
+  width: 650px;
+  // height: 430px;
   margin-top: 38px;
 }
 
@@ -385,8 +397,8 @@ body {
 }
 
 .conThreeImg3 {
-  width: 540px;
-  height: 430px;
+  width: 450px;
+  // height: 430px;
   float: right;
 }
 
@@ -532,6 +544,7 @@ body {
 .solution {
   background: #ffffff;
   padding: 100px 0 87px 0;
+  height: 1084px;
 
   h3 {
     color: #5B5E5F;
@@ -555,11 +568,50 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 
     span {
       margin: 0 0 19px 24px;
       font-size: 14px;
       color: #333333;
+    }
+
+    &:hover {
+      .hoveShow {
+        transition: all .3s ease-in;
+        opacity: 1;
+      }
+    }
+
+    .hoveShow {
+      position: absolute;
+      top: 0;
+      left: 3px;
+      color: #fff;
+      background: rgba(0, 0, 0, .6);
+      width: 216px;
+      height: 244px;
+      box-sizing: border-box;
+      padding: 60px 18px 0;
+      border-radius: 10px;
+      opacity: 0;
+
+      .innerBox {
+        border-top: 2px solid rgba(255, 255, 255, .5);
+        border-bottom: 2px solid rgba(255, 255, 255, .5);
+      }
+
+      .innerTitle {
+        font-size: 14px;
+        padding-top: 20px;
+      }
+
+      .innerContent {
+        font-size: 12px;
+        text-align: left;
+        margin: 10px 0 20px;
+        line-height: 24px;
+      }
     }
 
     &.solution-1-1 {
@@ -629,6 +681,8 @@ body {
   margin-top: 0;
 
   .industry-report {
+    height: 710px;
+
     h3 {
       color: #5B5E5F;
       font-size: 35px;
@@ -672,13 +726,14 @@ body {
 
       .ct {
         font-size: 14px;
-        font-weight: 300;
+        font-weight: 500;
         text-overflow: ellipsis;
         -webkit-line-clamp: 2;
         display: -webkit-box;
         -webkit-box-orient: vertical;
         overflow: hidden;
         margin: 15px 0;
+        height: 40px;
       }
 
       .downLoad {
@@ -696,8 +751,13 @@ body {
           padding-left: 35px;
           line-height: 30px;
           box-sizing: border-box;
-          color: rgba(0, 134, 236, 1);
+
           cursor: pointer;
+          font-size: 12px;
+
+          a:link {
+            color: rgba(0, 134, 236, 1);
+          }
         }
 
         .dnew {
@@ -708,6 +768,7 @@ body {
           text-align: right;
           flex: 1;
           color: rgba(170, 170, 170, 1);
+          font-size: 12px;
         }
       }
 
@@ -743,6 +804,7 @@ body {
 .comLogo {
   width: 942px;
   margin: 0 auto;
+  height: 510px;
 }
 
 .comLogo ul {
@@ -1533,3 +1595,35 @@ body {
 .nav-right a:active {
   color: #008dd1;
 }
+
+//视差滚动
+
+#scroll_2_box,
+#scroll_3_box,
+#scroll_4_box,
+#scroll_6_box,
+#scroll_7_box,
+#scroll_8_box,
+#scroll_9_box,
+#scroll_10_box,
+#scroll_11_box,
+#scroll_12_box,
+#scroll_13_box,
+#scroll_5_box {
+  opacity: 0;
+  transform: translateY(200%);
+  position: relative;
+  overflow: hidden;
+
+  &.scrollTopEle {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all .8s ease-in-out
+  }
+}
+
+// #scroll_2_box{
+//   &.scrollTopEle {
+//     transition: all 1s ease-in
+//   }
+// }

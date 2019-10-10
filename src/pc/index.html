@@ -12,9 +12,9 @@
 </head>
 
 <body>
+
     <!--S header-->
     @@include('./head.html',{ "index": "active" })
-
     <!--E header-->
 
     <!--S content-->
@@ -29,9 +29,9 @@
                 <div class="swiper-pagination"></div>
             </div>
             <div class=conTwo>
-                <h1 class="conTit2 hide scrollEle">中国 CLM（合同全生命周期管理）行业的引领者</h1>
-                <div class=conTwoStep>
-                    <div class="ov hide scrollEle">
+                <h1 class="conTit2 hide scrollEle ">中国 CLM（合同全生命周期管理）行业的引领者</h1>
+                <div class='conTwoStep'>
+                    <div class="ov hide scrollEle" id="scroll_2_box">
                         <div class="item">
                             <div class="detal">
                                 <img class="icon" src="./images/indexPage/con-two-1-1.png" />
@@ -76,7 +76,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="ov hide scrollEle">
+                    <div class="ov hide scrollEle" id="scroll_3_box">
                         <div class="item">
                             <div class="detal">
                                 <img class="icon" src="./images/indexPage/con-two-2-1.png" />
@@ -124,7 +124,7 @@
             <div class=conThree>
                 <div class="inner">
                     <!-- <h1 class="conTit2 hide scrollEle">专为企业法务、合同管理职能而设计</h1> -->
-                    <div class="ov conThreeFir hide scrollEle">
+                    <div class="ov conThreeFir hide scrollEle" id="scroll_4_box">
                         <div class=conThreeUp>
                             <p>合同全生命周期管理<br />让数据流动起来</p>
                             <ul>
@@ -134,7 +134,7 @@
                             </ul>
                         </div>
                         <img class="fr conThreeImg1" src=./images/indexPage/con-three-1.png> </div> <div
-                            class="conThreeSec hide scrollEle">
+                            class="conThreeSec hide scrollEle" id="scroll_5_box">
                         <p>大数据、AI等新技术的应用，实现合同管理的智能化</p>
                         <ul>
                             <li>·&nbsp;合同文本智能审核，降低人工审核的工作量；</li>
@@ -143,7 +143,7 @@
                             <li>·&nbsp;相对方征信嵌入，助力企业防范选商风险；</li>
                         </ul>
                         <img class=conThreeImg2 src=./images/indexPage/con-three-2.png> </div> <div
-                            class="ov conThreeThi hide scrollEle">
+                            class="ov conThreeThi hide scrollEle" id="scroll_6_box">
                         <div class=conThreeLeft>
                             <p>「沉浸式」工作体验，专注全部工作</p>
                             <ul>
@@ -156,57 +156,129 @@
                         <img class="fr conThreeImg3" src=./images/indexPage/con-three-3.png> </div> </div> </div> <div
                             class=conForth>
                         <div class="solution">
-                            <h3>为您定制行业专属解决方案</h3>
-                            <ul>
+                            <h3 id="scroll_7_box">为您定制行业专属解决方案</h3>
+                            <ul id="scroll_8_box">
                                 <li class="solution-1-1">
                                     <span>金融行业</span>
+                                    <div class="hoveShow">
+                                        <div class="innerBox">
+                                            <p class="innerTitle">金融行业</p>
+                                            <p class="innerContent">满足监管要求的合规要求，在合同系统中进行全生命周期固化</p>
+                                        </div>
+                                    </div>
                                 </li>
                                 <li class="solution-1-2">
                                     <span>地产行业</span>
+                                    <div class="hoveShow">
+                                        <div class="innerBox">
+                                            <p class="innerTitle">地产行业</p>
+                                            <p class="innerContent">从项目的视角管理合同，以及地产行业纠纷案件案件管理，例如群诉管理</p>
+                                        </div>
+                                    </div>
                                 </li>
                                 <li class="solution-1-3">
                                     <span>交通行业</span>
+                                    <div class="hoveShow">
+                                        <div class="innerBox">
+                                            <p class="innerTitle">交通行业</p>
+                                            <p class="innerContent">精细化合同管理，满足航空公司、机场、公路、铁路、港口、地铁等不同企业需求</p>
+                                        </div>
+                                    </div>
                                 </li>
                                 <li class="solution-1-4">
                                     <span>石化钢铁</span>
+                                    <div class="hoveShow">
+                                        <div class="innerBox">
+                                            <p class="innerTitle">石化钢铁</p>
+                                            <p class="innerContent">上下游业务一体化贯通的合同管理，实现产供销一体化</p>
+                                        </div>
+                                    </div>
                                 </li>
                             </ul>
-                            <ul>
+                            <ul id="scroll_9_box">
                                 <li class="solution-2-1">
                                     <span>投资集团</span>
+                                    <div class="hoveShow">
+                                        <div class="innerBox">
+                                            <p class="innerTitle">投资集团</p>
+                                            <p class="innerContent">满足监管要求的合规要求，在合同系统中进行全生命周期固化</p>
+                                        </div>
+                                    </div>
                                 </li>
                                 <li class="solution-2-2">
                                     <span>娱乐文化</span>
+                                    <div class="hoveShow">
+                                        <div class="innerBox">
+                                            <p class="innerTitle">娱乐文化</p>
+                                            <p class="innerContent">从项目的视角管理合同，以及地产行业纠纷案件案件管理，例如群诉管理</p>
+                                        </div>
+                                    </div>
                                 </li>
                                 <li class="solution-2-3">
                                     <span>制造行业</span>
+                                    <div class="hoveShow">
+                                        <div class="innerBox">
+                                            <p class="innerTitle">制造行业</p>
+                                            <p class="innerContent">精细化合同管理，满足航空公司、机场、公路、铁路、港口、地铁等不同企业需求</p>
+                                        </div>
+                                    </div>
                                 </li>
                                 <li class="solution-2-4">
                                     <span>农牧行业</span>
+                                    <div class="hoveShow">
+                                        <div class="innerBox">
+                                            <p class="innerTitle">农牧行业</p>
+                                            <p class="innerContent">上下游业务一体化贯通的合同管理，实现产供销一体化</p>
+                                        </div>
+                                    </div>
                                 </li>
                             </ul>
-                            <ul>
+                            <ul id="scroll_10_box">
                                 <li class="solution-3-1">
                                     <span>烟草行业</span>
+                                    <div class="hoveShow">
+                                        <div class="innerBox">
+                                            <p class="innerTitle">烟草行业</p>
+                                            <p class="innerContent">满足监管要求的合规要求，在合同系统中进行全生命周期固化</p>
+                                        </div>
+                                    </div>
                                 </li>
                                 <li class="solution-3-2">
                                     <span>军工行业</span>
+                                    <div class="hoveShow">
+                                        <div class="innerBox">
+                                            <p class="innerTitle">军工行业</p>
+                                            <p class="innerContent">从项目的视角管理合同，以及地产行业纠纷案件案件管理，例如群诉管理</p>
+                                        </div>
+                                    </div>
                                 </li>
                                 <li class="solution-3-3">
                                     <span>制药行业</span>
+                                    <div class="hoveShow">
+                                        <div class="innerBox">
+                                            <p class="innerTitle">制药行业</p>
+                                            <p class="innerContent">精细化合同管理，满足航空公司、机场、公路、铁路、港口、地铁等不同企业需求</p>
+                                        </div>
+                                    </div>
                                 </li>
                                 <li class="solution-3-4">
                                     <span>政府</span>
+                                    <div class="hoveShow">
+                                        <div class="innerBox">
+                                            <p class="innerTitle">政府</p>
+                                            <p class="innerContent">上下游业务一体化贯通的合同管理，实现产供销一体化</p>
+                                        </div>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
                         <div class="ov conForthCompany">
-                            <div class="industry-report">
+                            <div class="industry-report" id="scroll_11_box">
                                 <h3>行业报告</h3>
-                                <ul class="newList list_2 ">
-                                    <li>
-                                        <p class="img"><img src="./images/nav-icon-2.png" width="290" height="160"
-                                                alt=""></p>
+                                <ul class="newList list_2 " id="reportList">
+                                    <!-- <li>
+                                        <p class="img"><img src="/images/caseList/listImg-8.png" width="290"
+                                                height="160" alt=""></p>
                                         <p class="ct">
                                             北京人离开资源管理迎来突破，电子劳动合同助理效率升级北京人离开资源管理迎来突破，电子劳动合同助理效率升级北京人离开资源管理迎来突破，电子劳动合同助理效率升级
                                             北京人离开资源管理迎来突破，电子劳动合同助理效率升级</p>
@@ -214,29 +286,7 @@
                                             <span class="ddow">下载文件</span>
                                             <span class="dtime">2019-03-12</span>
                                         </p>
-                                    </li>
-                                    <li>
-                                        <p class="img"><img src="./images/nav-icon-2.png" width="290" height="160"
-                                                alt=""></p>
-                                        <p class="ct">
-                                            北京人离开资源管理迎来突破，电子劳动合同助理效率升级北京人离开资源管理迎来突破，电子劳动合同助理效率升级北京人离开资源管理迎来突破，电子劳动合同助理效率升级
-                                            北京人离开资源管理迎来突破，电子劳动合同助理效率升级</p>
-                                        <p class="downLoad">
-                                            <span class="ddow">下载文件</span>
-                                            <span class="dtime">2019-03-12</span>
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <p class="img"><img src="./images/nav-icon-2.png" width="290" height="160"
-                                                alt=""></p>
-                                        <p class="ct">
-                                            北京人离开资源管理迎来突破，电子劳动合同助理效率升级北京人离开资源管理迎来突破，电子劳动合同助理效率升级北京人离开资源管理迎来突破，电子劳动合同助理效率升级
-                                            北京人离开资源管理迎来突破，电子劳动合同助理效率升级</p>
-                                        <p class="downLoad">
-                                            <span class="ddow">下载文件</span>
-                                            <span class="dtime">2019-03-12</span>
-                                        </p>
-                                    </li>
+                                    </li> -->
                                 </ul>
                                 <div class=btn>
                                     <a class=experBtn href="resourceCenter.html?tabId=3"
@@ -244,8 +294,9 @@
                                 </div>
                             </div>
                             <div class="split-line"></div>
-                            <h3 class="hide scrollEle"><span>20年</span>深耕，中国<span>500强</span>企业的共同选择</h3>
-                            <div class="comLogo hide scrollEle">
+                            <h3 class="hide scrollEle" id="scroll_12_box"><span>20年</span>深耕，中国<span>500强</span>企业的共同选择
+                            </h3>
+                            <div class="comLogo hide scrollEle" id="scroll_13_box">
                                 <ul>
                                     <li class="logo-1-1"></li>
                                     <li class="logo-1-2"></li>
@@ -336,6 +387,7 @@
                     });
 
 
+                    //焦点图
                     $.ajax({
                         url: "http://172.16.5.59:5000/api/v1/banner/list",
                         type: "GET",
@@ -358,6 +410,75 @@
                                     el: '.swiper-pagination',
                                 },
                             })
+                        }
+                    })
+
+                    // 行业报告
+                    $.ajax({
+                        url: "http://172.16.5.59:5000/api/v1/news/list",
+                        type: "GET",
+                        dataType: "json",
+                        data: {
+                            page: 1,
+                            pageSize: 3,
+                            type: 2
+                        },
+                        success: function (obr) {
+                            let list = obr.body.newsList;
+                            $.each(list, function (n, obj) {
+                                $("#reportList").append(`<li>
+                                 <p class="img"><a href="./detail.html?news_id=${obj.news_id}"><img
+                                             src="${obj.head_url}" alt="" width="290"
+                                             height="160"></a></p>
+                                 <p class="ct">${obj.title}</p>
+                                 <p class="downLoad">
+                                     <span class="ddow"><a href="${obj.download_url}" download="下载文件">下载文件</a></span>
+                                     <span class="dtime">${obj.publish_time}</span>
+                                 </p>
+                             </li>`)
+                            });
+                        }
+                    });
+
+
+                    //滚动视差效果
+                    $(window).scroll(function () {
+                        let winTop = $(this).scrollTop()
+                        if (winTop > 190 && !$("#scroll_2_box").hasClass('scrollTopEle')) {
+                            $("#scroll_2_box").addClass('scrollTopEle')
+                        }
+                        if (winTop > 370 && !$("#scroll_3_box").hasClass('scrollTopEle')) {
+                            $("#scroll_3_box").addClass('scrollTopEle')
+                        }
+                        if (winTop > 770 && !$("#scroll_4_box").hasClass('scrollTopEle')) {
+                            $("#scroll_4_box").addClass('scrollTopEle')
+                        }
+                        if (winTop > 1230 && !$("#scroll_5_box").hasClass('scrollTopEle')) {
+                            $("#scroll_5_box").addClass('scrollTopEle')
+                        }
+                        if (winTop > 2100 && !$("#scroll_6_box").hasClass('scrollTopEle')) {
+                            $("#scroll_6_box").addClass('scrollTopEle')
+                        }
+                        if (winTop > 2920 && !$("#scroll_7_box").hasClass('scrollTopEle')) {
+                            $("#scroll_7_box").addClass('scrollTopEle')
+                        }
+                        if (winTop > 3000 && !$("#scroll_8_box").hasClass('scrollTopEle')) {
+                            $("#scroll_8_box").addClass('scrollTopEle')
+                        }
+                        if (winTop > 3200 && !$("#scroll_9_box").hasClass('scrollTopEle')) {
+                            $("#scroll_9_box").addClass('scrollTopEle')
+                        }
+                        if (winTop > 3500 && !$("#scroll_10_box").hasClass('scrollTopEle')) {
+                            $("#scroll_10_box").addClass('scrollTopEle')
+                        }
+                        if (winTop > 4000 && !$("#scroll_11_box").hasClass('scrollTopEle')) {
+                            $("#scroll_11_box").addClass('scrollTopEle')
+                        }
+                        if (winTop > 4500 && !$("#scroll_12_box").hasClass('scrollTopEle')) {
+                            $("#scroll_12_box").addClass('scrollTopEle')
+                        }
+                        if (winTop > 4700 && !$("#scroll_13_box").hasClass('scrollTopEle')) {
+                            $("#scroll_13_box").addClass('scrollTopEle')
                         }
                     })
 

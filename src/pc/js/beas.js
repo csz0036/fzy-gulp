@@ -17,6 +17,34 @@ $(function () {
         }, "fast");
     });
 
+    //顶部导航交互效果
+    var t = 0
+    $(window).scroll(function () {
+        var scrollT = $(this).scrollTop();
+        if (t < scrollT) {
+            //下滚
+            if (scrollT > 100) {
+                // $("#pageHeader").css('top', '-' + 44 + 'px')
+                $("#pageHeader").stop(true).animate({
+                    top: '-44px'
+                }, 30)
+            }
+        } else {
+            //上滚            
+            let headTop = ($("#pageHeader").css('top')).substring(1, 3)
+            if (headTop != 0) {
+                $("#pageHeader").stop(true).animate({
+                    top: 0
+                }, 30)
+            }
+        }
+        setTimeout(function () {
+            t = scrollT;
+        }, 0)
+
+
+    })
+
 })
 
 function GetQueryString(name) {
