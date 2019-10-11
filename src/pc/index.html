@@ -351,7 +351,7 @@
             <script src="./js/jquery-1.9.1.min.js"></script>
             <script src="./js/swiper.min.js"></script>
             <script src="./js/beas.min.js"></script>
-            <script>
+            <script defer>
                 $(function () {
                     // 底部轮播图
                     var swiper = new Swiper('.swiper-container', {
@@ -389,7 +389,7 @@
 
                     //焦点图
                     $.ajax({
-                        url: "http://172.16.5.59:5000/api/v1/banner/list",
+                        url: apiUrl + "banner/list",
                         type: "GET",
                         dataType: "json",
                         data: {
@@ -415,7 +415,7 @@
 
                     // 行业报告
                     $.ajax({
-                        url: "http://172.16.5.59:5000/api/v1/news/list",
+                        url: apiUrl + "news/list",
                         type: "GET",
                         dataType: "json",
                         data: {

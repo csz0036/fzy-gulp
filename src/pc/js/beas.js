@@ -54,4 +54,5 @@ function GetQueryString(name) {
     return null;
 }
 
-var apiUrl = 'http://172.16.5.59:5000/api/v1/'
+// var apiUrl = 'http://172.16.5.59:5000/api/v1/'
+var apiUrl = 'http://fzy2.smartdot.com:38080/api/v1/'

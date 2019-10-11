@@ -39,7 +39,7 @@
     <!--E footer-->
     <script src="./js/jquery-1.9.1.min.js"></script>
     <script src="./js/beas.min.js"></script>
-    <script>
+    <script defer>
         $(function () {
             $(".but > span").hover(function () {
                 $(this).find('img').stop().animate({
@@ -57,7 +57,7 @@
             let tabIdPage = GetQueryString("news_id");
             if (tabIdPage) {
                 $.ajax({
-                    url: "http://172.16.5.59:5000/api/v1/news/detail",
+                    url: apiUrl + "news/detail",
                     type: "get",
                     dataType: "json",
                     data: {
