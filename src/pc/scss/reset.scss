@@ -161,17 +161,22 @@ header {
   z-index: 11;
   left: -26px;
   display: none;
+  padding-top: 25px;
+  box-sizing: border-box;
 
   a {
-    height: 60px;
     font-size: 14px;
-    font-family: PingFangSC-Regular,
-      PingFangSC;
+    height: 20px;
+    line-height: 20px;
     font-weight: 400;
     color: rgba(110, 130, 153, 1);
-    line-height: 60px;
     display: block;
     text-align: center;
+    margin-bottom: 34px;
+
+    &:last-child {
+      margin-bottom: 31px;
+    }
   }
 }
 
