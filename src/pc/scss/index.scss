@@ -20,7 +20,7 @@ body {
 
 .conThree {
   width: 100%;
-  background: #F1F3F7;
+  background: #F8F9FB;
   padding-top: 0;
   height: 1885px;
 
@@ -85,7 +85,7 @@ body {
 .conOneData {
   width: 100%;
   margin-top: 35px;
-  background: #F1F3F7;
+  background: #F8F9FB;
 }
 
 .conOneDataList {
@@ -169,7 +169,8 @@ body {
   .item {
     width: 320px;
     height: 260px;
-    background: #F0F0F0;
+    background: #FBFBFB;
+    border: 1px solid #f0f0f0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -397,13 +398,13 @@ body {
 }
 
 .conThreeImg3 {
-  width: 450px;
+  width: 400px;
   // height: 430px;
   float: right;
 }
 
 .conForth {
-  padding-top: 80px;
+  padding-top: 0px;
   overflow: hidden;
 }
 
@@ -557,7 +558,7 @@ body {
     width: 1006px;
     display: flex;
     justify-content: space-between;
-    margin: auto;
+    margin: 0 auto 20px;
   }
 
   li {

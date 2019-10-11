@@ -382,7 +382,12 @@ h5 {
         .liContent {
             font-size: .24rem;
             color: rgba(153, 153, 153, 1);
-            line-height: .4rem
+            line-height: .4rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            word-break: break-all
         }
     }
 }

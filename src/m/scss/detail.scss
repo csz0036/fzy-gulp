@@ -1,0 +1,31 @@
+@import './reset.scss';
+
+.detailPage {
+    padding: 0 .4rem .9rem;
+    min-height: 7.5rem;
+
+    .title {
+        font-size: .4rem;
+        line-height: .6rem;
+        color: #383838;
+        text-align: center;
+        padding: .7rem 0 .3rem;
+        ;
+    }
+
+    .detailContent {
+        color: #808080;
+        font-size: .28rem;
+        line-height: .48rem;
+
+        img {
+            width: 100%;
+            display: block;
+            margin: .3rem 0;
+        }
+
+        p {
+            margin-bottom: .3rem;
+        }
+    }
+}

@@ -62,7 +62,6 @@
                 background: rgba(255, 255, 255, 1);
                 border-radius: 2px;
                 border: 1px solid rgba(225, 225, 225, 1);
-
                 align-items: center;
                 margin-bottom: 15px;
 
@@ -88,8 +87,6 @@
                     background-color: #fff;
                     width: 235px;
                     outline: none;
-
-
                 }
 
                 select {
@@ -160,4 +157,43 @@
 
 #input_3 {
     width: 282px;
+}
+
+.selectBox {
+    flex: 1;
+    position: relative;
+    font-size: 13px;
+    margin-left: 10px;
+    background: url(../images/apply/arr_bt.png) 246px 0px no-repeat;
+    background-size: 16px 16px;
+
+    .defaultText {
+        color: #999;
+
+        &.clickClass {
+            color: #000
+        }
+    }
+
+    ul {
+        position: absolute;
+        background-color: #fff;
+        width: 90%;
+        height: 0;
+        overflow: hidden;
+
+        li {
+            height: 40px;
+            line-height: 40px;
+            border-bottom: 1px solid #f6f6f6;
+            padding-left: 10px;
+            top: 25px;
+            left: 0;
+        }
+
+        &.showUl {
+            height: 200px;
+            transform: all .6s ease-in-out;
+        }
+    }
 }

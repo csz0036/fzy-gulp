@@ -144,21 +144,8 @@
             </div>
             <div class="bg_f1 reportList">
                 <h3 class="reportTitle">行业报告</h3>
-                <ul class="listLint-2">
-                    <li>
-                        <a href="#">
-                            <img src="" alt="" class="listImg">
-                            <p class="liTitle">小米大厦</p>
-                            <p class="liContent">北京人离开资源管理迎来突破，电子劳动合同助理效率升级</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="" alt="" class="listImg">
-                            <p class="liTitle">小米大厦</p>
-                            <p class="liContent">北京人离开资源管理迎来突破，电子劳动合同助理效率升级</p>
-                        </a>
-                    </li>
+                <ul class="listLint-2" id="reportList">
+
                 </ul>
                 <a href="./caseList.html" class="demonstration reportMore"></a>
                 <h3 class="reportTitle titl_3"><span>20年</span>深耕，中国<span></span>百强企业</span>的共同选择</h3>
@@ -220,7 +207,6 @@
                     pageSize: 100
                 },
                 success: function (result) {
-                    console.log('obj-----', result)
                     var list = result.body.bannerList;
                     $.each(list, function (n, obj) {
                         $("#swiperPlug").append(
@@ -235,6 +221,36 @@
                     });
                 }
             })
+
+            //去除HTML标签
+            function matchReg(str) {
+                let reg = /<\/?.+?\/?>/g;
+                // console.log(str.replace(reg, ''));
+                return str.replace(reg, '')
+            }
+            // 行业报告
+            $.ajax({
+                url: "http://172.16.5.59:5000/api/v1/news/list",
+                type: "GET",
+                dataType: "json",
+                data: {
+                    page: 1,
+                    pageSize: 2,
+                    type: 2
+                },
+                success: function (obr) {
+                    let list = obr.body.newsList;
+                    $.each(list, function (n, obj) {
+                        $("#reportList").append(`<li>
+                            <a href="./detail.html?news_id=${obj.news_id}">
+                                <img src="${obj.head_url}" alt="" class="listImg">
+                                <p class="liTitle">${obj.title}</p>
+                                <p class="liContent">${matchReg(obj.content)}</p>
+                            </a>
+                        </li>`)
+                    });
+                }
+            });
         </script>
 </body>
 

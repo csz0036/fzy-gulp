@@ -53,3 +53,5 @@ function GetQueryString(name) {
     if (r != null) return unescape(r[2]);
     return null;
 }
+
+var apiUrl = 'http://172.16.5.59:5000/api/v1/'
