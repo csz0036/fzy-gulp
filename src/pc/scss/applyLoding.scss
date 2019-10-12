@@ -64,12 +64,23 @@
                 border: 1px solid rgba(225, 225, 225, 1);
                 align-items: center;
                 margin-bottom: 15px;
-
+                position: relative;
+                .errorInfo{
+                    position: absolute;
+                    font-size:13px;
+                    color: #FC2222;
+                    top: 9px;
+                    right: 5px;
+                    display: none;
+                    z-index: 2;
+                    background-color: #fff;
+                }
                 label {
                     display: flex;
                     width: 330px;
                     height: 36px;
-                    align-items: center
+                    align-items: center;
+                    
                 }
 
                 .iconImg {
@@ -166,6 +177,7 @@
     margin-left: 10px;
     background: url(../images/apply/arr_bt.png) 246px 0px no-repeat;
     background-size: 16px 16px;
+    z-index: 1;
 
     .defaultText {
         color: #999;

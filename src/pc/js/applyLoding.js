@@ -1,12 +1,19 @@
 $(function () {
 
     $(".defaultText").on('click', function () {
+        $("#selsectCompany").hide()
         $(this).siblings('#scaleNumber').toggleClass('showUl')
     })
     $("#scaleNumber").on('click', 'li', function () {
         $(this).parent().removeClass('showUl')
         $('.defaultText').text($(this).text()).addClass('clickClass')
+        
     })
+
+    $(".inputLab input").focus(function(){
+        $(this).parents('.inputLab').find(".errorInfo").hide()
+    })
+
     $("#submitBut").on('click', function () {
         var name = $.trim($("#input_1").val());
         var company_scale = $('.defaultText').text();
@@ -15,24 +22,29 @@ $(function () {
         var phone = $.trim($("#input_5").val());
 
         if (!name) {
-            alert('请输入您的名字');
+            // alert('请输入您的名字');
+            $("#userName").show()
+            return false;
+        }
+        if (!company) {
+            // alert('请输入公司名称');
+            $("#companyName").show()
             return false;
         }
         if (company_scale == '请选择企业规模') {
-            alert('请选择企业规模');
+            // alert('请选择企业规模');
+            $("#selsectCompany").show()
             return false;
         }
         var reg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
         if (!reg.test(company_email)) {
-            alert('邮箱格式不正确');
-            return false;
-        }
-        if (!company) {
-            alert('请输入公司名称');
+            // alert('邮箱格式不正确');
+            $("#companyMail").show()
             return false;
         }
         if (!(/^1[3456789]\d{9}$/.test(phone))) {
-            alert('手机号码有误，请重填');
+            // alert('手机号码有误，请重填');
+            $("#phoneNumber").show()
             return false;
         }
 
