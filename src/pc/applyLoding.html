@@ -42,14 +42,6 @@
                     </div>
                     <div class="inputLab">
                         <label for="input_3"><img src="./images/apply/ic_3.png" class="iconImg" alt="">
-                            <!-- <select name="" id="input_3">
-                                <option value="1">请选择企业规模</option>
-                                <option value="1">20人以下</option>
-                                <option value="1">20-100人</option>
-                                <option value="1">100-300人</option>
-                                <option value="1">300-500人</option>
-                                <option value="1">500人以上</option>
-                            </select> -->
                             <div class="selectBox">
                                 <p class="defaultText">请选择企业规模</p>
                                 <ul id="scaleNumber">
@@ -87,65 +79,7 @@
     <!--E footer-->
     <script src="./js/jquery-1.9.1.min.js"></script>
     <script src="./js/beas.min.js"></script>
-    <script defer>
-        $(function () {
-
-            $(".defaultText").on('click', function () {
-                $(this).siblings('#scaleNumber').toggleClass('showUl')
-            })
-            $("#scaleNumber").on('click', 'li', function () {
-                $(this).parent().removeClass('showUl')
-                $('.defaultText').text($(this).text()).addClass('clickClass')
-            })
-            $("#submitBut").on('click', function () {
-                var name = $.trim($("#input_1").val());
-                var company_scale = $('.defaultText').text();
-                var company_email = $.trim($("#input_4").val());
-                var company = $.trim($("#input_2").val());
-                var phone = $.trim($("#input_5").val());
-
-                if (!name) {
-                    alert('请输入您的名字');
-                    return false;
-                }
-                if (company_scale == '请选择企业规模') {
-                    alert('请选择企业规模');
-                    return false;
-                }
-                var reg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
-                if (!reg.test(company_email)) {
-                    alert('邮箱格式不正确');
-                    return false;
-                }
-                if (!company) {
-                    alert('请输入公司名称');
-                    return false;
-                }
-                if (!(/^1[3456789]\d{9}$/.test(phone))) {
-                    alert('手机号码有误，请重填');
-                    return false;
-                }
-
-
-                $.ajax({
-                    url: apiUrl + "user/post_info",
-                    type: "POST",
-                    dataType: "json",
-                    data: {
-                        name: name,
-                        company_scale: company_scale,
-                        company_email: company_email,
-                        company: company,
-                        phone: phone,
-                        memo: $("#textareaId").val(),
-                    },
-                    success: function (reuslt) {
-                        alert('提交申请成功');
-                    }
-                })
-            })
-        })
-    </script>
+    <script src="./js/applyLoding.min.js" defer></script>
 
 </body>
 

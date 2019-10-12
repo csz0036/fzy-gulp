@@ -102,16 +102,6 @@
     <script src="./js/beas.min.js"></script>
     <script>
         $(function () {
-            $(".but > span").hover(function () {
-                $(this).find('img').stop().animate({
-                    'margin-left': "18px"
-                }, 300)
-            }, function () {
-                $(this).find('img').stop().animate({
-                    'margin-left': "10px"
-                }, 300)
-            });
-
             $("#plLeft > .plTitle").on('click', function () {
                 $(this).addClass('active').siblings().removeClass('active');
                 // $(this).index()
