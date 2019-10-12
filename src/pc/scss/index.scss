@@ -805,7 +805,7 @@ body {
 .comLogo {
   width: 942px;
   margin: 0 auto;
-  height: 510px;
+  height: 580px;
 }
 
 .comLogo ul {
@@ -1628,3 +1628,8 @@ body {
 //     transition: all 1s ease-in
 //   }
 // }
+#scroll_13_box {
+  .logoScroll {
+    bottom: 0
+  }
+}

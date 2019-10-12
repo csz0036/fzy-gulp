@@ -1,8 +1,8 @@
  $(function () {
      // 底部轮播图
-     var swiper = new Swiper('.swiper-container', {
+     var swiper = new Swiper('#scroll_13_box', {
          pagination: {
-             el: '.swiper-pagination',
+             el: '.logoScroll',
          },
      });
 

@@ -7,10 +7,10 @@ $(function () {
     $("#scaleNumber").on('click', 'li', function () {
         $(this).parent().removeClass('showUl')
         $('.defaultText').text($(this).text()).addClass('clickClass')
-        
+
     })
 
-    $(".inputLab input").focus(function(){
+    $(".inputLab input").focus(function () {
         $(this).parents('.inputLab').find(".errorInfo").hide()
     })
 
@@ -62,7 +62,11 @@ $(function () {
                 memo: $("#textareaId").val(),
             },
             success: function (reuslt) {
-                alert('提交申请成功');
+                // alert('提交申请成功');
+                $("#successSubmit").show();
+                setTimeout(function () {
+                    $("#successSubmit").hide()
+                }, 3000)
             }
         })
     })
