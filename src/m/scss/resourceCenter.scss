@@ -72,6 +72,7 @@ body {
             overflow: hidden;
             -webkit-box-orient: vertical;
             word-break: break-all;
+            min-height: 1.05rem;
         }
 
         .listContent {
@@ -89,6 +90,7 @@ body {
             text-align: center;
             color: #0086EC;
             font-size: .24rem;
+            display: block
         }
     }
 

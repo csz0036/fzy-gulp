@@ -78,7 +78,7 @@
                 <li><img src="./images/index/logo-23.png" alt=""></li>
                 <li><img src="./images/index/logo-24.png" alt=""></li>
             </ul>
-            <a href="#" class="demonstration"></a>
+            <a href="./applyLoding.html" class="demonstration"></a>
         </div>
     </div>
     <!--S footer-->
@@ -87,28 +87,7 @@
 
     <script src="./js/jquery-1.9.1.min.js"></script>
     <script src="./js/basis.min.js"></script>
-    <script>
-        $(function () {
-            $("#resourceCenterNav span").on('click', function () {
-                $(this).addClass('activet').parent('p').siblings('p').find("span").removeClass(
-                    'activet');
-                let ind = $(this).parent('p').index();
-                switch (ind) {
-                    case 0:
-                        $("#titleText").text('公司新闻');
-                        break;
-                    case 1:
-                        $("#titleText").text('专业分析');
-                        break;
-                    case 2:
-                        $("#titleText").text('行业报告');
-                        break;
-                }
-                $("#listScroll").find('.caseList').eq(ind).addClass('active').siblings().removeClass(
-                    'active')
-            })
-        })
-    </script>
+
 </body>
 
 </html>

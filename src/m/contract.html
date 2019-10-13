@@ -19,6 +19,7 @@
             <p class="subTitle">Contract Lifecycle Management</p>
             <p class="content">以“效率、风险、数据”为核心，通过智能化技术帮助企业实现合同全生命周期的管理；通过CLM+eSignature（电子签名） 实现合同全程电子化。</p>
             <p class="but"><a href="./applyLoding.html">预约演示</a></p>
+            <img src="./images/contract/banner_img.png" class="bannerImg" alt="">
         </div>
         <div class="bg_ff">
             <h3 class="h3Styel padding_1">合同全生命周期管理<br />让数据流动起来</h3>
@@ -57,7 +58,10 @@
             <img src="./images/contract/img-9.png" alt="" class="imgStyle img9">
             <p class="ct_p">专业的报表工具支持多维度统计分析</p>
         </div>
-        <img src="./images/contract/img-10.png" class="video" alt="">
+        <img src="./images/contract/img-10.png" class="video" alt="" id="playBtn">
+        <div id="videoWarp">
+            <video src="http://www.smartdot.com/fzy/website/dist/img/video.mp4" id="videoSource"></video>
+        </div>
     </div>
     <!--S footer-->
     @@include('./foot.html')
@@ -66,7 +70,16 @@
     <script src="./js/jquery-1.9.1.min.js"></script>
     <script src="./js/basis.min.js"></script>
     <script>
-
+        $(function () {
+            $("#playBtn").on('click', function () {
+                $("#videoWarp").show()
+                document.getElementById('videoSource').play()
+            })
+            $("#videoWarp").on('click', function () {
+                $(this).hide()
+                document.getElementById('videoSource').pause()
+            })
+        })
     </script>
 </body>
 

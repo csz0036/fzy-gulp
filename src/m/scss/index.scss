@@ -275,6 +275,11 @@
         overflow: auto;
         padding: 0 .15rem;
 
+        img {
+            width: 100%;
+            display: block;
+        }
+
         li {
             float: left;
             margin: 0 .05rem .1rem 0;
@@ -286,10 +291,13 @@
             }
 
             img {
-                width: 100%;
-                height: 100%;
+                width: 2.16rem;
                 display: block;
             }
+        }
+
+        .swiper-pagination-logo {
+            text-align: center;
         }
     }
 }

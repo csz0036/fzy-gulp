@@ -40,9 +40,17 @@
     }
 
     .img_2 {
-        width: 6.52rem;
-        height: 9.08rem;
+        width: 6.32rem;
         display: block;
         margin-top: .7rem;
     }
+}
+
+.bannerBox .but {
+    position: static;
+    margin-left: 0;
+}
+
+.bannerImg {
+    width: 5.74rem;
 }

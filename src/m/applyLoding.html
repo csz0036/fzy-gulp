@@ -24,31 +24,45 @@
                 <div class="rightTable">
                     <div class="inputLab">
                         <input type="text" id="input_1" placeholder="您的名字">
+                        <p class="errorInfo" id="userName">请输入姓名</p>
                     </div>
                     <div class="inputLab">
                         <input type="text" id="input_2" placeholder="公司名称">
+                        <p class="errorInfo" id="companyName">请输入公司名称</p>
                     </div>
                     <div class="inputLab">
                         <select name="" id="input_3">
                             <option value="1">请选择企业规模</option>
-                            <option value="1">20人以下</option>
-                            <option value="1">20-100人</option>
-                            <option value="1">100-300人</option>
-                            <option value="1">300-500人</option>
-                            <option value="1">500人以上</option>
+                            <option value="2">20人以下</option>
+                            <option value="3">20-100人</option>
+                            <option value="4">100-300人</option>
+                            <option value="5">300-500人</option>
+                            <option value="6">500人以上</option>
                         </select>
+                        <p class="errorInfo" id="selsectCompany">请选择企业规模</p>
                     </div>
                     <div class="inputLab">
                         <input type="text" id="input_4" placeholder="公司邮箱">
+                        <p class="errorInfo" id="companyMail">请输入正确的邮箱</p>
                     </div>
                     <div class="inputLab2">
                         <textarea name="" id="textareaId" placeholder="备注"></textarea>
                     </div>
                     <div class="inputLab">
                         <input type="text" id="input_5" placeholder="手机号码">
+                        <p class="errorInfo" id="phoneNumber">请输入正确的手机号码</p>
                     </div>
-                    <p id="submitBut">申请申请，免费体验</p>
+                    <p id="submitBut">申请，免费体验</p>
                 </div>
+            </div>
+        </div>
+
+
+        <div class="successBox" id="successInfo">
+            <div class="innerSuc">
+                <img src="./images/applyLoding/success.png" class="sucImg" />
+                <p class="sucTitle">您已经成功提交申请</p>
+                <p class="sucContent">我们的顾问会在1个工作日内与您取得联系</p>
             </div>
         </div>
     </div>
@@ -59,60 +73,8 @@
 
     <!--E footer-->
     <script src="./js/jquery-1.9.1.min.js"></script>
-    <script src="./js/beas.min.js"></script>
-    <script>
-        $(function () {
-            $("#submitBut").on('click', function () {
-                var name = $.trim($("#input_1").val());
-                var company_scale = $("#input_3").val();
-                var company_email = $.trim($("#input_4").val());
-                var company = $.trim($("#input_2").val());
-                var phone = $.trim($("#input_5").val());
-
-                if (!name) {
-                    alert('请输入您的名字');
-                    return false;
-                }
-                if (!company_scale) {
-                    alert('请选择企业规模');
-                    return false;
-                }
-                var reg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
-                if (!reg.test(company_email)) {
-                    alert('邮箱格式不正确');
-                    return false;
-                }
-                if (!company) {
-                    alert('请输入公司名称');
-                    return false;
-                }
-                if (!(/^1[3456789]\d{9}$/.test(phone))) {
-                    alert('手机号码有误，请重填');
-                    return false;
-                }
-
-
-
-                $.ajax({
-                    url: "http://172.16.5.59:5000/api/v1/user/post_info",
-                    type: "POST",
-                    dataType: "json",
-                    data: {
-                        name: name,
-                        company_scale: company_scale,
-                        company_email: company_email,
-                        company: company,
-                        phone: phone,
-                        memo: $("#textareaId").val(),
-                    },
-                    success: function (reuslt) {
-                        alert('提交申请成功');
-                    }
-                })
-            })
-        })
-    </script>
-
+    <script src="./js/basis.min.js"></script>
+    <script src="./js/applyLoding.min.js" defer></script>
 </body>
 
 </html>

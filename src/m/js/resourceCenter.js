@@ -1,17 +1,26 @@
  $(function () {
+     let contentId;
+     let pageNumber = 1;
      $("#resourceCenterNav span").on('click', function () {
          $(this).addClass('activet').parent('p').siblings('p').find("span").removeClass(
              'activet');
          let ind = $(this).parent('p').index();
+         pageNumber = 1
          switch (ind) {
              case 0:
                  $("#titleText").text('公司新闻');
+                 getData(0, 1, 'companyNewsWrap');
+                 contentId = 'companyNewsWrap';
                  break;
              case 1:
                  $("#titleText").text('专业分析');
+                 getData(1, 1, 'majorWrap')
+                 contentId = 'majorWrap';
                  break;
              case 2:
                  $("#titleText").text('行业报告');
+                 getData(2, 1, 'reportWrap')
+                 contentId = 'reportWrap';
                  break;
          }
          $("#listScroll").find('.caseList').eq(ind).addClass('active').siblings().removeClass(
@@ -38,7 +47,9 @@
 
          // 到底部加载下一页
          if (scrollTop + height == $(document).height()) {
-             console.log('到底部了')
+             pageNumber++
+             getData($("#" + contentId).index(), pageNumber, contentId)
+             //  console.log('到底部了', contentId, $("#" + contentId).index() + 1, pageNumber)
          }
      })
 
@@ -73,7 +84,7 @@
       */
      function getData(type, page, ele) {
          $.ajax({
-             url: "http://172.16.5.59:5000/api/v1/news/list",
+             url: apiUrl + "news/list",
              type: "get",
              dataType: "json",
              data: {
@@ -82,24 +93,32 @@
                  pageSize: 10
              },
              success: function (result) {
-                 console.log('result----', result)
+                 let totalPage = Math.ceil(result.body.total / 10);
+                 // 大于总数之后不处理下面内容
+                 if (page > totalPage) {
+                     return
+                 }
+
+                 //内容加载
+                 $('#' + ele).html('');
+                 let list = result.body.newsList;
                  if (ele === 'companyNewsWrap') {
                      $.each(list, function (n, obj) {
                          $('#' + ele).append(`<li>
-                                <a href="./detail.html?news_id=${obj.news_id}"><img class="listImg" src="./images/arrowsBlueRight.png" data-src="${obj.head_url}"
+                                <a href="./detail.html?news_id=${obj.news_id}"><img class="listImg" src="./images/error.png" data-src="${obj.head_url}"
                                             alt=""></a>
                                 <p class="listTitle">${obj.title}</p>
-                                <p class = "listContent" >${obj.publish_time}< /p> 
-                                <p class = "dow" > 下载文件 < /p>
+                                <p class = "listContent" >${obj.publish_time}</p> 
+                                <a href="${obj.download_url}" target="_blank" class = "dow">在线预览</a>
                             </li>`)
                      });
                  } else {
                      $.each(list, function (n, obj) {
                          $('#' + ele).append(`<li>
-                                <a href="./detail.html?news_id=${obj.news_id}"><img class="listImg" src="./images/arrowsBlueRight.png" data-src="${obj.head_url}"
+                                <a href = "./detail.html?news_id=${obj.news_id}"> <img class="listImg" src="./images/error.png" data-src = "${obj.head_url}"
                                             alt=""></a>
                                 <p class="listTitle">${obj.title}</p>
-                                <p class = "listContent" >${obj.publish_time}< /p> 
+                                <p class = "listContent" >${obj.publish_time}</p> 
                             </li>`)
                      });
                  }
@@ -117,10 +136,13 @@
 
      if (GetQueryString('typeId') == 0 || !GetQueryString('typeId')) {
          getData(0, 1, 'companyNewsWrap')
+         contentId = 'companyNewsWrap';
      } else if (GetQueryString('typeId') == 1) {
          getData(1, 1, 'majorWrap')
+         contentId = 'majorWrap';
      } else if (GetQueryString('typeId') == 2) {
          getData(2, 1, 'reportWrap')
+         contentId = 'reportWrap';
      }
 
 

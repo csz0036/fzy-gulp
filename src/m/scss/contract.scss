@@ -87,3 +87,30 @@
     width: 100%;
     height: 4.5rem;
 }
+
+.bannerBox .but {
+    position: static;
+    margin-left: 0;
+}
+
+.bannerImg {
+    width: 6.91rem;
+}
+
+#videoWarp {
+    position: fixed;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+
+    #videoSource {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

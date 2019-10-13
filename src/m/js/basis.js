@@ -20,3 +20,5 @@ $(function () {
 
 
 })
+
+var apiUrl = 'http://fzy2.smartdot.com:38080/api/v1/'
