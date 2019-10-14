@@ -69,6 +69,7 @@
 
     .ct {
         margin: 20px 0;
+        height: 38px;
     }
 
     .downLoad {
@@ -82,10 +83,11 @@
             border-radius: 15px;
             border: 1px solid rgba(89, 164, 255, 1);
             padding-left: 35px;
-            line-height: 30px;
+            line-height: 27px;
             box-sizing: border-box;
             cursor: pointer;
             position: relative;
+            font-size: 13px;
 
             .gotoApply {
                 display: block;
@@ -112,10 +114,18 @@
             text-align: right;
             flex: 1;
             color: rgba(170, 170, 170, 1);
+            font-size: 13px;
         }
     }
 
     &.active {
         display: block;
+    }
+}
+#analyzePageList,#reportPageList{
+    ul{
+        li{
+            height: 305px;
+        }
     }
 }

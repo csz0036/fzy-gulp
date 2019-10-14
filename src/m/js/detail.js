@@ -19,7 +19,6 @@ $(function () {
                 pageSize: 9
             },
             success: function (reuslt) {
-                console.log(reuslt)
                 let {
                     title,
                     content,

@@ -63,7 +63,7 @@ $(function () {
             },
             success: function (reuslt) {
                 // alert('提交申请成功');
-                if (reuslt.header.error === 0) {
+                if (reuslt.head.error === 0) {
                     $("#successSubmit").show();
                     setTimeout(function () {
                         $("#successSubmit").hide();
@@ -72,7 +72,7 @@ $(function () {
                     }, 3000)
                     localStorage.setItem('postInfo', 'none')
                 } else {
-                    alert(reuslt.header.message)
+                    alert(reuslt.head.message)
                 }
             }
         })

@@ -29,18 +29,22 @@ $(function () {
             pageSize: 100
         },
         success: function (result) {
-            var list = result.body.bannerList;
-            $.each(list, function (n, obj) {
-                $("#swiperPlug").append(
-                    `<div class='swiper-slide'><img src="${obj.h5_pic_url}"/></div>`)
-            });
-            //头部焦点图
-            var swiper = new Swiper('#scrollWrap', {
-                loop: true, // 循环模式选项
-                pagination: {
-                    el: '.swiper-pagination',
-                },
-            });
+            if(obr.head.error == 0){
+                var list = result.body.bannerList;
+                $.each(list, function (n, obj) {
+                    $("#swiperPlug").append(
+                        `<div class='swiper-slide'><img src="${obj.h5_pic_url}"/></div>`)
+                });
+                //头部焦点图
+                var swiper = new Swiper('#scrollWrap', {
+                    loop: true, // 循环模式选项
+                    pagination: {
+                        el: '.swiper-pagination',
+                    },
+                });
+            }else{
+                alert(obr.head.message) 
+            }
         }
     })
 
@@ -61,16 +65,21 @@ $(function () {
             type: 2
         },
         success: function (obr) {
-            let list = obr.body.newsList;
-            $.each(list, function (n, obj) {
-                $("#reportList").append(`<li>
-                            <a href="./detail.html?news_id=${obj.news_id}">
-                                <img src="${obj.head_url}" alt="" class="listImg">
-                                <p class="liTitle">${obj.title}</p>
-                                <p class="liContent">${matchReg(obj.content)}</p>
-                            </a>
-                        </li>`)
-            });
+            if(obr.head.error == 0){
+                let list = obr.body.newsList;
+                $.each(list, function (n, obj) {
+                    $("#reportList").append(`<li>
+                                <a href="./detail.html?news_id=${obj.news_id}">
+                                    <img src="${obj.head_url}" alt="" class="listImg">
+                                    <p class="liTitle">${obj.title}</p>
+                                    <p class="liContent">${matchReg(obj.content)}</p>
+                                </a>
+                            </li>`)
+                });
+            }else{
+                alert(obr.head.message)
+            }
+            
         }
     });
 })
