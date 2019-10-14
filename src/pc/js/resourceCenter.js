@@ -1,13 +1,4 @@
  $(function () {
-     $(".but > span").hover(function () {
-         $(this).find('img').stop().animate({
-             'margin-left': "18px"
-         }, 300)
-     }, function () {
-         $(this).find('img').stop().animate({
-             'margin-left': "10px"
-         }, 300)
-     });
 
      // 根据URL 参数 触发
      let tabIdPage = GetQueryString("tabId") - 1 || 0;
@@ -39,6 +30,7 @@
      function changeTabId(divId) {
          getPagesData(0).then(function (obr) {
              let list = obr.body.newsList;
+             let postInfo = localStorage.getItem('postInfo')
 
              if (list.length < 1) return;
              switch (tabIdPage) {
@@ -65,7 +57,9 @@
                                             alt=""></a></p>
                                 <p class="ct">${obj.title}</p>
                                 <p class="downLoad">
-                                    <span class="dow"><a href="${obj.download_url}"
+                                    <span class="dow"> <a class = "gotoApply"
+                                    href="./applyLoding.html"
+                                    style="distplay:${postInfo}"></a><a href="${obj.download_url}"
                                             download="下载文件">下载文件</a></span>
                                     <span class="time">${obj.publish_time}</span>
                                 </p>
