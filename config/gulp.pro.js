@@ -80,6 +80,11 @@ gulp.task('image', function (done, cb) {
 
 gulp.task('html', function (done) {
     gulp.src(path.html.dev)
+        .pipe(fileinclude({
+            prefix: '@@', //变量前缀 @@include
+            basepath: '../src/' + nodeEvn + 'public', //引用文件路径
+            indent: true //保留文件的缩进
+        }))
         .pipe(htmlmin({
             collapseWhitespace: true, //压缩html
             collapseBooleanAttributes: true, //省略布尔属性的值
@@ -90,11 +95,7 @@ gulp.task('html', function (done) {
             minifyJS: true, //压缩页面js
             minifyCSS: true //压缩页面css
         }))
-        .pipe(fileinclude({
-            prefix: '@@', //变量前缀 @@include
-            basepath: '../src/' + nodeEvn + 'public', //引用文件路径
-            indent: true //保留文件的缩进
-        }))
+        
         .pipe(gulp.dest(path.html.build))
         .pipe(browsersync.stream());
     done()
