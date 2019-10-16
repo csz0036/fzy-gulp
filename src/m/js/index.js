@@ -3,6 +3,7 @@ $(function () {
     var swiper = new Swiper('#scrollWrap2', {
         slidesPerView: 'auto',
         // centeredSlides: true,
+        freeMode: true,
         pagination: {
             el: '.scrollWrap2-swiper-pagination',
             clickable: true,

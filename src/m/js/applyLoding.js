@@ -64,7 +64,12 @@ $(function () {
                     }, 3000)
                     localStorage.setItem('postInfo', 'none')
                 } else {
-                    alert(reuslt.head.message)
+                    // alert(reuslt.head.message)
+                    $("#errorsInfo").show();
+                    $("#errorContent").text(reuslt.head.message)
+                    setTimeout(function () {
+                        $("#errorsInfo").hide();
+                    }, 3000)
                 }
             }
         })
