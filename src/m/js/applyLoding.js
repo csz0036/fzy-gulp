@@ -55,16 +55,21 @@ $(function () {
                 memo: $("#textareaId").val(),
             },
             success: function (reuslt) {
-                if (reuslt.header.error == 0) {
+                if (reuslt.head.error == 0) {
                     // alert('提交申请成功');
                     $("#successInfo").show();
                     setTimeout(function () {
                         $("#successInfo").hide();
-                        window.location.href = './index.html'
+                        window.location.href = history.go(-1)
                     }, 3000)
+<<<<<<< HEAD
                     localStorage.setItem('postInfo', 'none')
                 } else {
                     alert(reuslt.head.message)
+=======
+                }else{
+                    alert(reuslt.head.message) 
+>>>>>>> 21b778248c66142b5e621ca33e803526ad2bc22a
                 }
             }
         })

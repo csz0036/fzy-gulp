@@ -28,15 +28,17 @@
      }
 
      function changeTabId(divId) {
-         getPagesData(0).then(function (obr) {
+        //  console.log('divId-----',divId)
+        let pn = localStorage.getItem('pageNamber') || 1
+         getPagesData(pn).then(function (obr) {
              let list = obr.body.newsList;
              let postInfo = localStorage.getItem('postInfo')
 
              if (list.length < 1) return;
+             $(divId + "List").find('ul').html('')
              switch (tabIdPage) {
                  case 0:
                  case 1:
-                     $(divId + "List").find('ul').html('')
                      $.each(list, function (n, obj) {
                          $(divId + "List").find('ul').append(`<li>
                                 <p class="img"><a href="./detail.html?news_id=${obj.news_id}"><img src="${obj.head_url}"
@@ -50,7 +52,6 @@
                      });
                      break;
                  case 2:
-                     $(divId + "List").find('ul').html('')
                      $.each(list, function (n, obj) {
                          $(divId + "List").find('ul').append(`<li>
                                 <p class="img"><a href="./detail.html?news_id=${obj.news_id}"><img src="${obj.head_url}"
@@ -75,7 +76,8 @@
               * */
              function pageChange(i) {
                  Pagination.Page($(divId), i - 1, Math.ceil(obr.body.total / 9), 9);
-                 getPagesData(i)
+                 getPagesData(i);
+                 localStorage.setItem('pageNamber',i)
              }
 
              /*
@@ -100,6 +102,7 @@
      }
 
      $("#rcCentreNev li").on('click', function () {
+        localStorage.removeItem('pageNamber')
          $(this).addClass('active').siblings('li').removeClass('active');
          let ind = $(this).index();
          $(".bannerConten .bannerCentre_1").eq(ind).addClass('active').siblings(
@@ -111,6 +114,9 @@
          tabIdPage = $(this).index()
          changeTabId(divId)
      })
+
+     //初始化
+
      switch (tabIdPage) {
          case 0:
              changeTabId("#newPage");

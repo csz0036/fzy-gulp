@@ -2,6 +2,7 @@
      let contentId;
      let pageNumber = 1;
      $("#resourceCenterNav span").on('click', function () {
+         localStorage.removeItem('pageNamber')
          $(this).addClass('activet').parent('p').siblings('p').find("span").removeClass(
              'activet');
          let ind = $(this).parent('p').index();
@@ -48,7 +49,8 @@
          // 到底部加载下一页
          if (scrollTop + height == $(document).height()) {
              pageNumber++
-             getData($("#" + contentId).index(), pageNumber, contentId)
+             getData($("#" + contentId).index(), pageNumber, contentId);
+             localStorage.setItem('pageNamber',pageNumber)
              //  console.log('到底部了', contentId, $("#" + contentId).index() + 1, pageNumber)
          }
      })
