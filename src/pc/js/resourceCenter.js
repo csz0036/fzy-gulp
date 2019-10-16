@@ -1,7 +1,7 @@
  $(function () {
 
      // 根据URL 参数 触发
-     let tabIdPage = GetQueryString("tabId") - 1 || 0;
+     let tabIdPage = GetQueryString("tabId") * 1 || 0;
      $("#rcCentreNev li").eq(tabIdPage).trigger("click");
 
      function getPagesData(pageNumber) {
@@ -28,8 +28,9 @@
      }
 
      function changeTabId(divId) {
-        //  console.log('divId-----',divId)
-        let pn = localStorage.getItem('pageNamber') || 1
+         console.log('divId-----', divId)
+         //  $("#rcCentreNev li").eq(tabIdPage).trigger('click');
+         let pn = localStorage.getItem('pageNamber') || 1
          getPagesData(pn).then(function (obr) {
              let list = obr.body.newsList;
              let postInfo = localStorage.getItem('postInfo')
@@ -77,7 +78,7 @@
              function pageChange(i) {
                  Pagination.Page($(divId), i - 1, Math.ceil(obr.body.total / 9), 9);
                  getPagesData(i);
-                 localStorage.setItem('pageNamber',i)
+                 localStorage.setItem('pageNamber', i)
              }
 
              /*
@@ -102,29 +103,42 @@
      }
 
      $("#rcCentreNev li").on('click', function () {
-        localStorage.removeItem('pageNamber')
-         $(this).addClass('active').siblings('li').removeClass('active');
-         let ind = $(this).index();
-         $(".bannerConten .bannerCentre_1").eq(ind).addClass('active').siblings(
-             '.bannerCentre_1').removeClass('active');
-         $(".caseNewList .newList").eq(ind).addClass('active').siblings(
-             '.newList').removeClass('active');
+         /**
+          state： 与要跳转到的URL对应的状态信息。
+          title： 不知道干啥用， 传空字符串就行了。
+          url： 要跳转到的URL地址， 不能跨域。
+          */
+         history.replaceState('resourceCenter.html', '', 'resourceCenter.html?tabId=' + $(this).index());
+         localStorage.removeItem('pageNamber')
 
+         let ind = $(this).index();
+         eqClick(ind)
          let divId = $(this).attr('name');
          tabIdPage = $(this).index()
          changeTabId(divId)
      })
 
-     //初始化
+     function eqClick(ind) {
+         $("#rcCentreNev li").eq(ind).addClass('active').siblings('li').removeClass('active');
+         $(".bannerConten .bannerCentre_1").eq(ind).addClass('active').siblings(
+             '.bannerCentre_1').removeClass('active');
+         $(".caseNewList .newList").eq(ind).addClass('active').siblings(
+             '.newList').removeClass('active');
+     }
 
+     //初始化
+     console.log('tabIdPage----', tabIdPage)
      switch (tabIdPage) {
          case 0:
+             eqClick(0)
              changeTabId("#newPage");
              break;
          case 1:
+             eqClick(1)
              changeTabId("#analyzePage");
              break;
          case 2:
+             eqClick(2)
              changeTabId("#reportPage");
              break;
      }

@@ -27,7 +27,7 @@ $(function () {
             pageSize: 100
         },
         success: function (result) {
-            if (obr.head.error == 0) {
+            if (result.head.error == 0) {
                 var list = result.body.bannerList;
                 $.each(list, function (n, obj) {
                     $("#swiperPlug").append(
@@ -41,7 +41,7 @@ $(function () {
                     },
                 });
             } else {
-                alert(obr.head.message)
+                alert(result.head.message)
             }
         }
     })

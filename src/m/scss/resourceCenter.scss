@@ -68,11 +68,11 @@ body {
             color: #000;
             margin: .18rem 0;
             display: -webkit-box;
-            -webkit-line-clamp: 3;
+            -webkit-line-clamp: 2;
             overflow: hidden;
             -webkit-box-orient: vertical;
             word-break: break-all;
-            min-height: 1.05rem;
+            min-height: .76rem;
         }
 
         .listContent {
@@ -109,7 +109,7 @@ body {
 
     &.companyNews {
         li {
-            height: 4.8rem;
+            height: 4.6rem;
         }
     }
 }

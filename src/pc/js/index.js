@@ -2,6 +2,7 @@
      // 底部轮播图
      var swiper = new Swiper('#scroll_13_box', {
          pagination: {
+             clickable: true,
              el: '.logoScroll',
          },
      });
@@ -50,8 +51,10 @@
              var mySwiper = new Swiper('.swiper-container', {
                  autoplay: true, // 自动播放
                  loop: true, // 循环模式选项
+
                  // 如果需要分页器
                  pagination: {
+                     clickable: true,
                      el: '.swiper-pagination',
                  },
              })

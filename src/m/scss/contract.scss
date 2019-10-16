@@ -34,7 +34,7 @@
     text-align: center;
     font-weight: 500;
     color: rgba(69, 88, 108, 1);
-    font-size: .3rem;
+    font-size: .34rem;
 }
 
 .img3,
@@ -98,8 +98,9 @@
     margin-left: 0;
 }
 
-.bannerImg {
+.bannerBox.bannerHeight_1 .bannerImg {
     width: 6.91rem;
+    left: 47%;
 }
 
 #videoWarp {

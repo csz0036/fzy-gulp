@@ -78,6 +78,17 @@ gulp.task('html', function (done) {
         .pipe(browsersync.stream());
     done()
 });
+gulp.task('exampleHtml', function (done) {
+    gulp.src(path.exampleList.dev)
+        .pipe(fileinclude({
+            prefix: '@@', //变量前缀 @@include
+            basepath: '../src/' + nodeEvn + 'public', //引用文件路径
+            indent: true //保留文件的缩进
+        }))
+        .pipe(gulp.dest(path.exampleList.build))
+        .pipe(browsersync.stream());
+    done()
+});
 
 gulp.task('serve', function (done) {
     browsersync.init({
@@ -91,11 +102,12 @@ gulp.task('serve', function (done) {
     watch(path.js.dev, gulp.series('scripts'));
     watch(path.image.dev, gulp.series('image'));
     watch(path.html.dev, gulp.series('html'));
+    watch(path.html.dev, gulp.series('exampleHtml'));
     done()
 })
 
 //series里的任务是顺序执行的，parallel里的任务是同时执行的。
 // gulp.task('default', gulp.series('clean', gulp.parallel('scripts', 'style', 'image', 'html'), 'serve'));
-gulp.task('default', gulp.series(gulp.parallel('scripts', 'style', 'image', 'html'), 'serve'));
+gulp.task('default', gulp.series(gulp.parallel('scripts', 'style', 'image', 'html', 'exampleHtml'), 'serve'));
 
 // gulp.task('default', gulp.series('serve'));

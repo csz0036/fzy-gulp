@@ -64,8 +64,8 @@
         li {
             float: left;
             width: 3.4rem;
-            height: 3.6rem;
-            background: rgba(251, 251, 251, 1);
+            height: 3.7rem;
+            background: #fdfdfd;
             border: 1px solid rgba(240, 240, 240, 1);
             margin: 0 .2rem .2rem 0;
             box-sizing: border-box;
@@ -147,8 +147,8 @@
     }
 
     .img_3 {
-        width: 6rem;
-        height: 3.95rem;
+        width: 4rem;
+        // height: 3.95rem;
         margin-bottom: .34rem
     }
 
@@ -259,16 +259,18 @@
     }
 
     .titl_3 {
-        border-top: 1px solid #DFDFDF;
+        border-top: 1px solid #ededed;
         padding: .8rem 0 .5rem;
     }
 
     .listLint-2 {
         padding: .6rem 0 0;
+        overflow: hidden;
     }
 
     .reportMore {
-        background-image: url(../images/index/more.png)
+        background-image: url(../images/index/more.png);
+        margin-bottom: .62rem;
     }
 
     .logoList {
@@ -316,11 +318,11 @@
 
         .liTitle {
             display: -webkit-box;
-            -webkit-line-clamp: 3;
+            -webkit-line-clamp: 2;
             overflow: hidden;
             -webkit-box-orient: vertical;
             word-break: break-all;
-            height: 1.08rem;
+            height: .76rem;
         }
     }
 }

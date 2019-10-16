@@ -204,7 +204,7 @@ h5 {
                 content: '';
                 width: 100%;
                 height: 100%;
-                background-size: 100%;
+                background-size: 80%;
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -231,7 +231,7 @@ h5 {
 
         li {
             line-height: 1rem;
-            border-bottom: 1px solid #D8D8D8;
+            border-bottom: 1px solid #e9e9e9;
 
             .paddingLeft {
                 padding-left: .65rem;
@@ -258,7 +258,7 @@ h5 {
 
             &.openList {
                 .startShow {
-                    border-bottom: 1px solid #D8D8D8;
+                    border-bottom: 1px solid #e9e9e9;
 
                     img {
                         transition: .3s all ease;
@@ -282,7 +282,7 @@ h5 {
                 display: none;
 
                 p {
-                    border-bottom: 1px solid #D8D8D8;
+                    border-bottom: 1px solid #e9e9e9;
                     padding-left: .2rem;
 
                     &:last-child {
@@ -346,6 +346,7 @@ h5 {
         position: fixed;
         bottom: .6rem;
         right: .4rem;
+        z-index: 11;
     }
 }
 
@@ -373,14 +374,17 @@ h5 {
 
         .listImg {
             height: 1.6rem;
-            width: 2.9rem
+            width: 2.9rem;
+            display: block;
+            background: url(../images/error.png) center center no-repeat;
+            background-size: contain;
         }
 
         .liTitle {
             font-weight: 400;
             color: rgba(0, 0, 0, 1);
             font-size: .24rem;
-            margin: .25rem 0 .2rem;
+            margin: .25rem 0 .1rem;
         }
 
         .liContent {
@@ -566,7 +570,7 @@ h5 {
             font-weight: 500;
             color: rgba(91, 94, 95, 1);
             text-align: center;
-            margin: .4rem 0 .35rem;
+            margin: .2rem 0 .15rem;
         }
 
         .content {

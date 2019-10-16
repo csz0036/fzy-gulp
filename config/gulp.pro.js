@@ -100,6 +100,28 @@ gulp.task('html', function (done) {
     done()
 });
 
+gulp.task('exampleHtml', function (done) {
+    gulp.src(path.exampleList.dev)
+        .pipe(htmlmin({
+            collapseWhitespace: true, //压缩html
+            collapseBooleanAttributes: true, //省略布尔属性的值
+            removeComments: true, //清除html注释
+            removeEmptyAttributes: true, //删除所有空格作为属性值
+            removeScriptTypeAttributes: true, //删除type=text/javascript
+            removeStyleLinkTypeAttributes: true, //删除type=text/css
+            minifyJS: true, //压缩页面js
+            minifyCSS: true //压缩页面css
+        }))
+        .pipe(fileinclude({
+            prefix: '@@', //变量前缀 @@include
+            basepath: '../src/' + nodeEvn + 'public', //引用文件路径
+            indent: true //保留文件的缩进
+        }))
+        .pipe(gulp.dest(path.exampleList.build))
+        .pipe(browsersync.stream());
+    done()
+});
+
 // gulp.task('serve', ['clean'], function() {
 //     gulp.start('scripts','style','image','html');
 //     browsersync.init({
@@ -118,4 +140,4 @@ gulp.task('html', function (done) {
 
 
 //series里的任务是顺序执行的，parallel里的任务是同时执行的。
-gulp.task('default', gulp.series(gulp.parallel('scripts', 'style', 'image', 'html')));
+gulp.task('default', gulp.series(gulp.parallel('scripts', 'style', 'image', 'html', 'exampleHtml')));
