@@ -144,12 +144,27 @@ h5 {
     background: #fff;
     z-index: 99;
     box-shadow: 0 0.02rem 0.04rem 0 rgba(0, 0, 0, 0.10);
+    #hideHeadNav{
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: transparent;
+        z-index: -1;
+        display: none ;
+        &.activeNav{
+            display: block;
+        }
+    }
 
     .detailShow {
         display: flex;
         align-items: center;
         font-size: .44rem;
         height: 1.2rem;
+        z-index: 5;
 
         .logo {
             width: 3.5rem;
@@ -224,6 +239,8 @@ h5 {
         background-color: #F2F2F2;
         color: #000;
         overflow: hidden;
+        position: relative;
+        z-index: 2;
 
         &.activeNav {
             height: auto;
