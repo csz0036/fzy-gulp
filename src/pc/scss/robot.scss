@@ -35,7 +35,7 @@
 
 .robotList {
     width: 1050px;
-    margin: 85px auto 75px;
+    margin: 85px auto 95px;
     overflow: hidden;
 }
 
@@ -117,7 +117,8 @@
 }
 
 .margintp2 {
-    margin: 40px 0 60px;
+    margin: 60px 0;
+    font-weight: 300;
 }
 
 .robotbg1 {
@@ -393,7 +394,9 @@ li .error em {
 .productIntro h2 {
     font-size: 30px;
     color: #5B5E5F;
-    line-height: 40px
+    line-height: 40px;
+    font-weight: 300;
+    text-align: center
 }
 
 .productIntro span {
@@ -406,7 +409,8 @@ li .error em {
 
 .productIntro ul li {
     font-size: 16px;
-    line-height: 30px
+    line-height: 30px;
+    text-align: center
 }
 
 .productIntro2 {
@@ -416,7 +420,7 @@ li .error em {
 
 .productIntro2 h2,
 .productIntro3 h2 {
-    width: 300px
+    // width: 300px
 }
 
 .productIntro2 ul {

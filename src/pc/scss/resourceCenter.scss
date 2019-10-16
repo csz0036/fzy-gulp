@@ -43,7 +43,7 @@
 
 .list_2 {
     li {
-        height: 320px;
+        height: 300px;
     }
 }
 
@@ -51,6 +51,8 @@
     display: none;
 
     .img {
+        background: url(../images/error.png) center center no-repeat;
+
         a {
             width: 290px;
             height: 160px;
@@ -71,6 +73,7 @@
     .downLoad {
         display: flex;
         align-items: center;
+        font-size: 12px;
 
         .dow {
             width: 100px;
@@ -83,7 +86,6 @@
             box-sizing: border-box;
             cursor: pointer;
             position: relative;
-            font-size: 13px;
 
             .gotoApply {
                 display: block;
@@ -118,9 +120,11 @@
         display: block;
     }
 }
-#analyzePageList,#reportPageList{
-    ul{
-        li{
+
+#analyzePageList,
+#reportPageList {
+    ul {
+        li {
             height: 305px;
         }
     }
