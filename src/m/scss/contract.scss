@@ -6,7 +6,7 @@
 }
 
 .padding_1 {
-    padding: .8rem 0 .6rem;
+    padding: .6rem 0;
 }
 
 .img1 {
@@ -46,11 +46,16 @@
 
 .ct_p {
     color: rgba(91, 94, 95, 1);
-    font-size: .3rem;
+    font-size: .28rem;
     line-height: .35rem;
     margin-bottom: .7rem;
     text-align: center;
     margin-top: .15rem;
+    font-weight: 300
+}
+
+.pt_2 {
+    padding-top: .2rem
 }
 
 .img4 {

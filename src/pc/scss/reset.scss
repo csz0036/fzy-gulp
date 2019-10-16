@@ -214,7 +214,7 @@ header {
         width: 22px;
         height: 22px;
         position: relative;
-        top: 5px;
+        top: 6px;
       }
     }
   }
@@ -299,9 +299,13 @@ header {
   padding-right: 62px;
   position: relative;
 
-  &:last-child {
-    margin-right: 62px;
+  div {
+    a {
+      color: #6e8299;
+      font-weight: 300;
+    }
   }
+
 }
 
 .nav-list a {
@@ -310,7 +314,7 @@ header {
   display: inline-block;
   font-size: 16px;
   color: #333333;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .nav-list .active,
@@ -415,6 +419,7 @@ header {
     box-sizing: border-box;
     cursor: pointer;
 
+
     &:hover {
       img {
         transform: translate(50%, 0);
@@ -423,6 +428,7 @@ header {
     }
 
     img {
+      transition: 0.6s all ease-in-out;
       margin-left: 10px;
     }
   }
@@ -442,8 +448,6 @@ header {
     h3 {
       height: 40px;
       font-size: 40px;
-      font-family: PingFangSC-Light,
-        PingFangSC;
       font-weight: 300;
       color: rgba(255, 255, 255, 1);
       line-height: 40px
@@ -452,8 +456,6 @@ header {
     .subTitle {
       height: 22px;
       font-size: 19px;
-      font-family: PingFangSC-Thin,
-        PingFangSC;
       font-weight: 100;
       color: rgba(255, 255, 255, .5);
       line-height: 22px;
@@ -463,8 +465,6 @@ header {
 
     .bc_p {
       font-size: 14px;
-      font-family: PingFangSC-Light,
-        PingFangSC;
       font-weight: 300;
       color: rgba(255, 255, 255, 1);
       line-height: 28px;

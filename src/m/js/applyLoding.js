@@ -62,6 +62,9 @@ $(function () {
                         $("#successInfo").hide();
                         window.location.href = './index.html'
                     }, 3000)
+                    localStorage.setItem('postInfo', 'none')
+                } else {
+                    alert(reuslt.head.message)
                 }
             }
         })

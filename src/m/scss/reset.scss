@@ -191,7 +191,7 @@ h5 {
             transition-delay: 0.03s;
 
             &::after {
-                background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAAG1BMVEVMaXEEabgBabcBaLgBabcCabgCarkBaLgBaLcz8mx2AAAACHRSTlMAPbLm/Xp7/jVhSugAAABqSURBVHja7deLCcAgDEBBv232n7grKAQs7d0CkqDCKwAAwOfU1iNFb7VsmHekGXNj3hGJxvrMLVK1sqpHqn7s4GOrfv/lKtfIfE7HPhAAANSiWlSLalEtqkUAALWoFtWiWlSLahEAAP7oAaG4R7kkvEzEAAAAAElFTkSuQmCC) no-repeat center;
+                background: #fff url(../images/headNavDetail.png) no-repeat center;
             }
 
             &::before {
@@ -499,11 +499,11 @@ h5 {
 
         a {
             width: 2.88rem;
-            height: 1.11rem;
+            height: 1rem;
             background-color: #fff;
             box-shadow: 0px 3px 6px 0px rgba(121, 121, 121, 0.4);
             border-radius: 6px;
-            line-height: 1.11rem;
+            line-height: 1rem;
             padding-left: .6rem;
             display: block;
             box-sizing: border-box;

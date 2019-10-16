@@ -9,10 +9,8 @@ $(function () {
         },
     });
 
-    //行业专属
-    var swiper = new Swiper('#logoScroll', {
-        // slidesPerView: 'auto',
-        // centeredSlides: true,
+    //合作品牌
+    var logoSwiper = new Swiper('#logoScroll', {
         loop: true,
         pagination: {
             el: '.swiper-pagination-logo',
@@ -35,7 +33,7 @@ $(function () {
                     `<div class='swiper-slide'><img src="${obj.h5_pic_url}"/></div>`)
             });
             //头部焦点图
-            var swiper = new Swiper('#scrollWrap', {
+            var headSwiper = new Swiper('#scrollWrap', {
                 loop: true, // 循环模式选项
                 pagination: {
                     el: '.swiper-pagination',
@@ -52,7 +50,7 @@ $(function () {
     }
     // 行业报告
     $.ajax({
-        url: apiUrl + "v1/news/list",
+        url: apiUrl + "news/list",
         type: "GET",
         dataType: "json",
         data: {
@@ -67,7 +65,7 @@ $(function () {
                             <a href="./detail.html?news_id=${obj.news_id}">
                                 <img src="${obj.head_url}" alt="" class="listImg">
                                 <p class="liTitle">${obj.title}</p>
-                                <p class="liContent">${matchReg(obj.content)}</p>
+                                <p class="listContent" >${obj.publish_time}</p> 
                             </a>
                         </li>`)
             });

@@ -54,28 +54,7 @@
      })
 
 
-     //图片懒加载
-     var lazyLoadImg = new LazyLoadImg({
-         el: document.querySelector('#companyNewsWrap'),
-         mode: 'default', //默认模式，将显示原图，diy模式，将自定义剪切，默认剪切居中部分
-         time: 300, // 设置一个检测时间间隔
-         done: true, //页面内所有数据图片加载完成后，是否自己销毁程序，true默认销毁，false不销毁
-         position: { // 只要其中一个位置符合条件，都会触发加载机制
-             top: 0, // 元素距离顶部
-             right: 0, // 元素距离右边
-             bottom: 0, // 元素距离下面
-             left: 0 // 元素距离左边
-         },
-         before: function () {
 
-         },
-         success: function (el) {
-             el.classList.add('success')
-         },
-         error: function (el) {
-             el.src = './images/error.png'
-         }
-     })
      /**
       * 
       * type 0 = 公司新闻 / 1 = 专业分析 / 2 = 行业报告
@@ -102,6 +81,7 @@
                  //内容加载
                  $('#' + ele).html('');
                  let list = result.body.newsList;
+                 let postInfo = localStorage.getItem('postInfo')
                  if (ele === 'companyNewsWrap') {
                      $.each(list, function (n, obj) {
                          $('#' + ele).append(`<li>
@@ -109,20 +89,43 @@
                                             alt=""></a>
                                 <p class="listTitle">${obj.title}</p>
                                 <p class = "listContent" >${obj.publish_time}</p> 
-                                <a href="${obj.download_url}" target="_blank" class = "dow">在线预览</a>
+                                <span class="dow"><a href="./applyLoding.html" class="gotoApply" style="display:${postInfo}"></a><a href="${obj.download_url}" target="_blank">在线预览</a></span>
                             </li>`)
                      });
                  } else {
                      $.each(list, function (n, obj) {
                          $('#' + ele).append(`<li>
-                                <a href = "./detail.html?news_id=${obj.news_id}"> <img class="listImg" src="./images/error.png" data-src = "${obj.head_url}"
+                                <a href = "./detail.html?news_id=${obj.news_id}"> <img class="listImg" src="./images/error.png" data-src ="${obj.head_url}"
                                             alt=""></a>
                                 <p class="listTitle">${obj.title}</p>
                                 <p class = "listContent" >${obj.publish_time}</p> 
                             </li>`)
                      });
                  }
+                 //图片懒加载
+                 var lazyLoadImg = new LazyLoadImg({
+                     //  el: document.querySelector('#companyNewsWrap'),
+                     el: document.querySelector('body'),
+                     mode: 'default', //默认模式，将显示原图，diy模式，将自定义剪切，默认剪切居中部分
+                     time: 300, // 设置一个检测时间间隔
+                     done: true, //页面内所有数据图片加载完成后，是否自己销毁程序，true默认销毁，false不销毁
+                     position: { // 只要其中一个位置符合条件，都会触发加载机制
+                         top: 0, // 元素距离顶部
+                         right: 0, // 元素距离右边
+                         bottom: 0, // 元素距离下面
+                         left: 0 // 元素距离左边
+                     },
+                     before: function () {
 
+                     },
+                     success: function (el) {
+                         el.classList.add('success')
+                     },
+                     error: function (el) {
+                         el.src = './images/error.png'
+                     }
+                 })
+                 lazyLoadImg.start() // 开启懒加载程序
              }
          })
      }
