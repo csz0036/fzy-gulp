@@ -20,8 +20,9 @@
             h2 {
                 font-size: 40px;
                 font-weight: 500;
-                line-height: 70px;
-                margin: 135px 0 30px
+                line-height: 60px;
+                font-weight: 400;
+                margin: 135px 0 30px;
             }
 
             p {
@@ -63,6 +64,7 @@
                 align-items: center;
                 margin-bottom: 15px;
                 position: relative;
+
 
                 .errorInfo {
                     position: absolute;
@@ -108,6 +110,8 @@
                     height: 16px;
                     line-height: 16px;
                     margin-left: 10px;
+                    position: relative;
+                    top: -1px;
                 }
 
                 ::-webkit-input-placeholder {
@@ -161,6 +165,10 @@
                 font-weight: 400;
                 margin-top: 20px;
                 cursor: pointer;
+
+                &:hover {
+                    background-color: #0287E1;
+                }
             }
         }
     }

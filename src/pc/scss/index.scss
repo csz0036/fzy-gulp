@@ -3,6 +3,7 @@
 
 body {
   background: #f8f9fb;
+  font-weight: 300
 }
 
 .conOne {
@@ -22,12 +23,12 @@ body {
   width: 100%;
   background: #F8F9FB;
   padding-top: 0;
-  height: 1885px;
+  height: 1625px;
 
   .inner {
     width: 1035px;
     margin: auto;
-    height: 1805px;
+    height: 1605px;
     overflow: hidden;
   }
 
@@ -371,7 +372,7 @@ body {
 
 .conThreeSec ul {
   width: 385px;
-  margin: 30px auto 0;
+  margin: 10px auto 0;
   text-align: left;
   font-size: 16px;
   line-height: 30px;
@@ -384,7 +385,7 @@ body {
 }
 
 .conThreeThi {
-  margin: 100px auto 0;
+  margin: 70px auto 0;
   padding-bottom: 135px;
 }
 
@@ -400,6 +401,7 @@ body {
   width: 320px;
   // height: 430px;
   float: right;
+  margin-right: 80px;
 }
 
 .conForth {
@@ -595,8 +597,13 @@ body {
       opacity: 0;
 
       .innerBox {
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 50%;
         border-top: 2px solid rgba(255, 255, 255, .5);
         border-bottom: 2px solid rgba(255, 255, 255, .5);
+        width: 180px;
       }
 
       .innerTitle {
@@ -746,6 +753,12 @@ body {
         height: 160px;
         background: url(../images/error.png) center center no-repeat;
         background-size: contain;
+
+        a {
+          width: 100%;
+          height: 100%;
+          display: block
+        }
       }
 
       .ct {
@@ -819,7 +832,7 @@ body {
   font-size: 35px;
   color: #47494a;
   font-weight: 300;
-  padding: 80px 0 50px;
+  padding: 80px 0 70px;
 }
 
 .conForthCompany h3 span {
@@ -829,7 +842,7 @@ body {
 .comLogo {
   width: 942px;
   margin: 0 auto;
-  height: 580px;
+  height: 630px;
 }
 
 .comLogo ul {
@@ -1651,4 +1664,10 @@ body {
   .logoScroll {
     bottom: 0;
   }
+}
+
+#scroll_4_box,
+#scroll_6_box {
+  position: relative;
+  right: -70px;
 }

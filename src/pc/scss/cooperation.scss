@@ -1,4 +1,5 @@
 @import './reset.scss';
+@import "./swiper.scss";
 
 .coopCentre {
     background: rgba(241, 243, 247, 1);
@@ -153,4 +154,12 @@
 .bc_p {
     opacity: .6;
     padding-top: 20px;
+}
+
+.but a {
+    text-align: left;
+}
+
+.experBtn {
+    width: 250px;
 }
