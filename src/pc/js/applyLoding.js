@@ -71,7 +71,11 @@ $(function () {
                     }, 3000)
                     localStorage.setItem('postInfo', 'none')
                 } else {
-                    alert(reuslt.head.message)
+                    $("#errorInfo").show();
+                    $("#errorContent").text(reuslt.head.message)
+                    setTimeout(function () {
+                        $("#errorInfo").hide();
+                    }, 3000)
                 }
             }
         })
