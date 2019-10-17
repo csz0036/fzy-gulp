@@ -45,8 +45,11 @@
          success: function (obr) {
              var list = obr.body.bannerList;
              $.each(list, function (n, obj) {
-                 $("#swiperPlug").append(`<div class='swiper-slide'><a href="${obj.link_url}" target="_blank"><img src="${obj.web_pic_url}"
+                 // status == 0 ,是关闭状态
+                 if (obj.status !== 0) {
+                     $("#swiperPlug").append(`<div class='swiper-slide'><a href="${obj.link_url}" target="_blank"><img src="${obj.web_pic_url}"
                         width='100%' height='100%' /></a></div>`)
+                 }
              });
              var mySwiper = new Swiper('.swiper-container', {
                  autoplay: true, // 自动播放

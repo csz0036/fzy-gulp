@@ -20,7 +20,7 @@
             float: left;
             margin: 0 40px 40px 0;
             width: 460px;
-            height: 300px;
+            height: 260px;
 
             &:nth-child(2n) {
                 margin-right: 0
@@ -28,7 +28,7 @@
 
             .had {
                 height: 100px;
-                color: #fff;
+                color: #FDFDFD;
                 padding: 21px 0 0 40px;
                 box-sizing: border-box;
                 position: relative;
@@ -58,7 +58,7 @@
 
             .listC {
                 background-color: #fff;
-                height: 200px;
+                height: 160px;
                 padding: 25px 40px;
                 box-sizing: border-box;
                 font-size: 14px;
