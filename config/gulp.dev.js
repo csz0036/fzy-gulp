@@ -9,6 +9,7 @@ const path = require('./path')
 const watch = require("gulp-watch")
 const nodeEvn = process.env.NODE_ENV == 'all' ? '**/' : process.env.NODE_ENV + '/'
 const pump = require('pump')
+const replace = require('gulp-replace')
 
 //删除dist目录下文件
 const del = require('del');
@@ -85,6 +86,7 @@ gulp.task('exampleHtml', function (done) {
             basepath: '../src/' + nodeEvn + 'public', //引用文件路径
             indent: true //保留文件的缩进
         }))
+        .pipe(replace(/\.\//gi, '../'))
         .pipe(gulp.dest(path.exampleList.build))
         .pipe(browsersync.stream());
     done()
@@ -102,7 +104,7 @@ gulp.task('serve', function (done) {
     watch(path.js.dev, gulp.series('scripts'));
     watch(path.image.dev, gulp.series('image'));
     watch(path.html.dev, gulp.series('html'));
-    watch(path.html.dev, gulp.series('exampleHtml'));
+    watch(path.exampleList.dev, gulp.series('exampleHtml'));
     done()
 })
 
