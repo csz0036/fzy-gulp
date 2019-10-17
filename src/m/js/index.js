@@ -32,7 +32,7 @@ $(function () {
                 var list = result.body.bannerList;
                 $.each(list, function (n, obj) {
                     $("#swiperPlug").append(
-                        `<div class='swiper-slide'><a href="./applyLoding.html"><img src="${obj.h5_pic_url}"/></a></div>`)
+                        `<div class='swiper-slide'><a href="${obj.link_url}" target="_blank"><img src="${obj.h5_pic_url}"/></a></div>`)
                 });
                 //头部焦点图
                 var swiper = new Swiper('#scrollWrap', {
