@@ -67,7 +67,7 @@ $(function () {
                     $("#successSubmit").show();
                     setTimeout(function () {
                         $("#successSubmit").hide();
-                        window.location.href = history.go(-1);
+                        history.go(-1);
                     }, 3000)
                     localStorage.setItem('postInfo', 'none')
                 } else {

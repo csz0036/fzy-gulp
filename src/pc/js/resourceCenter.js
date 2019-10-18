@@ -21,14 +21,10 @@
                      resolve(obr)
                  }
              })
-
-
-
          })
      }
 
      function changeTabId(divId) {
-         console.log('divId-----', divId)
          //  $("#rcCentreNev li").eq(tabIdPage).trigger('click');
          let pn = localStorage.getItem('pageNamber') || 1
          getPagesData(pn).then(function (obr) {

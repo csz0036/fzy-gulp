@@ -2,10 +2,12 @@
      let contentId;
      let pageNumber = 1;
      $("#resourceCenterNav span").on('click', function () {
-         localStorage.removeItem('pageNamber')
-         $(this).addClass('activet').parent('p').siblings('p').find("span").removeClass(
-             'activet');
+         
+         localStorage.removeItem('pageNamber');
          let ind = $(this).parent('p').index();
+         history.replaceState('resourceCenter.html', '', 'resourceCenter.html?tabId=' + ind);
+         console.log('ind----',ind)
+        eqClass(ind)
          pageNumber = 1
          switch (ind) {
              case 0:
@@ -24,9 +26,12 @@
                  contentId = 'reportWrap';
                  break;
          }
-         $("#listScroll").find('.caseList').eq(ind).addClass('active').siblings().removeClass(
-             'active')
      });
+     function eqClass(ind){
+        $("#resourceCenterNav p").eq(ind).find("span").addClass('activet').end().siblings('p').find("span").removeClass('activet');
+        $("#listScroll").find('.caseList').eq(ind).addClass('active').siblings().removeClass('active');
+
+     }
 
      let hadHeight = $("#head").height()
      let navFixed = $("#resourceCenterNav").offset().top - hadHeight
@@ -138,15 +143,18 @@
          if (r != null) return unescape(r[2]);
          return null;
      }
-
-     if (GetQueryString('typeId') == 0 || !GetQueryString('typeId')) {
+     let pageTabId = GetQueryString('tabId')
+     if (pageTabId == 0 || !pageTabId) {
          getData(0, 1, 'companyNewsWrap')
+         eqClass(0)
          contentId = 'companyNewsWrap';
-     } else if (GetQueryString('typeId') == 1) {
+     } else if (pageTabId == 1) {
          getData(1, 1, 'majorWrap')
+         eqClass(1)
          contentId = 'majorWrap';
-     } else if (GetQueryString('typeId') == 2) {
+     } else if (pageTabId == 2) {
          getData(2, 1, 'reportWrap')
+         eqClass(2)
          contentId = 'reportWrap';
      }
 
