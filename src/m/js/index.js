@@ -64,7 +64,7 @@ $(function () {
         data: {
             page: 1,
             pageSize: 2,
-            type: 2
+            type: 1
         },
         success: function (obr) {
             if (obr.head.error == 0) {

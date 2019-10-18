@@ -35,7 +35,6 @@
              $(divId + "List").find('ul').html('')
              switch (tabIdPage) {
                  case 0:
-                 case 1:
                      $.each(list, function (n, obj) {
                          $(divId + "List").find('ul').append(`<li>
                                 <p class="img"><a href="./detail.html?news_id=${obj.news_id}"><img src="${obj.head_url}"
@@ -43,6 +42,19 @@
                                 <p class="ct">${obj.title}</p>
                                 <p class="downLoad">
                                     <span class="new">公司新闻</span>
+                                    <span class="time">${obj.publish_time}</span>
+                                </p>
+                            </li>`)
+                     });
+                     break;
+                 case 1:
+                     $.each(list, function (n, obj) {
+                         $(divId + "List").find('ul').append(`<li>
+                                <p class="img"><a href="./detail.html?news_id=${obj.news_id}"><img src="${obj.head_url}"
+                                            alt=""></a></p>
+                                <p class="ct">${obj.title}</p>
+                                <p class="downLoad">
+                                    <span class="new">专业分析</span>
                                     <span class="time">${obj.publish_time}</span>
                                 </p>
                             </li>`)

@@ -47,7 +47,7 @@ body {
     li {
         float: left;
         width: 3.3rem;
-        height: 3.8rem;
+        height: 3.6rem;
         background-color: #fff;
         padding: .2rem;
         box-sizing: border-box;
@@ -72,7 +72,8 @@ body {
             overflow: hidden;
             -webkit-box-orient: vertical;
             word-break: break-all;
-            min-height: .76rem;
+            min-height: .66rem;
+            line-height: .33rem;
         }
 
         .listContent {
@@ -83,7 +84,7 @@ body {
         .dow {
             width: 2.8rem;
             height: .6rem;
-            background: rgba(255, 255, 255, 1);
+            background: #fff;
             border-radius: .05rem;
             border: 1px solid rgba(89, 164, 255, 1);
             line-height: .6rem;
@@ -107,7 +108,7 @@ body {
         }
     }
 
-    &.companyNews {
+    &#reportWrap {
         li {
             height: 4.6rem;
         }

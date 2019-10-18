@@ -31,7 +31,10 @@ $(function () {
                 $("#contentAjax").html(content)
                 // $("#publisher").html(publisher)
                 // $("#publish_time").html(publish_time)
-                // $(".download a").attr('href', download_url)
+                if (download_url) {
+                    $("#lineShow").show().find('a').attr('href', download_url)
+                }
+
             }
         })
     }

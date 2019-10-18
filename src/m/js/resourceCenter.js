@@ -2,12 +2,10 @@
      let contentId;
      let pageNumber = 1;
      $("#resourceCenterNav span").on('click', function () {
-         
          localStorage.removeItem('pageNamber');
          let ind = $(this).parent('p').index();
          history.replaceState('resourceCenter.html', '', 'resourceCenter.html?tabId=' + ind);
-         console.log('ind----',ind)
-        eqClass(ind)
+         eqClass(ind)
          pageNumber = 1
          switch (ind) {
              case 0:
@@ -27,9 +25,10 @@
                  break;
          }
      });
-     function eqClass(ind){
-        $("#resourceCenterNav p").eq(ind).find("span").addClass('activet').end().siblings('p').find("span").removeClass('activet');
-        $("#listScroll").find('.caseList').eq(ind).addClass('active').siblings().removeClass('active');
+
+     function eqClass(ind) {
+         $("#resourceCenterNav p").eq(ind).find("span").addClass('activet').end().siblings('p').find("span").removeClass('activet');
+         $("#listScroll").find('.caseList').eq(ind).addClass('active').siblings().removeClass('active');
 
      }
 
@@ -55,7 +54,7 @@
          if (scrollTop + height == $(document).height()) {
              pageNumber++
              getData($("#" + contentId).index(), pageNumber, contentId);
-             localStorage.setItem('pageNamber',pageNumber)
+             localStorage.setItem('pageNamber', pageNumber)
              //  console.log('到底部了', contentId, $("#" + contentId).index() + 1, pageNumber)
          }
      })
@@ -89,7 +88,7 @@
                  $('#' + ele).html('');
                  let list = result.body.newsList;
                  let postInfo = localStorage.getItem('postInfo')
-                 if (ele === 'companyNewsWrap') {
+                 if (ele === 'reportWrap') {
                      $.each(list, function (n, obj) {
                          $('#' + ele).append(`<li>
                                 <a href="./detail.html?news_id=${obj.news_id}"><img class="listImg" src="./images/error.png" data-src="${obj.head_url}"

@@ -72,7 +72,7 @@
          data: {
              page: 1,
              pageSize: 3,
-             type: 2
+             type: 1
          },
          success: function (obr) {
              let list = obr.body.newsList;
