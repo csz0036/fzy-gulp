@@ -144,7 +144,8 @@ h5 {
     background: #fff;
     z-index: 99;
     box-shadow: 0 0.02rem 0.04rem 0 rgba(0, 0, 0, 0.10);
-    #hideHeadNav{
+
+    #hideHeadNav {
         content: '';
         width: 100%;
         height: 100%;
@@ -153,8 +154,9 @@ h5 {
         left: 0;
         background-color: transparent;
         z-index: -1;
-        display: none ;
-        &.activeNav{
+        display: none;
+
+        &.activeNav {
             display: block;
         }
     }
@@ -268,7 +270,8 @@ h5 {
                     height: .14rem;
                     display: block;
                     margin-right: .42rem;
-                    transform: rotateZ(180deg)
+                    transform: rotateZ(180deg);
+                    transition: .3s all ease;
                 }
             }
 
@@ -278,7 +281,6 @@ h5 {
                     border-bottom: 1px solid #e9e9e9;
 
                     img {
-                        transition: .3s all ease;
                         transform: rotateZ(0deg)
                     }
                 }

@@ -7,10 +7,10 @@ $(function () {
 
   });
   $(".navListButton").on('click', 'li', function () {
-    $(this).addClass('openList').siblings('li').removeClass('openList');
+    $(this).toggleClass('openList')
+    $(this).siblings('li').removeClass('openList');
   })
-  $("#hideHeadNav").on('click',  function () {
-    console.log(11111)
+  $("#hideHeadNav").on('click', function () {
     $("#head .navListButton").hide()
   })
 
