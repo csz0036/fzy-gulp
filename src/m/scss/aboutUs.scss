@@ -57,14 +57,15 @@
 
     .img_1,
     .img_2,
-    .img_3 {
+    .img_3,
+    .img_4 {
         display: block;
         margin: 0 auto;
     }
 
     .img_1 {
-        width: 7.1rem;
-        height: 3.31rem;
+        width: 6.42rem;
+        height: 2.13rem;
     }
 
     .img_2 {
@@ -76,6 +77,8 @@
         width: 5.3rem;
         height: 6.95rem;
     }
+
+
 }
 
 .h3Style2 {
@@ -158,4 +161,10 @@
         line-height: .45rem;
         margin-bottom: .4rem;
     }
+}
+
+.img_4 {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
 }

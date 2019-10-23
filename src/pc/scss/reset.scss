@@ -162,7 +162,8 @@ header {
   margin: auto;
 }
 
-#resourceList {
+#resourceList,
+#aboutList {
   width: 116px;
   height: 177px;
   background: rgba(255, 255, 255, 1);
@@ -191,6 +192,7 @@ header {
     }
   }
 }
+
 
 #productNavList {
   position: absolute;
@@ -520,7 +522,7 @@ header {
       }
 
       dl {
-        width: 202px;
+        width: 162px;
       }
 
       dt {

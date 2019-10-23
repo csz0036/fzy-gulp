@@ -9,6 +9,11 @@ $(function () {
     }, function () {
         $("#resourceList").hide()
     })
+    $("#aboutCentre").hover(function () {
+        $("#aboutList").show()
+    }, function () {
+        $("#aboutList").hide()
+    })
     //为返回顶部元素添加点击事件
     $('body').on('click', '#return_top', function () {
         //将当前窗口的内容区滚动高度改为0，即顶部

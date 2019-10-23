@@ -191,3 +191,29 @@
         margin: 0 5px
     }
 }
+
+.newList {
+    li {
+        a {
+            position: relative;
+
+            img.hover {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                transition: .3s all ease-in-out;
+            }
+        }
+    }
+
+
+
+    li:hover {
+        a {
+            img.hover {
+                opacity: 1;
+            }
+        }
+    }
+}
