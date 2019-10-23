@@ -42,7 +42,8 @@
         border-radius: .05rem;
         position: relative;
 
-        .errorInfo {
+        .errorInfo,
+        .default {
             position: absolute;
             font-size: .22rem;
             color: #FC2222;
@@ -50,6 +51,11 @@
             right: .1rem;
             background-color: #fff;
             display: none
+        }
+
+        .default {
+            display: block;
+            color: #0095FB;
         }
 
         input {

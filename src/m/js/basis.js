@@ -11,7 +11,9 @@ $(function () {
     $(this).siblings('li').removeClass('openList');
   })
   $("#hideHeadNav").on('click', function () {
-    $("#head .navListButton").hide()
+    $(this).toggleClass('activeNav')
+    $("#head .navListButton").toggleClass('activeNav')
+    $("#head .button").toggleClass('activeNav')
   })
 
   //获取URL参数

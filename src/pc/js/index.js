@@ -83,7 +83,7 @@
                                              height="160"></a></p>
                                  <p class="ct">${obj.title}</p>
                                  <p class="downLoad">
-                                     <span class="ddow"><a href="${obj.download_url}" download="下载文件">下载文件</a></span>
+                                     <span class="ddow">专业分析</span>
                                      <span class="dtime">${obj.publish_time}</span>
                                  </p>
                              </li>`)
