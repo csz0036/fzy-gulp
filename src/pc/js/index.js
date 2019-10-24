@@ -101,34 +101,37 @@
          if (winTop > 320 && !$("#scroll_3_box").hasClass('scrollTopEle')) {
              $("#scroll_3_box").addClass('scrollTopEle')
          }
-         if (winTop > 720 && !$("#scroll_4_box").hasClass('scrollTopEle')) {
+         if (winTop > 1120 && !$("#scroll_4_box").hasClass('scrollTopEle')) {
              $("#scroll_4_box").addClass('scrollTopEle')
          }
-         if (winTop > 1150 && !$("#scroll_5_box").hasClass('scrollTopEle')) {
+         if (winTop > 1450 && !$("#scroll_5_box").hasClass('scrollTopEle')) {
              $("#scroll_5_box").addClass('scrollTopEle')
          }
-         if (winTop > 1700 && !$("#scroll_6_box").hasClass('scrollTopEle')) {
+         if (winTop > 2200 && !$("#scroll_14_box").hasClass('scrollTopEle')) {
+             $("#scroll_14_box").addClass('scrollTopEle')
+         }
+         if (winTop > 2550 && !$("#scroll_6_box").hasClass('scrollTopEle')) {
              $("#scroll_6_box").addClass('scrollTopEle')
          }
-         if (winTop > 2420 && !$("#scroll_7_box").hasClass('scrollTopEle')) {
+         if (winTop > 2970 && !$("#scroll_7_box").hasClass('scrollTopEle')) {
              $("#scroll_7_box").addClass('scrollTopEle')
          }
-         if (winTop > 2600 && !$("#scroll_8_box").hasClass('scrollTopEle')) {
+         if (winTop > 3050 && !$("#scroll_8_box").hasClass('scrollTopEle')) {
              $("#scroll_8_box").addClass('scrollTopEle')
          }
-         if (winTop > 2800 && !$("#scroll_9_box").hasClass('scrollTopEle')) {
+         if (winTop > 3250 && !$("#scroll_9_box").hasClass('scrollTopEle')) {
              $("#scroll_9_box").addClass('scrollTopEle')
          }
-         if (winTop > 3100 && !$("#scroll_10_box").hasClass('scrollTopEle')) {
+         if (winTop > 3550 && !$("#scroll_10_box").hasClass('scrollTopEle')) {
              $("#scroll_10_box").addClass('scrollTopEle')
          }
-         if (winTop > 3500 && !$("#scroll_11_box").hasClass('scrollTopEle')) {
+         if (winTop > 3950 && !$("#scroll_11_box").hasClass('scrollTopEle')) {
              $("#scroll_11_box").addClass('scrollTopEle')
          }
-         if (winTop > 4000 && !$("#scroll_12_box").hasClass('scrollTopEle')) {
+         if (winTop > 4350 && !$("#scroll_12_box").hasClass('scrollTopEle')) {
              $("#scroll_12_box").addClass('scrollTopEle')
          }
-         if (winTop > 4100 && !$("#scroll_13_box").hasClass('scrollTopEle')) {
+         if (winTop > 4450 && !$("#scroll_13_box").hasClass('scrollTopEle')) {
              $("#scroll_13_box").addClass('scrollTopEle')
          }
      })
