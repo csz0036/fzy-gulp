@@ -48,13 +48,19 @@
             font-size: .22rem;
             color: #FC2222;
             top: .22rem;
+            line-height: .3rem;
             right: .1rem;
             background-color: #fff;
             display: none
         }
 
+        #showTime {
+            display: none;
+        }
+
         .default {
             display: block;
+            top: .25rem;
             color: #0095FB;
         }
 

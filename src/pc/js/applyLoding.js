@@ -15,7 +15,6 @@ $(function () {
     })
 
     //获取验证码
-
     $("#getYZM").on('click', function () {
         let yzmTime = 59;
         setInterval(() => {

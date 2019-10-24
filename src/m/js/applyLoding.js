@@ -13,12 +13,44 @@ $(function () {
         $(this).parents('.inputLab').find(".errorInfo").hide()
     })
 
+    // 获取验证码
+    //获取验证码
+    $("#getYZM").on('click', function () {
+        let yzmTime = 59;
+        setInterval(() => {
+            yzmTime--
+            $("#showTime").text(yzmTime)
+            if (yzmTime < 0) {
+                yzmTime = 0;
+                $("#getYZM").show();
+                $("#showTime").hide()
+            }
+        }, 1000);
+
+        $(this).hide();
+        $("#showTime").show();
+        let phone = $.trim($("#input_5").val());
+        $.ajax({
+            url: apiUrl + "user/sms_code",
+            type: "POST",
+            dataType: "json",
+            data: {
+                phone: phone,
+                // phone: 15811095121,
+            },
+            success: function (reuslt) {
+                console.log(reuslt)
+            }
+        })
+    })
+    // 提交
     $("#submitBut").on('click', function () {
         var name = $.trim($("#input_1").val());
         var company_scale = $("#input_3").val();
         var company_email = $.trim($("#input_4").val());
         var company = $.trim($("#input_2").val());
         var phone = $.trim($("#input_5").val());
+        var yzm = $.trim($("#input_6").val());
         if (!name) {
             $("#userName").show();
             return false;
@@ -52,6 +84,7 @@ $(function () {
                 company_email: company_email,
                 company: company,
                 phone: phone,
+                code: yzm,
                 memo: $("#textareaId").val(),
             },
             success: function (reuslt) {
