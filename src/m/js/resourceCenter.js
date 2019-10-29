@@ -3,10 +3,15 @@
      let pageNumber = 1;
      $("#resourceCenterNav span").on('click', function () {
          localStorage.removeItem('pageNamber');
+         localStorage.removeItem('totalPage')
          let ind = $(this).parent('p').index();
+         $("#listScroll ul").html('');
          history.replaceState('resourceCenter.html', '', 'resourceCenter.html?tabId=' + ind);
          eqClass(ind)
-         pageNumber = 1
+         pageNumber = 1;
+         $("html,body").animate({
+             scrollTop: 0
+         }, "fast");
          switch (ind) {
              case 0:
                  $("#titleText").text('公司新闻');
@@ -52,6 +57,9 @@
 
          // 到底部加载下一页
          if (scrollTop + height == $(document).height()) {
+             if (pageNumber >= localStorage.getItem('totalPage')) {
+                 return
+             }
              pageNumber++
              getData($("#" + contentId).index(), pageNumber, contentId);
              localStorage.setItem('pageNamber', pageNumber)
@@ -68,6 +76,7 @@
       * ele 插入的元素
       */
      function getData(type, page, ele) {
+
          $.ajax({
              url: apiUrl + "news/list",
              type: "get",
@@ -79,13 +88,14 @@
              },
              success: function (result) {
                  let totalPage = Math.ceil(result.body.total / 10);
+                 localStorage.setItem('totalPage', totalPage)
                  // 大于总数之后不处理下面内容
                  if (page > totalPage) {
                      return
                  }
 
                  //内容加载
-                 $('#' + ele).html('');
+                 //  $('#' + ele).html('');
                  let list = result.body.newsList;
                  let postInfo = localStorage.getItem('postInfo')
                  if (ele === 'reportWrap') {

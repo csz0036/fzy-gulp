@@ -1,42 +1,48 @@
- $(function () {
-
-     // 根据URL 参数 触发
-     let tabIdPage = GetQueryString("tabId") * 1 || 0;
-     $("#rcCentreNev li").eq(tabIdPage).trigger("click");
-
-     function getPagesData(pageNumber) {
-         return new Promise(function (resolve, reject) {
-             //获取数据
-             let page = pageNumber * 1 || 1
-             $.ajax({
-                 url: apiUrl + "news/list",
-                 type: "get",
-                 dataType: "json",
-                 data: {
-                     type: tabIdPage,
-                     page: page,
-                     pageSize: 9
-                 },
-                 success: function (obr) {
-                     resolve(obr)
+ /**
+  * ajax 请求
+  * @param {*} type 请求类型  0：公司新闻 1：专业分析 2：行业报告
+  * @param {*} page 默认 1
+  */
+ function getAjax(type, page) {
+     return new Promise(function (resolve, reject) {
+         //获取数据
+         //  let page = pageNumber * 1 || 1
+         $.ajax({
+             url: apiUrl + "news/list",
+             type: "get",
+             dataType: "json",
+             data: {
+                 type: type,
+                 page: page || 1,
+                 pageSize: 9
+             },
+             success: function (result) {
+                 if (result.head.error === 0) {
+                     resolve(result.body)
+                 } else {
+                     reject(result.head.message)
                  }
-             })
+
+             }
          })
-     }
+     })
+ }
 
-     function changeTabId(divId) {
-         //  $("#rcCentreNev li").eq(tabIdPage).trigger('click');
-         let pn = localStorage.getItem('pageNamber') || 1
-         getPagesData(pn).then(function (obr) {
-             let list = obr.body.newsList;
-             let postInfo = localStorage.getItem('postInfo')
 
-             if (list.length < 1) return;
-             $(divId + "List").find('ul').html('')
-             switch (tabIdPage) {
-                 case 0:
-                     $.each(list, function (n, obj) {
-                         $(divId + "List").find('ul').append(`<li>
+ /**
+  * 
+  * @param {*} id  当前tab对应的ID
+  * @param {*} page 具体页数
+  */
+ function appendDemo(id, page = 1) {
+     getAjax(id, page).then((result) => {
+         let listDate = result.newsList;
+         let postInfo = localStorage.getItem('postInfo')
+         switch (id) {
+             case 0:
+                 $("#newPageList").find('ul').html('')
+                 $.each(listDate, function (n, obj) {
+                     $("#newPageList").find('ul').append(`<li>
                                 <p class="img"><a href="./detail.html?news_id=${obj.news_id}"><img src="${obj.head_url}"
                                             alt=""></a></p>
                                 <p class="ct">${obj.title}</p>
@@ -45,11 +51,20 @@
                                     <span class="time">${obj.publish_time}</span>
                                 </p>
                             </li>`)
-                     });
-                     break;
-                 case 1:
-                     $.each(list, function (n, obj) {
-                         $(divId + "List").find('ul').append(`<li>
+                 });
+                 /*
+                  * 首次调用
+                  * @param object:翻页容器对象
+                  * @param number:当前页
+                  * @param number:总页数
+                  * @param number:每页数据条数
+                  * */
+                 Pagination.Page($('#newPage'), page * 1 - 1, result.total, 9);
+                 break;
+             case 1:
+                 $("#analyzePageList").find('ul').html('')
+                 $.each(listDate, function (n, obj) {
+                     $("#analyzePageList").find('ul').append(`<li>
                                 <p class="img"><a href="./detail.html?news_id=${obj.news_id}"><img src="${obj.head_url}"
                                             alt=""></a></p>
                                 <p class="ct">${obj.title}</p>
@@ -58,11 +73,13 @@
                                     <span class="time">${obj.publish_time}</span>
                                 </p>
                             </li>`)
-                     });
-                     break;
-                 case 2:
-                     $.each(list, function (n, obj) {
-                         $(divId + "List").find('ul').append(`<li>
+                 });
+                 Pagination.Page($('#analyzePage'), page * 1 - 1, result.total, 9);
+                 break;
+             case 2:
+                 $("#reportPageList").find('ul').html('')
+                 $.each(listDate, function (n, obj) {
+                     $("#reportPageList").find('ul').append(`<li>
                                 <p class="img"><a href="./detail.html?news_id=${obj.news_id}"><img src="${obj.head_url}"
                                             alt=""></a></p>
                                 <p class="ct">${obj.title}</p>
@@ -74,81 +91,52 @@
                                     <span class="time">${obj.publish_time}</span>
                                 </p>
                             </li>`)
-                     });
-                     break;
-             }
-
-
-             /*
-              * 定义回掉函数
-              * @param number:跳转页
-              * */
-             function pageChange(i) {
-                 Pagination.Page($(divId), i - 1, Math.ceil(obr.body.total / 9), 9);
-                 getPagesData(i);
-                 localStorage.setItem('pageNamber', i)
-             }
-
-             /*
-              * 初始化插件
-              * @param object:翻页容器对象
-              * @param function:回调函数
-              * */
-             Pagination.init($(".ht-page"), pageChange);
-
-             /*
-              * 首次调用
-              * @param object:翻页容器对象
-              * @param number:当前页
-              * @param number:总页数
-              * @param number:每页数据条数
-              * */
-
-             // Pagination.Page($(divId), 1, 100, 9);
-             Pagination.Page($(divId), 0, Math.ceil(obr.body.total / 9), 9);
-
-         })
-     }
-
-     $("#rcCentreNev li").on('click', function () {
-         /**
-          state： 与要跳转到的URL对应的状态信息。
-          title： 不知道干啥用， 传空字符串就行了。
-          url： 要跳转到的URL地址， 不能跨域。
-          */
-         history.replaceState('resourceCenter.html', '', 'resourceCenter.html?tabId=' + $(this).index());
-         localStorage.removeItem('pageNamber')
-
-         let ind = $(this).index();
-         eqClick(ind)
-         let divId = $(this).attr('name');
-         tabIdPage = $(this).index()
-         changeTabId(divId)
+                 });
+                 Pagination.Page($('#reportPage'), page * 1 - 1, result.total, 9);
+                 break;
+         }
+         /*
+          * 初始化插件
+          * @param object:翻页容器对象
+          * @param function:回调函数
+          * */
+         Pagination.init($(".ht-page"), function (i) {
+             Pagination.Page($('.ht-page'), i, result.total, 9);
+             appendDemo(id, i * 1 + 1)
+         });
      })
+ }
 
-     function eqClick(ind) {
-         $("#rcCentreNev li").eq(ind).addClass('active').siblings('li').removeClass('active');
-         $(".bannerConten .bannerCentre_1").eq(ind).addClass('active').siblings(
-             '.bannerCentre_1').removeClass('active');
-         $(".caseNewList .newList").eq(ind).addClass('active').siblings(
-             '.newList').removeClass('active');
-     }
 
-     //初始化
-     console.log('tabIdPage----', tabIdPage)
-     switch (tabIdPage) {
-         case 0:
-             eqClick(0)
-             changeTabId("#newPage");
-             break;
-         case 1:
-             eqClick(1)
-             changeTabId("#analyzePage");
-             break;
-         case 2:
-             eqClick(2)
-             changeTabId("#reportPage");
-             break;
-     }
+ /**
+  * 
+  * @param {*} id tab 切换对应的ID
+  */
+ function tabChange(id) {
+     //修改url不刷新页面
+     history.replaceState('resourceCenter.html', '', 'resourceCenter.html?tabId=' + id);
+     //demo操作
+     $("#rcCentreNev li").eq(id).addClass('active').siblings('li').removeClass('active');
+     $(".bannerConten .bannerCentre_1").eq(id).addClass('active').siblings('.bannerCentre_1').removeClass('active');
+     $(".caseNewList .newList").eq(id).addClass('active').siblings('.newList').removeClass('active');
 
- })
+     //数据操作
+     appendDemo(id)
+ }
+
+ // 根据URL 参数 触发
+ let urlQueryId = GetQueryString("tabId") * 1 || 0;
+ switch (urlQueryId) {
+     case 0:
+         // changeTabId("#newPage");
+         tabChange(0)
+         break;
+     case 1:
+         // changeTabId("#analyzePage");
+         tabChange(1)
+         break;
+     case 2:
+         // changeTabId("#reportPage");
+         tabChange(2)
+         break;
+ }
