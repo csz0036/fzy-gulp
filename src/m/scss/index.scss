@@ -319,7 +319,7 @@
 
 .listLint-2 {
     li {
-        height: 4rem;
+        // height: 4rem;
 
         .liTitle {
             display: -webkit-box;
@@ -328,6 +328,10 @@
             -webkit-box-orient: vertical;
             word-break: break-all;
             height: .76rem;
+        }
+
+        .liContent {
+            margin-top: .2rem;
         }
     }
 }

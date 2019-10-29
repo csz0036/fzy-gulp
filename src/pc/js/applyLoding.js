@@ -1,3 +1,5 @@
+// import { clearInterval } from "timers"
+
 $(function () {
 
     $(".defaultText").on('click', function () {
@@ -16,30 +18,43 @@ $(function () {
 
     //获取验证码
     $("#getYZM").on('click', function () {
+        let phone = $.trim($("#input_5").val());
+        if (!phone) {
+            $("#universalTotl").show().find('.infoText').text('请输入正确的手机号');
+            let phontTime = setTimeout(function () {
+                $("#universalTotl").hide();
+                clearTimeout(phontTime)
+            }, 2000)
+            return
+        }
         let yzmTime = 59;
-        setInterval(() => {
+        $(this).hide();
+        $("#showTime").show().text(yzmTime);
+        var dowtime = setInterval(function () {
             yzmTime--
             $("#showTime").text(yzmTime)
-            if (yzmTime < 0) {
-                yzmTime = 0;
+            if (yzmTime < 1) {
                 $("#getYZM").show();
                 $("#showTime").hide()
+                clearInterval(dowtime);
             }
         }, 1000);
 
-        $(this).hide();
-        $("#showTime").show();
-        let phone = $.trim($("#input_5").val());
         $.ajax({
             url: apiUrl + "user/sms_code",
             type: "POST",
             dataType: "json",
             data: {
                 phone: phone,
-                // phone: 15811095121,
             },
             success: function (reuslt) {
-                console.log(reuslt)
+                if (reuslt.head.error == 0) {
+                    $("#universalTotl").show().find('.infoText').text('验证码已经发送，请查收');
+                    let phontTime = setTimeout(function () {
+                        $("#universalTotl").hide();
+                        clearTimeout(phontTime)
+                    }, 2000)
+                }
             }
         })
     })

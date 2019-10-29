@@ -302,3 +302,39 @@ textarea:-ms-input-placeholder {
     color: #999;
     font-size: 13px;
 }
+
+#universalTotl {
+    position: fixed;
+    z-index: 111;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+
+    &::after {
+        content: '';
+
+        background-color: rgba(0, 0, 0, .3);
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 11;
+    }
+
+    .infoText {
+        width: 300px;
+        padding: 20px;
+        text-align: center;
+        font-size: 14px;
+        background-color: #fff;
+        border-radius: 5px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        z-index: 12;
+        transform: translate(-50%, -50%);
+    }
+}

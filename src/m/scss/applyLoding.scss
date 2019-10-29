@@ -187,3 +187,38 @@
         }
     }
 }
+
+#universalTotl {
+    position: fixed;
+    z-index: 111;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+
+    &::after {
+        content: '';
+        background-color: rgba(0, 0, 0, .3);
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 11;
+    }
+
+    .infoText {
+        width: 6rem;
+        padding: .4rem;
+        text-align: center;
+        font-size: .28rem;
+        background-color: #fff;
+        border-radius: .05rem;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        z-index: 12;
+        transform: translate(-50%, -50%);
+    }
+}

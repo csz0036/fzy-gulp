@@ -74,7 +74,7 @@ $(function () {
                                 <a href="./detail.html?news_id=${obj.news_id}">
                                     <img src="${obj.head_url}" alt="" class="listImg">
                                     <p class="liTitle">${obj.title}</p>
-                                    <p class="liContent">${matchReg(obj.content)}</p>
+                                    <p class="liContent">${obj.publish_time}</p>
                                 </a>
                             </li>`)
                 });
