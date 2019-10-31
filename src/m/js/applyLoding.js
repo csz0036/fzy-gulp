@@ -24,7 +24,7 @@ $(function () {
             }, 2000)
             return
         }
-        let yzmTime = 9;
+        let yzmTime = 59;
         $(this).hide();
         $("#showTime").show().text(yzmTime);
         let yzmT = setInterval(() => {
