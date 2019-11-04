@@ -18,6 +18,7 @@
              },
              success: function (result) {
                  if (result.head.error === 0) {
+                     $("#loding").hide()
                      resolve(result.body)
                  } else {
                      reject(result.head.message)
@@ -116,6 +117,7 @@
      //修改url不刷新页面
      history.replaceState('resourceCenter.html', '', 'resourceCenter.html?tabId=' + id);
      //demo操作
+     $("#loding").show()
      $("#rcCentreNev li").eq(id).addClass('active').siblings('li').removeClass('active');
      $(".bannerConten .bannerCentre_1").eq(id).addClass('active').siblings('.bannerCentre_1').removeClass('active');
      $(".caseNewList .newList").eq(id).addClass('active').siblings('.newList').removeClass('active');

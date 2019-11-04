@@ -236,7 +236,8 @@ h5 {
     }
 
     .navListButton {
-        height: 0;
+        // height: 0;
+        display: none;
         font-size: .3rem;
         background-color: #F2F2F2;
         color: #000;
@@ -245,7 +246,10 @@ h5 {
         z-index: 2;
 
         &.activeNav {
-            height: auto;
+            // height: auto;
+            max-height: 88.5vh;
+            overflow-y: auto;
+            display: block;
         }
 
         li {
@@ -355,6 +359,7 @@ h5 {
 
     .addr {
         font-size: .2rem;
+        line-height: .56rem;
     }
 
     .pageTel {

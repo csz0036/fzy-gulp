@@ -24,10 +24,54 @@
             margin-bottom: 10px;
         }
 
+        .content_h3 {
+            color: #333333;
+            font-weight: 400;
+            margin: 30px 0 10px;
+            font-size: 16px;
+            line-height: 28px;
+        }
+
+        .content_p {
+            color: #808080;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 23px;
+
+            span {
+                font-weight: 400;
+                color: #666;
+
+                &.dls {
+                    display: block;
+                }
+            }
+        }
+
+        .notPermission {
+            font-size: 14px;
+            color: #ddd;
+            text-align: right;
+            margin-top: 15px;
+            font-weight: 300;
+        }
+
         img {
             margin: 0 auto;
             display: block;
             max-width: 1000px;
+        }
+
+        .exampleImg1 {
+            width: 790px;
+            height: 300px;
+        }
+
+        .exampleImgFoot {
+            width: 790px;
+            height: 220px;
+            display: block;
+            margin: 80px auto 10px;
         }
     }
 

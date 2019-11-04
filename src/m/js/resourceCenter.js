@@ -2,6 +2,7 @@
      let contentId;
      let pageNumber = 1;
      $("#resourceCenterNav span").on('click', function () {
+         $("#loding").show()
          localStorage.removeItem('pageNamber');
          localStorage.removeItem('totalPage')
          let ind = $(this).parent('p').index();
@@ -34,7 +35,6 @@
      function eqClass(ind) {
          $("#resourceCenterNav p").eq(ind).find("span").addClass('activet').end().siblings('p').find("span").removeClass('activet');
          $("#listScroll").find('.caseList').eq(ind).addClass('active').siblings().removeClass('active');
-
      }
 
      let hadHeight = $("#head").height()
@@ -87,6 +87,7 @@
                  pageSize: 10
              },
              success: function (result) {
+                 $("#loding").hide()
                  let totalPage = Math.ceil(result.body.total / 10);
                  localStorage.setItem('totalPage', totalPage)
                  // 大于总数之后不处理下面内容
