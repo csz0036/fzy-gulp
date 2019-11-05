@@ -38,7 +38,6 @@
  function appendDemo(id, page = 1) {
      getAjax(id, page).then((result) => {
          let listDate = result.newsList;
-         let postInfo = localStorage.getItem('postInfo')
          switch (id) {
              case 0:
                  $("#newPageList").find('ul').html('')
@@ -85,9 +84,7 @@
                                             alt=""></a></p>
                                 <p class="ct">${obj.title}</p>
                                 <p class="downLoad">
-                                    <span class="dow"> <a class = "gotoApply"
-                                    href="./applyLoding.html"
-                                    style="distplay:${postInfo}"></a><a href="${obj.download_url}"
+                                    <span class="dow"><a href="${obj.download_url}"
                                             download="下载文件">下载文件</a></span>
                                     <span class="time">${obj.publish_time}</span>
                                 </p>

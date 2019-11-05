@@ -98,7 +98,6 @@
                  //内容加载
                  //  $('#' + ele).html('');
                  let list = result.body.newsList;
-                 let postInfo = localStorage.getItem('postInfo')
                  if (ele === 'reportWrap') {
                      $.each(list, function (n, obj) {
                          $('#' + ele).append(`<li>
@@ -106,7 +105,7 @@
                                             alt=""></a>
                                 <p class="listTitle">${obj.title}</p>
                                 <p class = "listContent" >${obj.publish_time}</p> 
-                                <span class="dow"><a href="./applyLoding.html" class="gotoApply" style="display:${postInfo}"></a><a href="${obj.download_url}" target="_blank">在线预览</a></span>
+                                <span class="dow"><a href="${obj.download_url}" target="_blank">在线预览</a></span>
                             </li>`)
                      });
                  } else {
