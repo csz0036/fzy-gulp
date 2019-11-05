@@ -322,18 +322,21 @@ header {
 
 }
 
-.nav-list a {
+.nav-list a,
+.nav-list .nav_a {
   height: 70px;
   line-height: 70px;
   display: inline-block;
   font-size: 16px;
   color: #333333;
   font-weight: 400;
+  cursor: pointer;
 }
 
 .nav-list .active,
 .nav-list a:hover {
   color: #008dd1;
+
 }
 
 .telephone {

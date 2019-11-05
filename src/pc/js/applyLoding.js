@@ -1,7 +1,6 @@
 // import { clearInterval } from "timers"
 
 $(function () {
-
     $(".defaultText").on('click', function () {
         $("#selsectCompany").hide()
         $(this).siblings('#scaleNumber').toggleClass('showUl')
@@ -11,7 +10,6 @@ $(function () {
         $('.defaultText').text($(this).text()).addClass('clickClass')
 
     })
-
     $(".inputLab input").focus(function () {
         $(this).parents('.inputLab').find(".errorInfo").hide()
     })

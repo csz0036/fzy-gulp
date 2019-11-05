@@ -4,6 +4,7 @@ const autoprefixer = require("gulp-autoprefixer"); // 自动补全css前缀
 const minifycss = require("gulp-minify-css"); // css压缩
 const rename = require("gulp-rename"); // 重命名
 const babel = require("gulp-babel"); // ES6 转换成 ES5
+const es2015Preset = require("babel-preset-es2015");
 const uglify = require("gulp-uglify"); // js压缩
 const browsersync = require("browser-sync").create(); // 自动刷新页面
 const imagemin = require('gulp-imagemin');
@@ -30,7 +31,7 @@ gulp.task('clean', function (cb) {
 gulp.task('scripts', function (done) {
     gulp.src(path.js.dev)
         .pipe(babel({
-            presets: ['es2015'] // es5检查机制
+            presets: ['es2015']
         }))
         .pipe(uglify())
         .on('error', function (err) {

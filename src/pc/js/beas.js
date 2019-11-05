@@ -59,5 +59,23 @@ function GetQueryString(name) {
     return null;
 }
 
+
+/**
+ * 判断是否为IE
+ */
+function isIE() {
+    if (!!window.ActiveXObject || "ActiveXObject" in window) {
+        return true;
+    } else {
+        return false;
+    }
+}
+if (isIE()) {
+    var script = document.createElement('script');
+    script.type = 'text/javaScript';
+    script.src = './js/bluebird.min.js'; // bluebird 文件地址
+    document.getElementsByTagName('head')[0].appendChild(script);
+}
+
 // var apiUrl = 'http://192.168.1.243:5000/api/v1/'
 var apiUrl = 'http://fzy2.smartdot.com:38080/api/v1/'
