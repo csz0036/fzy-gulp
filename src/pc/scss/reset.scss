@@ -193,6 +193,10 @@ header {
   }
 }
 
+#aboutList {
+  height: auto;
+}
+
 
 #productNavList {
   position: absolute;
@@ -764,4 +768,16 @@ header {
       cursor: pointer;
     }
   }
+}
+
+.headroom {
+  transition: transform 200ms linear;
+}
+
+.headroom--pinned {
+  transform: translateY(0%);
+}
+
+.headroom--unpinned {
+  transform: translateY(-44px);
 }

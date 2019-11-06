@@ -1,3 +1,38 @@
+//页面最顶部黑条滚动效果
+var headroomJs = document.createElement('script');
+headroomJs.type = 'text/javaScript';
+if (window.location.pathname.indexOf('exampleList') == -1) {
+    headroomJs.src = './js/headroom.min.js'; //  一级地址
+} else {
+    headroomJs.src = '../js/headroom.min.js'; //  一级地址
+}
+
+document.getElementsByTagName('head')[0].appendChild(headroomJs);
+
+/**
+ * 判断是否为IE
+ */
+function isIE() {
+    if (!!window.ActiveXObject || "ActiveXObject" in window) {
+        return true;
+    } else {
+        return false;
+    }
+}
+if (isIE()) {
+    //IE支持Promise
+    var script = document.createElement('script');
+    script.type = 'text/javaScript';
+    if (window.location.pathname.indexOf('exampleList') == -1) {
+        script.src = './js/bluebird.min.js'; //  一级地址
+    } else {
+        script.src = '../js/bluebird.min.js'; //  一级地址
+    }
+    document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+
+
 $(function () {
     $("#produvtNav").hover(function () {
         $("#productNavList").show()
@@ -23,32 +58,52 @@ $(function () {
     });
 
     //顶部导航交互效果
-    var t = 0
-    $(window).scroll(function () {
-        var scrollT = $(this).scrollTop();
-        if (t < scrollT) {
-            //下滚
-            if (scrollT > 100) {
-                // $("#pageHeader").css('top', '-' + 44 + 'px')
-                $("#pageHeader").stop(true).animate({
-                    top: '-44px'
-                }, 30)
-            }
-        } else {
-            //上滚            
-            let headTop = ($("#pageHeader").css('top')).substring(1, 3)
-            if (headTop != 0) {
-                $("#pageHeader").stop(true).animate({
-                    top: 0
-                }, 30)
-            }
-        }
-        setTimeout(function () {
-            t = scrollT;
-        }, 0)
+    // var t = 0
+    // $(window).scroll(function () {
+    //     var scrollT = $(this).scrollTop();
+    //     if (t < scrollT) {
+    //         //下滚
+    //         if (scrollT > 100) {
+    //             // $("#pageHeader").css('top', '-' + 44 + 'px')
+    //             $("#pageHeader").stop(true).animate({
+    //                 top: '-44px'
+    //             }, 30)
+    //         }
+    //     } else {
+    //         //上滚            
+    //         let headTop = ($("#pageHeader").css('top')).substring(1, 3)
+    //         if (headTop != 0) {
+    //             $("#pageHeader").stop(true).animate({
+    //                 top: 0
+    //             }, 30)
+    //         }
+    //     }
+    //     setTimeout(function () {
+    //         t = scrollT;
+    //     }, 0)
+    // })
 
 
-    })
+
+
+    // $("#headTransform").Headroom({
+    //     // 在元素没有固定之前，垂直方向的偏移量（以px为单位）
+    //     offset: 0,
+    //     // scroll tolerance in px before state changes
+    //     tolerance: 0,
+    //     // 对于每个状态都可以自定义css classes 
+    //     classes: {
+    //         // 当元素初始化后所设置的class
+    //         initial: "headroom",
+    //         // 向上滚动时设置的class
+    //         pinned: "headroom--pinned",
+    //         // 向下滚动时所设置的class
+    //         unpinned: "headroom--unpinned"
+    //     }
+    // });
+
+
+
 
 })
 
@@ -60,22 +115,7 @@ function GetQueryString(name) {
 }
 
 
-/**
- * 判断是否为IE
- */
-function isIE() {
-    if (!!window.ActiveXObject || "ActiveXObject" in window) {
-        return true;
-    } else {
-        return false;
-    }
-}
-if (isIE()) {
-    var script = document.createElement('script');
-    script.type = 'text/javaScript';
-    script.src = './js/bluebird.min.js'; // bluebird 文件地址
-    document.getElementsByTagName('head')[0].appendChild(script);
-}
+
 
 // var apiUrl = 'http://192.168.1.243:5000/api/v1/'
 var apiUrl = 'http://fzy2.smartdot.com:38080/api/v1/'
