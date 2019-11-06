@@ -1,6 +1,6 @@
  /**
   * ajax 请求
-  * @param {*} type 请求类型  0：公司新闻 1：专业分析 2：行业报告
+  * @param {*} type 请求类型  0：新闻动态 1：专业分析 2：行业报告
   * @param {*} page 默认 1
   */
  function getAjax(type, page) {
@@ -47,7 +47,7 @@
                                             alt=""></a></p>
                                 <p class="ct">${obj.title}</p>
                                 <p class="downLoad">
-                                    <span class="new">公司新闻</span>
+                                    <span class="new">新闻动态</span>
                                     <span class="time">${obj.publish_time}</span>
                                 </p>
                             </li>`)

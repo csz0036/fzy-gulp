@@ -15,7 +15,7 @@
          }, "fast");
          switch (ind) {
              case 0:
-                 $("#titleText").text('公司新闻');
+                 $("#titleText").text('新闻动态');
                  getData(0, 1, 'companyNewsWrap');
                  contentId = 'companyNewsWrap';
                  break;
@@ -71,7 +71,7 @@
 
      /**
       * 
-      * type 0 = 公司新闻 / 1 = 专业分析 / 2 = 行业报告
+      * type 0 = 新闻动态 / 1 = 专业分析 / 2 = 行业报告
       * page 默认 1
       * ele 插入的元素
       */

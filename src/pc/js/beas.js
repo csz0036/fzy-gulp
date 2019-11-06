@@ -115,7 +115,14 @@ function GetQueryString(name) {
 }
 
 
+var _hmt = _hmt || [];
+(function () {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?42dc1b1c0bd9f1d4cd5743ba834c08dd";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();
 
 
 // var apiUrl = 'http://192.168.1.243:5000/api/v1/'
-var apiUrl = 'http://fzy2.smartdot.com:38080/api/v1/'
+var apiUrl = 'http://fzy.smartdot.com/api/v1/'

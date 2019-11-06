@@ -1,3 +1,11 @@
+var _hmt = _hmt || [];
+(function () {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?42dc1b1c0bd9f1d4cd5743ba834c08dd";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+
 $(function () {
   // 头部操作
   $("#head .button").on('click', function () {
@@ -27,4 +35,4 @@ $(function () {
 
 })
 
-var apiUrl = 'http://fzy2.smartdot.com:38080/api/v1/'
+var apiUrl = 'http://fzy.smartdot.com/api/v1/'
