@@ -1,10 +1,11 @@
 var _hmt = _hmt || [];
 (function () {
   var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?42dc1b1c0bd9f1d4cd5743ba834c08dd";
+  hm.src = "https://hm.baidu.com/hm.js?f89837d60f6943bfc1d310429d9f8479";
   var s = document.getElementsByTagName("script")[0];
   s.parentNode.insertBefore(hm, s);
 })();
+
 
 $(function () {
   // 头部操作

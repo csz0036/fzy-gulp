@@ -10,6 +10,7 @@ const watch = require("gulp-watch")
 const nodeEvn = process.env.NODE_ENV == 'all' ? '**/' : process.env.NODE_ENV + '/'
 const pump = require('pump')
 const replace = require('gulp-replace')
+const plumber = require('gulp-plumber'); //语法错误被终止之后，修复完能继续执行
 
 //删除dist目录下文件
 const del = require('del');
@@ -26,6 +27,7 @@ gulp.task('clean', function (cb) {
 /* 操作js */
 gulp.task('scripts', function (done) {
     gulp.src(path.js.dev)
+        .pipe(plumber())
         .pipe(babel({
             presets: ['es2015'] // es5检查机制
         }))
@@ -43,6 +45,7 @@ gulp.task('scripts', function (done) {
 /* 编译scss 自动补全前缀 */
 gulp.task('style', function (done) {
     gulp.src(path.css.dev)
+        .pipe(plumber())
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({
             overrideBrowserslist: ['last 2 versions', 'safari 5', 'opera 12.1', 'ios 6', 'android 4']

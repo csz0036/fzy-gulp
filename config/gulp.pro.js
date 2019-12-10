@@ -15,6 +15,7 @@ const htmlmin = require('gulp-htmlmin');
 const fileinclude = require('gulp-file-include');
 const nodeEvn = process.env.NODE_ENV == 'all' ? '**/' : process.env.NODE_ENV + '/'
 const path = require('./path')
+const base64 = require('gulp-base64');
 
 //删除dist目录下文件
 const del = require('del');
@@ -48,6 +49,9 @@ gulp.task('scripts', function (done) {
 /* 编译scss 自动补全前缀 */
 gulp.task('style', function (done) {
     gulp.src(path.css.dev)
+        .pipe(base64({
+            maxImageSize: 8 * 1024, // 只转8kb以下的图片为base64
+        }))
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({
             overrideBrowserslist: ['last 2 versions', 'safari 5', 'opera 12.1', 'ios 6', 'android 4']
