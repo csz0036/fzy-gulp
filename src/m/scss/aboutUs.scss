@@ -145,6 +145,12 @@
             margin: 0 auto;
         }
     }
+
+    .but {
+        a {
+            width: 3.4rem;
+        }
+    }
 }
 
 .aboutInfo {
@@ -157,17 +163,17 @@
         margin-bottom: .1rem;
         font-weight: 500;
         color: #000;
-        padding-left: .2rem;
+        padding-left: .15rem;
         position: relative;
 
         &::after {
             content: '';
             width: 0.05rem;
-            height: .3rem;
+            height: .28rem;
             background-color: #0C92D2;
             position: absolute;
             left: 0;
-            top: 0;
+            top: .05rem;
         }
     }
 

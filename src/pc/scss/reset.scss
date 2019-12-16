@@ -280,14 +280,39 @@ header {
   height: 70px;
   overflow: hidden;
   float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.officialLogo {
+  width: 111px;
+  height: 44px;
+  display: inline-block;
+  position: relative;
+  margin-right: 20px;
+
+  &::after {
+    content: '';
+    width: 1px;
+    height: 28px;
+    background-color: #979797;
+    position: absolute;
+    right: -10px;
+    top: 7px;
+    opacity: 0.3;
+  }
+
+  img {
+    width: 100%;
+  }
 }
 
 .logoImg {
   width: 111px;
-  height: 42px;
-  margin: 14px 0;
+  height: 30px;
   background: url(../images/logo.png) no-repeat;
-  background-size: 100% 100%;
+  background-size: contain;
   display: inline-block;
 }
 
