@@ -157,6 +157,18 @@
         margin-bottom: .1rem;
         font-weight: 500;
         color: #000;
+        padding-left: .2rem;
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 0.05rem;
+            height: .3rem;
+            background-color: #0C92D2;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
     }
 
     p {
