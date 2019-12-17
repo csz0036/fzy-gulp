@@ -176,6 +176,12 @@ h5 {
             margin-left: .25rem;
             position: relative;
 
+            a {
+                display: block;
+                height: 100%;
+                width: 100%;
+            }
+
             &::after {
                 content: '';
                 width: 0.01rem;
